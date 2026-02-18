@@ -1,0 +1,677 @@
+Médico: 
+  Consulta de Oftalmologia: |
+    O seguinte texto é uma transcrição de uma consulta médica de oftalmologia:
+
+    {texto}
+
+    Você receberá a transcrição que foi realizada em pacotes de áudio de 8 segundos. 
+    Como o modelo de transcrição (Whisper) pode inserir palavras incorretas ao tentar completar trechos de áudio cortados, 
+    pode haver erros ou palavras mal transcritas. Alguns termos médicos, como nomes de medicamentos e doenças podem ser reconhecidos de forma incorreta. 
+    Caso algum medicamento seja mal transcrito, tente corrigir para o nome correto, com base no contexto da consulta e na 
+    lista de medicamentos e doenças abaixo. Caso um medicamento ou doença não esteja na lista, tente identificá-lo pela semelhança fonética ou por 
+    palavras-chave relacionadas ao seu efeito ou classe.
+
+    Lista de Doenças Mais Comuns:
+      Miopia, Hipermetropia, Astigmatismo, Presbiopia, Catarata senil, Catarata congênita, Catarata secundária, Glaucoma primário de ângulo aberto, 
+      Glaucoma de ângulo fechado, Glaucoma secundário, Glaucoma congênito, Conjuntivite viral, Conjuntivite bacteriana, Conjuntivite alérgica, 
+      Ceratocone, Blefarite, Hordeolo (terçol), Calázio, Pterígio, Pinguécula, Olho seco (Síndrome do olho seco / sicca), 
+      Retinopatia diabética, Retinopatia hipertensiva, Degeneração macular relacionada à idade (DMRI), Uveíte anterior (irite / iridociclite), 
+      Uveíte posterior (coriorretinite), Uveíte intermediária (pars planite), Esclerite, Episclerite, Retinopatia de prematuridade (ROP), 
+      Ceratite bacteriana, Ceratite viral (herpética), Ceratite por Acanthamoeba, Ceratite fúngica, Toxoplasmose ocular (retinocoroidite), 
+      Conjuntivite primaveril (VKC – Vernal Keratoconjunctivitis), Distrofia endotelial de Fuchs, Distrofia corneana “map-dot-fingerprint”, 
+      Distrofia corneana granular, Distrofia corneana lattice, Entrópio (inversão de pálpebra), Ectrópio (eversão de pálpebra), 
+      Triquíase (cílios mal posicionados), Ptose palpebral, Blefarospasmo essencial, Xantelasma (depósitos de gordura na pálpebra), 
+      Tumores palpebrais (p.ex., carcinoma basocelular), Dacriocistite (infecção do saco lacrimal), Dacrioadenite (inflamação da glândula lacrimal), 
+      Doença de Graves (oftalmopatia tireoidiana), Celulite orbitária (pós-septal), Celulite pré-septal, Retinoblastoma, Melanoma de coroide, 
+      Descolamento de retina regmatogênico, Descolamento de retina tracional, Descolamento de retina exsudativo, 
+      Oclusão da veia central da retina (OVCR), Oclusão de ramo da veia da retina, Oclusão da artéria central da retina (OACR), 
+      Oclusão de ramo da artéria da retina, Buraco macular, Membrana epirretiniana (pucker macular), Coriorretinopatia serosa central, 
+      Histoplasmose ocular, Oncocercose ocular (cegueira dos rios), Leptospirose ocular (uveíte leptospírica), Síndrome de Vogt-Koyanagi-Harada, 
+      Doença de Behçet (uveíte associada), Sarcoidose ocular, Artrite reumatoide (complicações oculares), Síndrome de Sjögren (olho seco secundário), 
+      Uveíte heterocrômica de Fuchs, Neurite óptica, Neuropatia óptica isquêmica anterior (NOIA), Atrofia óptica, Papiledema (edema de papila), 
+      Paralisias dos nervos oculomotores (III, IV, VI), Estrabismo (esotropia, exotropia, etc.), Nistagmo, Ambliopia, 
+      Daltonismo (deficiência de percepção de cores), Retinose pigmentar, Doença de Stargardt (distrofia macular juvenil), 
+      Buraco lamelar (variação de buraco macular), Coroideremia, Edema macular diabético, Retinosquise, Retinopatia associada ao HIV, 
+      Ceratopatia bolhosa, Degenerações corneanas periféricas (p.ex. marginal), Tumores conjuntivais (p.ex., melanoma, carcinoma), 
+      Panoftalmite (infecção total do globo), Endoftalmite (infecção intraocular), Iridociclite (sinônimo geral de uveíte anterior), 
+      Hifema (sangue na câmara anterior), Hemorragia vítrea, Hipertensão ocular (sem glaucoma estabelecido), Síndrome de Horner, Microftalmia
+    Lista de Medicamentos Mais Comuns:
+      Timolol maleato, Betaxolol, Latanoprosta, Travoprosta, Bimatoprosta, Tafluprosta, Brimonidina, Dorzolamida, Brinzolamida,
+      Acetazolamida, Pilocarpina, Apraclonidina, Timolol + Dorzolamida, Timolol + Brimonidina, Latanoprosta + Timolol, Tropicamida,
+      Ciclopentolato, Atropina, Fenilefrina, Homatropina, Dexametasona, Prednisolona acetato, Fluorometolona, Loteprednol etabonato,
+      Rimexolona, Tobramicina + dexametasona, Neomicina + dexametasona, Ciprofloxacino, Ofloxacino, Moxifloxacino, Gatifloxacino, 
+      Levofloxacino, Norfloxacino, Tobramicina, Gentamicina, Cloranfenicol, Sulfacetamida, Polimixina B + bacitracina, 
+      Polimixina B + neomicina + gramicidina, Polimixina B + neomicina + bacitracina, Vancomicina, Cetorolaco trometamol, 
+      Diclofenaco, Nepafenaco, Bromfenaco, Olopatadina, Epinastina, Ketotifeno, Azelastina, Alcaftadina, Emedastina, 
+      Cromoglicato de sódio, Nedocromil sódico, Ciclosporina A, Tacrolimo, Lifitegrast, Carboximetilcelulose, Hipromelose, 
+      Polividona, Gel de carbômero, Hialuronato de sódio, Acetilcisteína, Natamicina, Voriconazol, Anfotericina B, Cetoconazol, 
+      Clotrimazol, Idoxuridina, Ganciclovir, Aciclovir, Trifluridina, Foscarnet, Interferon alfa-2b, Bevacizumabe, Ranibizumabe, 
+      Aflibercepte, Pegaptanibe, Ocriplasmina, Manitol, Glicerol, Azitromicina, Besifloxacino, Povidona-iodo (PVPI), Tetracaína, 
+      Proparacaína, Lidocaína gel, Fenilefrina + tropicamida, Polimixina B + trimetoprima, Cefuroxima, Tetraciclina, Lodoxamida, 
+      Toxina botulínica tipo A (Botox), Doxiciclina, Soro fisiológico 0,9%, Soro autólogo, Metilprednisolona, Triancinolona acetonida, 
+      Difeprednato, Flurbiprofeno, Indometacina
+
+    Instruções:
+      1.Verifique e corrija os nomes dos medicamentos: Ao identificar um medicamento na transcrição, corrija o nome, se necessário, comparando com a lista acima. 
+      2.Contextualize a transcrição: Se não tiver certeza sobre um nome de medicamento, faça uma suposição educada com base no contexto clínico.
+      3.Classificação da consulta:
+        - Sumarize a consulta em tópicos principais com uma estrutura clara e fácil de ler, sem símbolos de formatação como # ou *.
+        - Organize a consulta em uma lista numerada ou com marcadores.
+        - Classifique a consulta em categorias como descrita abaixo.
+      4. Não adicione informações que não estão na transcrição: Não inclua suposições além do que foi dito na consulta.
+
+    Exemplo de resposta:
+
+    Classificação da Consulta:
+    Queixas Principais:
+      - Queixa 1.
+      - Queixa N.
+
+    Histórico da Doença Atual (HDA):
+      - Avaliação pré-operatória refrativa.
+    
+    Antecedentes Oftalmológicos:
+      - antecedentes 1.
+
+    Histórico Familiar (HF):
+      - Miopia.
+      - Astigmatismo.
+
+    Acuidade Visual Sem Correção (AVsc):
+      Olho Direito (OD): 20/60 (ou 0,3 em notação decimal)
+      Olho Esquerdo (OE): 20/70 (ou 0,28 em notação decimal)
+
+    Acuidade Visual Com Correção (AVcc):
+      Olho Direito (OD): 20/20 (1,0 em notação decimal) com -2,00 esf / -1,00 cil a 90°
+      Olho Esquerdo (OE): 20/25 (0,8 em notação decimal) com -2,50 esf / -1,25 cil a 85°
+
+    Refração Dinâmica:
+      Olho Direito (OD)= Esférico =-5,50 Cilíndrico=-1,50 Eixo=30° (ou -5,50/-1,50/30)
+      Olho Esquerdo (OE)= Esférico =-4,50 Cilíndrico=-2,00 Eixo=115° (ou -4,50/-2,00/115)
+
+    Medicamentos Mencionados:
+      - Medicamento 1.
+      - Medicamento 2.
+
+    Exames Realizados:
+      - Resultado dos exames realizados pelo paciente e analisado pelo médico:
+        Biomicroscopia (BIO): Normal
+
+        Tonometria (Pressão Intra Ocular ou PIO,PIL,PIU):
+          PIO OD: 12 mmHg
+          PIO OE: 10 mmHg
+          ou
+          PIO 12/10
+        Fundoscopia:
+
+    Hipótese Diagnóstica:
+    - Diagnóstico fechado pelo médico ao final da consulta.    
+
+    Conduta:
+      - Pré-operátório refrativo.
+  
+  Consulta de Neuropediatria: |
+    O seguinte texto é uma transcrição de uma consulta médica de neuropediatria:
+
+    {texto}
+
+    Você receberá a transcrição que foi realizada em pacotes de áudio de 8 segundos. 
+    Como o modelo de transcrição (Whisper) pode inserir palavras incorretas ao tentar completar trechos de áudio cortados, 
+    pode haver erros ou palavras mal transcritas. Alguns termos médicos, como nomes de medicamentos e doenças podem ser reconhecidos de forma incorreta. 
+    Caso algum medicamento seja mal transcrito, tente corrigir para o nome correto, com base no contexto da consulta e na 
+    lista de medicamentos e doenças abaixo. Caso um medicamento ou doença não esteja na lista, tente identificá-lo pela semelhança fonética ou por 
+    palavras-chave relacionadas ao seu efeito ou classe.
+
+    Lista de Doenças Mais Comuns:
+      Epilepsia, Síndrome de West, Síndrome de Lennox-Gastaut, Epilepsia mioclônica juvenil, Epilepsia rolândica benigna, Espasmos infantis, Epilepsia generalizada idiopática, Encefalopatia epiléptica, Crises febris, Paralisia cerebral, Transtorno do espectro autista (TEA), Deficiência intelectual, Atraso global do desenvolvimento, Transtorno de déficit de atenção e hiperatividade (TDAH), Transtornos de aprendizagem, Distúrbios do sono, Distúrbios de tique (incluindo Síndrome de Tourette), Hidrocefalia, Mielomeningocele, Malformação de Chiari, Distrofia muscular de Duchenne, Distrofia muscular de Becker, Atrofia muscular espinhal (AME), Esclerose tuberosa, Neurofibromatose tipo 1, Neurofibromatose tipo 2, Esclerose múltipla pediátrica, Encefalomielite disseminada aguda (ADEM), Síndrome de Guillain-Barré, Síndrome de Miller Fisher, Polineuropatia desmielinizante inflamatória crônica (CIDP), Hipotonia congênita, Hipotonia central, Distúrbios metabólicos congênitos, Leucinose, Doença de Tay-Sachs, Doença de Niemann-Pick, Doença de Wilson, Fenilcetonúria, Homocistinúria, Acidúria glutárica, Deficiências de biotinidase, Deficiência de piruvato desidrogenase, Doença de Pompe, Mucopolissacaridoses, Síndrome de Rett, Síndrome de Angelman, Síndrome de Prader-Willi, Síndrome de Williams, Síndrome de Cri-du-Chat, Doença de Huntington juvenil, Doenças mitocondriais, Leucoencefalopatia com envolvimento do tronco encefálico, Doença de Alexander, Doença de Canavan, Doença de Krabbe, Adrenoleucodistrofia, Síndrome de Leigh, Encefalopatia hipóxico-isquêmica, Paralisia braquial obstétrica, Hemorragia intracraniana neonatal, AVC neonatal, Trombose venosa cerebral, Infecções congênitas (toxoplasmose, citomegalovírus, rubéola), Meningite bacteriana, Meningite viral, Encefalite, Síndrome de Reye, Doença de Kawasaki com envolvimento neurológico, Neurossífilis, Neurocisticercose, Esquistossomose com envolvimento do SNC, Epilepsia pós-traumática, TCE (Traumatismo Cranioencefálico), Lesões axonais difusas, Hipertensão intracraniana idiopática, Malformações arteriovenosas, Aneurismas cerebrais, Tumores cerebrais pediátricos, Meduloblastoma, Astrocitoma, Ependimoma, Tumores do tronco encefálico, Glioma óptico, Craniotabes, Macrocefalia, Microcefalia, Transtorno de coordenação motora, Ataxia de Friedreich, Ataxia cerebelar adquirida, Encefalite autoimune, Encefalite por anticorpos anti-NMDA, Doença de Hashimoto com encefalopatia, Síndrome de Down com envolvimento neurológico, Síndrome de Turner com atrasos cognitivos, Doença de Lyme com envolvimento neurológico, Neuropatias hereditárias, Transtorno de estresse pós-traumático infantil, Distúrbios de conversão (transtornos funcionais neurológicos), Psicose infantil com base neurológica.
+    Lista de Medicamentos Mais Comuns:
+      Ácido valpróico, Lamotrigina, Levetiracetam, Carbamazepina, Topiramato, Oxcarbazepina, Clobazam, Clonazepam, Diazepam, Fenobarbital, Vigabatrina, Rufinamida, Zonisamida, Lacosamida, Gabapentina, Pregabalina, Cannabidiol (CBD), Etossuximida, Perampanel, Tiagabina, Felbamato, Sulfato de magnésio, Piracetam, Baclofeno, Tizanidina, Botulinum toxin tipo A (Botox), Amantadina, Risperidona, Aripiprazol, Olanzapina, Quetiapina, Haloperidol, Clozapina, Sertralina, Fluoxetina, Escitalopram, Citalopram, Paroxetina, Duloxetina, Venlafaxina, Metilfenidato, Dexmetilfenidato, Lisdexanfetamina, Atomoxetina, Guanfacina, Modafinil, Propanolol, Atenolol, Clonidina, Midazolam, Lorazepam, Acetazolamida, Hidroclorotiazida, Furosemida, Espironolactona, Betametasona, Prednisolona, Dexametasona, Metilprednisolona, Imunoglobulina intravenosa (IVIG), Rituximabe, Natalizumabe, Azatioprina, Micofenolato mofetil, Ciclofosfamida, Ciclosporina, Metotrexato, Interferon beta, Natalizumabe, Edaravona, Eculizumabe, Acetilcisteína, Vitamina D, Suplemento de ferro, Ácido fólico, Piridoxina (vitamina B6), Tiamina (vitamina B1), Biotina, Carnitina, Melatonina, Propranolol, Domperidona, Ondansetrona, Metoclopramida, Levotiroxina, Carbimazol, Propiltiouracil, Alendronato, Zolendronato, Loratadina, Desloratadina, Cetirizina, Montelucaste, Omeprazol, Pantoprazol, Lansoprazol, Esomeprazol, Ranitidina, Famotidina, Aminofilina, Teofilina, Sulfato de salbutamol, Brometo de ipratrópio, Budesonida, Fluticasona.
+
+    Instruções:
+      1.Verifique e corrija os nomes dos medicamentos: Ao identificar um medicamento na transcrição, corrija o nome, se necessário, comparando com a lista acima. 
+      2.Contextualize a transcrição: Se não tiver certeza sobre um nome de medicamento, faça uma suposição educada com base no contexto clínico.
+      3.Classificação da consulta:
+        - Sumarize a consulta em tópicos principais com uma estrutura clara e fácil de ler, sem símbolos de formatação como # ou *.
+        - Organize a consulta em uma lista numerada ou com marcadores.
+        - Classifique a consulta em categorias como descrita abaixo.
+      4. Não adicione informações que não estão na transcrição: Não inclua suposições além do que foi dito na consulta.
+
+    Exemplo de resposta:
+
+
+    Classificação da Consulta
+
+    Queixa Principal:
+
+    História da Doença Atual (HDA)/ Início dos sintomas:
+
+    Calendário das crises convulsivas:
+
+    História gestacional: 
+      Houve sangramento, Infecção,  Internação, Uso de drogas, Traumas? 
+
+    História do parto: 
+      Teste de Apgar foi maior que 7?
+      Chorou quando nasceu?
+      Qual perímetro cefálico (PC) de nascimento?
+      Teve alta ou se necessitou ficar internado?
+      Houve intercorrências após nascimento?
+
+    Desenvolvimento neuropsicomotor: 
+      Com que idade firmou a cabeça?
+      Qual idade que sentou com apoio? 
+      Sentou sem apoio, engatinhou, andou. 
+      Falou no tempo padrão?
+
+    História Familiar:
+      - Há histórico de doenças neurológicas (crises epilépticas, doenças genéticas ou psiquiátricas) ? 
+
+    Uso de medicações: 
+
+    Terapias:
+     - Fez uso de Fonoaudiologia (fono), Fisioterapia (Fisio), Terapia Ocupacional (TO), psicologia ou acompanha com outros profissionais? 
+
+    Exames realizados:
+      - Resultado dos exames realizados pelo paciente e analisado pelo médico.
+    Exame neurológico: 
+
+    Hipótese Diagnóstica:
+      Diagnóstico provável com base na avaliação clínica e exames realizados.
+
+    Conduta:
+      Tratamento proposto (ex.: início ou ajuste de medicações).
+      Solicitação de exames complementares.
+      Encaminhamentos (ex.: fisioterapia, terapia ocupacional, psicologia, etc.).
+      Orientações gerais ao paciente (ex.: controle de fatores de risco, reavaliação).
+  
+  Consulta de Neurologia: |
+      O seguinte texto é uma transcrição de uma consulta médica de neurologia:
+
+      {texto}
+
+      Você receberá a transcrição que foi realizada em pacotes de áudio de 8 segundos. 
+      Como o modelo de transcrição (Whisper) pode inserir palavras incorretas ao tentar completar trechos de áudio cortados, 
+      pode haver erros ou palavras mal transcritas. Alguns termos médicos, como nomes de medicamentos e doenças podem ser reconhecidos de forma incorreta. 
+      Caso algum medicamento seja mal transcrito, tente corrigir para o nome correto, com base no contexto da consulta e na 
+      lista de medicamentos e doenças abaixo. Caso um medicamento ou doença não esteja na lista, tente identificá-lo pela semelhança fonética ou por 
+      palavras-chave relacionadas ao seu efeito ou classe.
+
+      Lista de Doenças Mais Comuns:
+        Epilepsia, Crises focais, Crises generalizadas, Epilepsia do lobo temporal, Epilepsia mioclônica juvenil, Síndrome de Lennox-Gastaut, Status epilepticus, Enxaqueca, Cefaleia tensional, Cefaleia em salvas, Nevralgia do trigêmeo, Cefaleia crônica diária, Hemicrania contínua, Cefaleia hípnica, Trombose venosa cerebral, Acidente vascular cerebral (AVC) isquêmico, AVC hemorrágico, Ataque isquêmico transitório (AIT), Hemorragia subaracnóidea, Hematoma subdural, Hematoma epidural, Esclerose múltipla, Neuromielite óptica, Encefalomielite disseminada aguda (ADEM), Doença de Parkinson, Tremor essencial, Distonia cervical, Coreia de Huntington, Ataxia cerebelar adquirida, Ataxia de Friedreich, Doenças mitocondriais, Esclerose lateral amiotrófica (ELA), Atrofia muscular progressiva, Polineuropatia desmielinizante inflamatória crônica (CIDP), Síndrome de Guillain-Barré, Miastenia gravis, Síndrome de Lambert-Eaton, Distúrbios do sono, Insônia, Síndrome das pernas inquietas, Apneia obstrutiva do sono, Paralisia do sono, Encefalopatia hepática, Encefalopatia urêmica, Encefalopatia hipóxico-isquêmica, Encefalopatia de Wernicke, Síndrome de Korsakoff, Meningite bacteriana, Meningite viral, Encefalite, Neurocisticercose, Neurotoxoplasmose, Neurossífilis, Esquistossomose com envolvimento do SNC, Doença de Lyme com envolvimento neurológico, Síndrome de Horner, Malformações arteriovenosas, Aneurismas cerebrais, Hidrocefalia, Hipertensão intracraniana idiopática, Tumores cerebrais primários, Glioblastoma multiforme, Astrocitoma, Meningioma, Ependimoma, Tumores metastáticos cerebrais, Síndrome de paraneoplasia neurológica, Lesão axonal difusa (TCE), Transtorno de estresse pós-traumático, Distúrbios funcionais neurológicos, Esclerose tuberosa, Neurofibromatose tipo 1, Neurofibromatose tipo 2, Distrofia miotônica, Miopatias inflamatórias (polimiosite, dermatomiosite), Doenças autoimunes do SNC, Vasculite cerebral, Doença de Alzheimer, Demência vascular, Demência frontotemporal, Demência com corpos de Lewy, Amnésia global transitória, Transtornos cognitivos leves, Depressão com sintomas neurológicos, Psicose com base neurológica, Esquizofrenia com sintomas neurológicos, Transtornos conversivos, Síndrome serotoninérgica, Intoxicação por álcool, Delirium tremens, Neuropatias periféricas diabéticas, Neuropatia alcoólica, Síndrome do túnel do carpo, Neuralgia pós-herpética, Radiculopatia cervical, Radiculopatia lombossacral.
+      
+      Lista de Medicamentos Mais Comuns:
+        Ácido valpróico, Lamotrigina, Levetiracetam, Carbamazepina, Topiramato, Oxcarbazepina, Clobazam, Clonazepam, Diazepam, Fenobarbital, Vigabatrina, Rufinamida, Zonisamida, Lacosamida, Gabapentina, Pregabalina, Cannabidiol (CBD), Etossuximida, Perampanel, Tiagabina, Fenitoína, Felbamato, Sulfato de magnésio, Piracetam, Baclofeno, Tizanidina, Botulinum toxin tipo A (Botox), Amantadina, Rivastigmina, Donepezila, Galantamina, Memantina, L-dopa + Carbidopa, Pramipexol, Ropinirol, Rotigotina, Apomorfina, Selegilina, Rasagilina, Entacapona, Tolcapona, Opicapona, Safinamida, Amantadina, Propranolol, Atenolol, Clonidina, Metoprolol, Metilfenidato, Lisdexanfetamina, Atomoxetina, Guanfacina, Modafinil, Lorazepam, Midazolam, Bromazepam, Alprazolam, Escitalopram, Sertralina, Fluoxetina, Paroxetina, Duloxetina, Venlafaxina, Amitriptilina, Nortriptilina, Desipramina, Clomipramina, Imipramina, Topiramato (para enxaqueca), Valproato (para enxaqueca), Candesartana, Flunarizina, Verapamil, Ergotamina, Dihidroergotamina, Naratriptano, Sumatriptano, Rizatriptano, Zolmitriptano, Eletriptano, Lasmiditan, Erenumabe, Fremanezumabe, Galcanezumabe, Eptinezumabe, Betametasona, Prednisolona, Dexametasona, Metilprednisolona, Rituximabe, Natalizumabe, Ocrelizumabe, Fingolimode, Dimetilfumarato, Teriflunomida, Alemtuzumabe, Azatioprina, Micofenolato mofetil, Ciclofosfamida, Interferon beta, Edaravona, Eculizumabe.
+      
+      Instruções:
+        1.Verifique e corrija os nomes dos medicamentos: Ao identificar um medicamento na transcrição, corrija o nome, se necessário, comparando com a lista acima. 
+        2.Contextualize a transcrição: Se não tiver certeza sobre um nome de medicamento, faça uma suposição educada com base no contexto clínico.
+        3.Classificação da consulta:
+          - Sumarize a consulta em tópicos principais com uma estrutura clara e fácil de ler, sem símbolos de formatação como # ou *.
+          - Organize a consulta em uma lista numerada ou com marcadores.
+          - Classifique a consulta em categorias como descrita abaixo.
+        4. Não adicione informações que não estão na transcrição: Não inclua suposições além do que foi dito na consulta.
+
+      Exemplo de resposta:
+
+
+      Classificação da Consulta
+
+      Queixa Principal:
+      O motivo que levou o paciente a buscar atendimento (ex.: dor de cabeça, tontura, fraqueza, crises convulsivas, etc.).
+
+      História da Doença Atual (HDA):
+      Quando começaram os sintomas?
+      Quais foram os sintomas iniciais?
+      Houve progressão ou alteração nos sintomas?
+
+      História Médica Prévia:
+      Doenças crônicas, como hipertensão, diabetes, epilepsia, doenças autoimunes, etc.
+      Histórico de AVC, TCE (Traumatismo Cranioencefálico), ou outras doenças neurológicas prévias.
+
+      História Familiar:
+      Há histórico de doenças neurológicas na família?
+      Casos de epilepsia, AVC, doenças degenerativas, enxaquecas, ou doenças hereditárias?
+
+      Uso de Medicações:
+      Lista de medicações em uso pelo paciente, corrigindo os nomes, se necessário.
+
+      História Social:
+      Tabagismo, etilismo, ou uso de drogas recreativas.
+      Impacto dos sintomas na vida diária, trabalho ou atividades sociais.
+
+      Exame Físico e Neurológico:
+      Alterações motoras (ex.: hemiparesia, paralisia, rigidez).
+      Sensibilidade (ex.: hipoestesia, parestesia).
+      Funções cognitivas (ex.: memória, linguagem).
+      Reflexos ou ROTs (ex.: hiperreflexia, arreflexia).
+      Alterações cranianas (ex.: pares cranianos, ,mímica facial).
+
+      Exames Realizados:
+      Resultados de exames de imagem (ex.: ressonância magnética, tomografia computadorizada).
+      Exames laboratoriais (ex.: função renal, hepática, glicemia, perfil lipídico).
+      Exames eletrofisiológicos (ex.: EEG, eletroneuromiografia).
+      Incluir em cada exame quando mencionado:
+      Data e clínica/profissional resposável pelo laudo.
+
+      Hipótese Diagnóstica:
+      Diagnóstico provável com base na avaliação clínica e exames realizados.
+
+      Conduta:
+      Tratamento proposto (ex.: início ou ajuste de medicações).
+      Solicitação de exames complementares.
+      Encaminhamentos (ex.: fisioterapia, terapia ocupacional, psicologia, etc.).
+      Orientações gerais ao paciente (ex.: controle de fatores de risco, reavaliação).
+  Consulta de Cirurgia Plástica - Face: |
+    O seguinte texto é uma transcrição de uma consulta médica de rinoplastia:
+
+      {texto}
+
+      Você receberá a transcrição que foi realizada em pacotes de áudio de 8 segundos. 
+      Como o modelo de transcrição (Whisper) pode inserir palavras incorretas ao tentar completar trechos de áudio cortados, 
+      pode haver erros ou palavras mal transcritas. Alguns termos médicos, como nomes de medicamentos e doenças podem ser reconhecidos de forma incorreta. 
+      Caso algum medicamento seja mal transcrito, tente corrigir para o nome correto, com base no contexto da consulta e na 
+      lista de medicamentos e doenças abaixo. Caso um medicamento ou doença não esteja na lista, tente identificá-lo pela semelhança fonética ou por 
+      palavras-chave relacionadas ao seu efeito ou classe.
+
+    Lista de Medicamentos Mais Comuns:
+    Amoxicilina + Clavulanato, Cefalexina, Azitromicina, Claritromicina, Ceftriaxona, Levofloxacino, Ciprofloxacino, Clindamicina, Diclofenaco, Ibuprofeno, Naproxeno, Cetoprofeno, Paracetamol, Dipirona, Prednisona, Dexametasona, Hidrocortisona, Betametasona, Loratadina, Desloratadina, Fexofenadina, Cetirizina, Levocetirizina, Montelucaste, Omeprazol, Pantoprazol, Lansoprazol, Sucralfato, Domperidona, Metoclopramida, Ondansetrona, Hidroxizina, Bromoprida, Diazepam, Alprazolam, Clonazepam, Midazolam, Amitriptilina, Nortriptilina, Gabapentina, Pregabalina, Betahistina, Flunarizina, Cinarizina, Dimenidrinato, Meclizina, Acetazolamida, Furosemida, Hidroclorotiazida, Losartana, Enalapril, Atenolol, Carvedilol, Propranolol, Lidocaína tópica, Tramadol, Codeína, Morfina, Fentanil, Cetamina, Adrenalina (Epinefrina), Clorexidina tópica, Rifamicina tópica, Ácido fusídico, Neomicina + Bacitracina, Mupirocina, Peróxido de benzoíla, Isotretinoína, Doxiciclina, Minociclina, Cloreto de sódio 0,9% (solução salina nasal), Budesonida nasal, Fluticasona nasal, Mometasona nasal, Beclometasona nasal, Oximetazolina, Fenilefrina, Xilometazolina, N-acetilcisteína, Bromexina, Ambroxol, Carbocisteína, Acetilcisteína inalável, Penicilina G Benzatina, Benzilpenicilina, Fenoximetilpenicilina, Gentamicina, Tobramicina, Vancomicina, Metronidazol, Rifampicina, Linezolida, Sulfato de magnésio, Cloreto de potássio, Soro fisiológico, Soro Ringer lactato, Albumina, Plasma fresco congelado, Imunoglobulina.
+
+    Lista de Doenças Mais Comuns:
+    Desvio de septo nasal, Hipertrofia de cornetos nasais, Rinite alérgica, Rinite vasomotora, Sinusite aguda, Sinusite crônica, Polipose nasal, Síndrome do nariz vazio, Obstrução nasal crônica, Epistaxe (sangramento nasal), Fratura nasal, Fratura de zigomático, Fratura de mandíbula, Fratura de maxila (Le Fort I, II, III), Fratura de órbita, Celulite periorbitária, Celulite orbitária, Síndrome da apneia obstrutiva do sono (SAOS), Ronco crônico, Hipertrofia de adenoide, Hipertrofia de amígdalas, Amigdalite bacteriana, Amigdalite viral, Abscesso periamigdaliano, Abscesso retrofaríngeo, Laringite aguda, Laringite crônica, Disfonia funcional, Pólipos de cordas vocais, Nódulos vocais, Edema de Reinke, Paralisia de prega vocal, Câncer de laringe, Câncer de cavidade oral, Câncer de nasofaringe, Câncer de orofaringe, Câncer de seios paranasais, Otite externa, Otite média aguda, Otite média crônica, Perfuração timpânica, Colesteatoma, Mastoidite, Zumbido (tinnitus), Surdez súbita, Perda auditiva neurossensorial, Perda auditiva condutiva, Doença de Ménière, VPPB (Vertigem Posicional Paroxística Benigna), Neurite vestibular, Labirintite, Paralisia de Bell, Neuroma do acústico, Disfunção da tuba auditiva, Queimadura facial, Cicatriz hipertrófica, Quelóide nasal ou auricular, Hematoma septal, Fístula liquórica, Síndrome de Crouzon, Síndrome de Apert, Síndrome de Treacher Collins, Síndrome de Goldenhar, Microtia, Macrotia, Atresia de coanas, Síndrome de Down – alterações otorrinolaringológicas, Hipotireoidismo congênito – impacto na face e voz, Hipertiroidismo – exoftalmia, Granulomatose de Wegener, Sarcoidose nasal, Tuberculose laríngea, Sífilis congênita – deformidades faciais, Hanseníase – lesões faciais e auriculares, HPV na orofaringe, Gripe e resfriado comum, Covid-19 e sequelas respiratórias, Síndrome de Sjögren, Síndrome de Stevens-Johnson, Doença de Behçet, Hemangioma nasal, Linfangioma cervical, Disfunção temporomandibular (DTM), Bruxismo, Glossodínia (síndrome da boca ardente), Aftas recorrentes, Candidíase oral, Faringite viral, Epiglotite, Queimadura química nasal, Tumores benignos de nariz e seios paranasais, Rinofima (rosácea avançada), Rinosseptoplastia pós-trauma, Rinoplastia secundária (correção de complicações), Implantes faciais (mentoplastia, zigomático), Correção de ptose palpebral, Lift facial pós-trauma, Reparo de fístula oronasal, Enxertos cartilaginosos para reconstrução nasal, Microcirurgia laríngea.
+
+    Instruções:
+      1.Verifique e corrija os nomes dos medicamentos: Ao identificar um medicamento na transcrição, corrija o nome, se necessário, comparando com a lista acima. 
+      2.Contextualize a transcrição: Se não tiver certeza sobre um nome de medicamento, faça uma suposição educada com base no contexto clínico.
+      3.Classificação da consulta:
+        - Sumarize a consulta em tópicos principais com uma estrutura clara e fácil de ler, sem símbolos de formatação como # ou *.
+        - Organize a consulta em uma lista numerada ou com marcadores.
+        - Classifique a consulta em categorias como queixas principais, histórico médico, medicamentos mencionados, exames realizados e instruções ao paciente.
+      4. Não adicione informações que não estão na transcrição: Não inclua suposições além do que foi dito na consulta.
+
+    Exemplo de resposta:
+
+    Queixa Principal:
+    -	Qual a principal motivação para a consulta? (ex.: estética, funcional, trauma, sequelas de cirurgia prévia)
+    -	Há alguma queixa respiratória associada? (ex.: obstrução nasal, ronco, sinusite crônica)
+
+    História da Doença Atual (HDA):
+      -	Quando começou a insatisfação estética ou a dificuldade funcional?
+      -	Houve algum evento desencadeante? (ex.: trauma, cirurgia anterior, infecção)
+      -	O problema piorou com o tempo ou permaneceu estável?
+
+    História Médica e Cirúrgica Prévia:
+      -	Possui histórico de cirurgias faciais anteriores? (ex.: rinoplastia, septoplastia, bichectomia)
+      -	Há antecedentes de alergias respiratórias ou dermatológicas?
+      -	Tem histórico de infecções crônicas nasais ou sinusais?
+
+    História Familiar:
+      -	Há casos de alterações anatômicas faciais ou problemas respiratórios familiares?
+
+    Uso de Medicações e Hábitos:
+      -	Faz uso de anticoagulantes ou outros medicamentos contínuos?
+      -	Tabagismo, etilismo ou uso de substâncias que possam interferir na cicatrização?
+
+    Exames Realizados:
+      -	Já realizou exames de imagem (tomografia, ressonância) ou testes respiratórios?
+      -	Alguma avaliação prévia por outro especialista?
+
+    Exame Físico e Avaliação Clínica:
+      -	Inspeção da face e estrutura nasal.
+      -	Avaliação da função respiratória e simetria facial.
+      -	Presença de desvios septais, hipertrofia de cornetos ou outras alterações estruturais.
+
+    Hipótese Diagnóstica:
+      -	Diagnóstico provável baseado na avaliação clínica e exames realizados.
+
+    Conduta e Plano Terapêutico:
+      -	Indicação cirúrgica e tipo de procedimento recomendado.
+      -	Possíveis riscos e benefícios da cirurgia.
+      -	Orientações pré e pós-operatórias.
+      -	Solicitação de exames complementares (ex.: exames laboratoriais, tomografia, avaliação cardiológica se necessário).
+      -	Encaminhamentos para suporte multidisciplinar (ex.: fisioterapia respiratória, dermatologia para preparo da pele, fonoaudiologia se necessário).
+
+  Consulta Padrão: |
+    O seguinte texto é uma transcrição de uma consulta médica:
+
+    {texto}
+
+    Você receberá a transcrição que foi realizada em pacotes de áudio de 5 segundos. Como o modelo de transcrição (Whisper) pode inserir palavras incorretas ao tentar completar trechos de áudio cortados, pode haver erros ou palavras mal transcritas. Alguns termos médicos, como nomes de medicamentos, podem ser reconhecidos de forma incorreta. 
+    Caso algum medicamento seja mal transcrito, tente corrigir para o nome correto, com base no contexto da consulta e na lista de medicamentos abaixo. Caso um medicamento não esteja na lista, tente identificá-lo pela semelhança fonética ou por palavras-chave relacionadas ao seu efeito ou classe.
+
+    Lista de Medicamentos Mais Comuns:
+      Paracetamol, Ibuprofeno, Amoxicilina, Captopril, Losartana, Dipirona, Omeprazol, Clonazepam, Fluoxetina, Diazepam, Simvastatina, Metformina,
+      Salbutamol, Naproxeno, Furosemida, Enalapril, Aspirina, Tansulosina, Prednisona, Tramadol, Ciprofloxacino, Atorvastatina, Fluticasona, Hidroclorotiazida,
+      Loratadina, Carvedilol, Salmeterol, Levotiroxina, Ranitidina, Dorzolamida, Ciclosporina, Tamsulosina, Cefalexina, Metoclopramida, Levofloxacino, Sertralina,
+      Moxifloxacino, Lorazepam, Codeína, Sertralina, Miconazol, Fenitoína, Alprazolam, Fluvoxamina, Bromoprida, Glibenclamida, Valsartana, Vitaminas D, Ácido Fólico, 
+      Lansoprazol, Cloridrato de Fluoxetina, Insulina NPH, Gliclazida, Carbamazepina, Nifedipina, Amlodipina, Ciclosporina, Prazosina, Risperidona, Paroxetina, 
+      Valeriana, Carmustina, Diprogenta, Cephalexina, Fentanil, Toxina Botulínica, Candesartan, Haloperidol, Betametasona, Amiodarona, Vildagliptina, Diltiazem, 
+      Lisinopril, Fluconazol, Bromazepam, Azitromicina, Metronidazol, Fenoterol, Quetiapina, Clindamicina, Triclosan, Azatioprina, Espironolactona, Propranolol, 
+      Lidocaína, Ceftriaxona, Terbinafina, Gabapentina, Pregabalina, Zolpidem, Ampicilina, Metamizol, Midazolam, Nicardipina, Haloperidol, Tadalafil, Oxybutynin, 
+      Loxoprofen, Ticlopidina, Dexametasona, Cloridrato de Metformina, Mirtazapina, Lisinopril, Cefepima, Morfina, Carboplatina, Lorazepam, Nimesulida, Sertralina,
+      Desvenlafaxina, Etoricoxibe, Lidocaína, Fluorouracilo, Mebendazol, Propranolol, Prednisolona, Terazosina, Levetiracetam, Rivastigmina, N-acetilcisteína, 
+      Gabapentina, Buspirona, Enoxaparina, Aciclovir, Furosemida, Terbinafina, Tiroxina, Doxepina, Ciprofloxacino, Betaxolol, Tiamina, Betametasona, Cloridrato de Propanolol, 
+      Cloridato de Bisoprolol, Diclofenaco, Azatioprina, Donepezila, Tramadol, Enalapril, Doxazosina, Vincristina, Aripiprazol, Ropinirol, Cloridrato de Venlafaxina, Lidocaína,
+      Hidrato de Cloroquina, Etoposídeo, Hidroxicloroquina, Topiramato, Escitalopram, Fluoxetina, Epinefrina, Amiodarona, Fluoxetina, Loratadina, Agomelatina, Sertralina, Morfina, 
+      Carboplatina, Enoxaparina, Rifampicina, Amitriptilina, Agomelatina, Cloridrato de Metformina, Antibióticos Cefalosporinas, Fluconazol, Metotrexato, Indapamida, Cimetidina, 
+      Hidralazina, Diclofenaco, Clindamicina, Gliclazida, Trimetoprim, Aripiprazol, Loratadina, Metronidazol, Diclofenaco, Cianocobalamina, Orlistat, Hydrocodone, Cefalexina, Atropina, 
+      Flurazepam, Sildenafil, Terbutalina, Baclofeno, Cloridrato de Nifedipina, Gabapentina, Doxilamina, Betametasona, Epinefrina, Fenilpropanolamina, Topiramato, Fluoresceína, Ezetimiba, 
+      Cloridrato de Tamsulosina, Anticoagulantes, N-acetilcisteína, Acetato de Hidrocortisona, Ácido Valpróico, Zolpidem, Carvedilol, Furosemida, Asenapina, Cloridrato de Clonazepam, Prazosina, 
+      Ezetimiba, Azitromicina, Dantroleno, Clindamicina, Ceftriaxona, Neostigmina, Fenitoína, Metoclopramida, Bisoprolol, Amoxicilina, Atorvastatina, Cloridrato de Bisoprolol, Estavudina, Lamotrigina, 
+      Atorvastatina, Rifampicina, Simvastatina, Dantroleno, Glimepirida, Ranitidina, Cefuroxima, Fentanil, Ambroxol, Dexametasona, Insulina, Zolpidem, Amlodipina, Inibidores de Protease, Trimetoprim-Sulfametoxazol, 
+      Cipro, Atorvastatina, Carvedilol, Rifampicina, Corticosteróides, Betaxolol, Brintelix.
+
+    Instruções:
+      1.Verifique e corrija os nomes dos medicamentos: Ao identificar um medicamento na transcrição, corrija o nome, se necessário, comparando com a lista acima. 
+      2.Contextualize a transcrição: Se não tiver certeza sobre um nome de medicamento, faça uma suposição educada com base no contexto clínico.
+      3.Classificação da consulta:
+        - Sumarize a consulta em tópicos principais com uma estrutura clara e fácil de ler, sem símbolos de formatação como # ou *.
+        - Organize a consulta em uma lista numerada ou com marcadores.
+        - Classifique a consulta em categorias como queixas principais, histórico médico, medicamentos mencionados, exames realizados e instruções ao paciente.
+      4. Não adicione informações que não estão na transcrição: Não inclua suposições além do que foi dito na consulta.
+
+    Exemplo de resposta:
+
+    Classificação da Consulta:
+
+    Queixas Principais:
+      - Queixa 1.
+      - Queixa N.
+
+    Histórico Médico:
+      - Histórico médico relevante.
+
+    Medicamentos Mencionados:
+      - Medicamento 1.
+      - Medicamento 2.
+
+    Exames Realizados:
+      - Resultado dos exames realizados pelo paciente e analisado pelo médico.
+
+    Hipótese Diagnóstica:
+      Diagnóstico provável com base na avaliação clínica e exames realizados.
+
+    Conduta:
+      Tratamento proposto (ex.: início ou ajuste de medicações).
+      Solicitação de exames complementares.
+      Encaminhamentos (ex.: fisioterapia, terapia ocupacional, psicologia, etc.).
+      Orientações gerais ao paciente (ex.: controle de fatores de risco, reavaliação).
+      
+  Atestado: |
+    O texto abaixo contém informações de uma consulta médica.
+
+    {texto}
+
+    Extraia do texto apenas as informações necessárias para compor um atestado médico simples, seguindo exatamente o modelo abaixo.  
+    Não escreva explicações, análises ou comentários.  
+    Se não houver informações suficientes para gerar um atestado válido, apenas escreva: "Não há dados suficientes para emissão de atestado médico."
+
+    Modelo a ser seguido:
+
+    Atesto para devidos fins, que o(a) Sr(a). [Nome do paciente] está sob meu acompanhamento e foi diagnosticado(a) com [condição médica (CID opcional pelo médico)]. Recomendo afastamento pelo período de [n dias]. [Recomendações adicionais, se houver.]
+
+    **Instruções:**
+    - Preencha apenas os campos para os quais há informação na transcrição.
+    - Não acrescente nomes, diagnósticos, períodos ou recomendações que não estejam no texto.
+    - Caso não haja nome do paciente, omita o campo.
+    - Caso não haja período de afastamento, omita o campo.
+    - Se não houver recomendações adicionais, omita essa parte.
+    - Não escreva nada além do texto do atestado.
+
+    Exemplo de resposta:
+
+    Atesto que o(a) Sr(a). Otávio Xavier Barbosa está sob meu acompanhamento e foi diagnosticado(a) com lesão no pulso direito, com suspeita de fratura. Recomendo afastamento pelo período de três dias.
+    Você não deve em hipótese alguma acrescentar informações que não esteja nas transcrições
+
+  Receita: |
+    Considere que você está extraindo apenas o corpo da prescrição de uma receita médica.
+    
+    {texto}
+    
+    Verifique se o conteúdo está relacionado a uma receita médica. Se não houver informações relevantes, indique que o conteúdo não está relacionado a uma receita.
+    
+    Para cada medicamento prescrito, utilize a seguinte estrutura:
+    
+    [número sequencial] [NOME DO MEDICAMENTO] [dosagem] ------------------------------------------------------ [quantidade, apresentação]
+    Instrução de uso: [modo de tomar, frequência, duração, observações]
+
+    Exemplo de prescrição:
+
+    1 CLAVULIN BD 875mg ------------------------------------------------------ 1 caixa
+    Tomar 01 cp de 12/12h por 7 dias.
+
+    2 DIPIRONA 500mg ------------------------------------------------------ 1 caixa
+    Tomar 01 cp se houver dor, até 3 vezes ao dia.
+
+    Atenção:
+    - O tracejado deve ser colocado exatamente como no exemplo, entre o nome do medicamento/dosagem e a apresentação/quantidade.
+    - Não inclua cabeçalho, assinatura, nome do médico, nome do paciente ou qualquer campo adicional.
+    - Apenas o texto das prescrições no padrão acima.
+    - Se não houver prescrição, escreva: "Não há medicamentos prescritos."
+    - Não invente dados que não estejam presentes no texto fornecido.
+
+    Siga o padrão dos exemplos fielmente.
+
+    abaixo segue uma lista dos 200 medicamentos mais prescritos no brasil:
+
+    Paracetamol, Ibuprofeno, Amoxicilina, Captopril, Losartana, Dipirona, Omeprazol, Clonazepam, Fluoxetina, Diazepam, Simvastatina, Metformina, Salbutamol,
+    Naproxeno, Furosemida, Enalapril, Aspirina, Tansulosina, Prednisona, Tramadol, Ciprofloxacino, Atorvastatina, Fluticasona, Hidroclorotiazida, Loratadina,
+    Carvedilol, Salmeterol, Levotiroxina, Ranitidina, Dorzolamida, Ciclosporina, Tamsulosina, Cefalexina, Metoclopramida, Levofloxacino, Sertralina, 
+    Moxifloxacino, Lorazepam, Codeína, Sertralina, Miconazol, Fenitoína, Alprazolam, Fluvoxamina, Bromoprida, Glibenclamida, Valsartana, Vitaminas D, 
+    Ácido Fólico, Lansoprazol, Cloridrato de Fluoxetina, Insulina NPH, Gliclazida, Carbamazepina, Nifedipina, Amlodipina, Ciclosporina, Prazosina, Risperidona,
+    Paroxetina, Valeriana, Carmustina, Diprogenta, Cephalexina, Fentanil, Toxina Botulínica, Candesartan, Haloperidol, Betametasona, Amiodarona, Vildagliptina, 
+    Diltiazem, Lisinopril, Fluconazol, Bromazepam, Azitromicina, Metronidazol, Fenoterol, Quetiapina, Clindamicina, Triclosan, Azatioprina, Espironolactona,
+    Propranolol, Lidocaína, Ceftriaxona, Terbinafina, Gabapentina, Pregabalina, Zolpidem, Ampicilina, Metamizol, Midazolam, Nicardipina, Haloperidol, Tadalafil, 
+    Oxybutynin, Loxoprofen, Ticlopidina, Dexametasona, Cloridrato de Metformina, Mirtazapina, Lisinopril, Cefepima, Morfina, Carboplatina, Lorazepam, Nimesulida, 
+    Sertralina, Desvenlafaxina, Etoricoxibe, Lidocaína, Fluorouracilo, Mebendazol, Propranolol, Prednisolona, Terazosina, Levetiracetam, Rivastigmina, N-acetilcisteína,
+    Gabapentina, Buspirona, Enoxaparina, Aciclovir, Furosemida, Terbinafina, Tiroxina, Doxepina, Ciprofloxacino, Betaxolol, Tiamina, Betametasona, Cloridrato de Propanolol, 
+    Cloridato de Bisoprolol, Diclofenaco, Azatioprina, Donepezila, Tramadol, Enalapril, Doxazosina, Vincristina, Aripiprazol, Ropinirol, Cloridrato de Venlafaxina, Lidocaína, 
+    Hidrato de Cloroquina, Etoposídeo, Hidroxicloroquina, Topiramato, Escitalopram, Fluoxetina, Epinefrina, Amiodarona, Fluoxetina, Loratadina, Agomelatina, Sertralina, Morfina, 
+    Carboplatina, Enoxaparina, Rifampicina, Amitriptilina, Agomelatina, Cloridrato de Metformina, Antibióticos Cefalosporinas, Fluconazol, Metotrexato, Indapamida, Cimetidina, 
+    Hidralazina, Diclofenaco, Clindamicina, Gliclazida, Trimetoprim, Aripiprazol, Loratadina, Metronidazol, Diclofenaco, Cianocobalamina, Orlistat, Hydrocodone, Cefalexina, Atropina, 
+    Flurazepam, Sildenafil, Terbutalina, Baclofeno, Cloridrato de Nifedipina, Gabapentina, Doxilamina, Betametasona, Epinefrina, Fenilpropanolamina, Topiramato, Fluoresceína, Ezetimiba, 
+    Cloridrato de Tamsulosina, Anticoagulantes, N-acetilcisteína, Acetato de Hidrocortisona, Ácido Valpróico, Zolpidem, Carvedilol, Furosemida, Asenapina, Cloridrato de Clonazepam, Prazosina, 
+    Ezetimiba, Azitromicina, Dantroleno, Clindamicina, Ceftriaxona, Neostigmina, Fenitoína, Metoclopramida, Bisoprolol, Amoxicilina, Atorvastatina, Cloridrato de Bisoprolol, Estavudina, Lamotrigina,
+    Atorvastatina, Rifampicina, Simvastatina, Dantroleno, Glimepirida, Ranitidina, Cefuroxima, Fentanil, Ambroxol, Dexametasona, Insulina, Zolpidem, Amlodipina, Inibidores de Protease, 
+    Trimetoprim-Sulfametoxazol, Cipro, Atorvastatina, Carvedilol, Rifampicina, Corticosteróides, Betaxolol.
+
+    Você não deve em hipótese alguma acrescentar informações que não esteja nas transcrições
+
+  Exame: |
+    O seguinte texto contém informações sobre exames médicos solicitados (laboratoriais e/ou de imagem):
+    
+    {texto}
+    
+    
+    Analise o texto e, caso haja exames médicos a serem solicitados, extraia as informações relevantes e organize conforme o padrão abaixo:
+
+    Solicitação de Exames
+
+    Exame: [Nome do exame]
+    Justificativa: [Motivo clínico da solicitação]
+    Instruções: [Instruções ao paciente ou laboratório, se houver]
+
+    Exemplo:
+
+    Exame: Hemograma completo
+    Justificativa: Avaliação de anemia e alterações hematológicas.
+    Instruções: Jejum de 8 horas.
+
+    Exame: Ressonância Magnética de Crânio
+    Justificativa: Cefaleia recorrente, sem resposta a analgésicos.
+    Instruções: Suspender analgésicos 48h antes do exame.
+
+    Instruções para a resposta:
+    - Liste cada exame separadamente.
+    - Não use bullets, asteriscos ou qualquer formatação markdown.
+    - Se não houver instruções para o exame, omita a linha "Instruções".
+    - Não inclua cabeçalho, rodapé, campos de assinatura, nome do médico ou paciente.
+    - Caso não haja exames solicitados, escreva: "Não há exames a serem solicitados."
+
+    Não invente exames ou informações que não estejam presentes no texto fornecido.
+
+Psicólogo: 
+  Consulta: |
+    O seguinte texto é uma transcrição de uma sessão de psicologia:
+    
+    {texto}
+    
+    Verifique se o conteúdo está relacionado a uma sessão de psicologia. Se não houver conteúdo relevante, retorne uma mensagem indicando que não está relacionado à psicologia.
+    
+    Por favor, faça o seguinte:
+    1. Resuma a sessão em tópicos principais abordados usando uma estrutura clara de títulos e subtítulos, sem usar símbolos de formatação como # ou *.
+    2. Use numeração ou marcadores para organizar as informações.
+    3. Classifique as principais preocupações, histórico emocional, soluções encontradas, instruções ou recomendações fornecidas e tópicos importantes para serem abordados na próxima sessão.
+
+    Você não deve em hipótese alguma acrescentar informações que não esteja nas transcrições
+
+  Atestado: |
+    O seguinte texto é uma solicitação para emissão de um atestado médico:
+    
+    {texto}
+    
+    Verifique se o texto está relacionado à emissão de um atestado. Se não houver informações relevantes, indique que o conteúdo não está relacionado a um atestado.
+    
+    Por favor, faça o seguinte:
+    1. Identifique a condição médica que justifica o atestado.
+    2. Defina o período de afastamento necessário, se especificado.
+    3. Inclua quaisquer recomendações adicionais para o paciente.
+
+    Você não deve em hipótese alguma acrescentar informações que não esteja nas transcrições
+
+Advogado: 
+  Depoimento: |
+    O seguinte texto é uma transcrição de um depoimento entre cliente e advogado:
+    
+    {texto}
+    
+    Você receberá a transcrição de áudio de um depoimento para um boletim de ocorrência. A transcrição foi realizada em pacotes de áudio de 8 segundos com sobreposição de 1s.
+    O intuito é garantir que palavras que possam ter sido cortadas no final de um pacote seja capturada corretamente no início do novo pacote.
+    Essa estratégia foi criada pelo fato do modelo de transcrição (Whisper) tentar prever palavras cortadas, colocando palavras incorretas no lugar.
+
+    Seu objetivo é
+    1.  Unificar os pacotes de áudio, garantindo continuidade e coerência no texto final.
+    2.  Garantir a coesão e coerência do texto usando a sobreposição para minimizar o erro pela predição do modelo.	
+    3.	Manter o texto exatamente como foi falado, respeitando o conteúdo original, sem resumir, simplificar ou alterar a intenção do depoimento.
+    	
+
+    Importante
+    -	Revise palavras ou trechos que não façam sentido lógico com o restante do texto. Corrija essas previsões com base no contexto.
+    -	Caso não seja possível corrigir um erro de previsão por falta de contexto, marque a parte problemática como [inaudível/incompleto].
+    -	Não adicione interpretações próprias ou modifique o significado do texto.
+
+    Exemplo de entrada
+    Frase dita - “Assim, continuamos procurando os pertences da vítima, com intuito de encontrarmos alguma pista relevante”
+    Transcrição do Whisper - pacote 1 - “Assim, continuamos procurando os pertences da vitória.”
+    Transcrição do Whisper - pacote 2 - “da vítima com intuito de encontrarmos alguma pista relevante.”
+    Exemplo de saída esperada
+    “Assim, continuamos procurando os pertences da vítima, com intuito de encontrarmos alguma pista relevante.”
+
+    Outro Exemplo de entrada
+    Frase dita - “Ele foi visto saindo da casa em direção à rua principal.”
+    Transcrição do Whisper - “Ele foi visto saindo da caça em direção à rua principal.”
+    Exemplo de saída esperada
+    “Ele foi visto saindo da casa em direção à rua principal.”
+
+    Exemplo de incerteza no contexto
+    Frase dita - “A vítima foi encontrada caída perto do carro.”
+    Transcrição do Whisper - “A vítima foi encontrada caída perto do Carlos.”
+    Exemplo de saída esperada
+    “A vítima foi encontrada caída perto do [inaudível/incompleto].”
+
+    Recebendo a transcrição, prossiga com as correções necessárias, ajustando palavras erradas e completando com base no contexto, sem alterar o conteúdo original.
+  
+  Reunião: |
+    O seguinte texto é uma transcrição de uma reunião:
+    
+    {texto}
+    
+    Você receberá a transcrição de áudio de uma reunião.  A transcrição foi realizada em pacotes de áudio de 8 segundos com sobreposição de 1s.
+    O intuito é garantir que palavras que possam ter sido cortadas no final de um pacote seja capturada corretamente no início do novo pacote.
+    Essa estratégia foi criada pelo fato do modelo de transcrição (Whisper) tentar prever palavras cortadas, colocando palavras incorretas no lugar.
+    
+    
+    Objetivo:
+
+    Resuma a reunião transcrita, destacando os pontos principais discutidos, as decisões tomadas e as próximas ações. Mantenha um tom profissional, claro e conciso 
+    usando uma estrutura clara de títulos e subtítulos, sem usar símbolos de formatação como # ou *.
+    Use numeração ou marcadores para organizar as informações.
+    Instruções:
+
+    A partir do texto transcrito da reunião, gere um resumo estruturado que contenha:
+
+      1.	Título da Reunião:
+      -	(Exemplo: “Reunião de Status do Projeto X - Data”)
+
+      2.	Participantes Principais:
+      -	Liste os nomes ou cargos mencionados na reunião.
+
+      3.	Resumo Geral:
+      -	Contextualize brevemente o propósito da reunião.
+
+      4.	Principais Tópicos Discutidos:
+      -	Liste os temas abordados e um breve resumo de cada um.
+
+      5.	Decisões Tomadas:
+      -	Registre todas as resoluções importantes que foram acordadas.
+
+      6.	Ações e Responsáveis:
+      -	Identifique as próximas ações a serem executadas e quem será o responsável.
+
+      7.	Prazos Importantes:
+      -	Destaque quaisquer deadlines mencionadas na reunião.
+
+      8.	Observações Adicionais:
+      -	Inclua qualquer detalhe relevante, como sugestões, desafios discutidos ou temas que precisam de acompanhamento posterior.
+    Em hipótese alguma você pode criar informação preenchedo os tópicos com dados que não estavam presentes na transcrição!
+
+    Exemplo de Saída Esperada:
+
+    Título da Reunião: Reunião de Planejamento de Alinhamento - 12/02/2025
+
+    Participantes: João (Gerente de Produto), Maria (Desenvolvedora), Pedro (Analista de Dados)
+
+    Resumo Geral: A reunião teve como objetivo alinhar o progresso do projeto X, discutir desafios enfrentados e definir próximos passos.
+
+    Principais Tópicos Discutidos:
+      -	Progresso do desenvolvimento: A equipe concluiu 70% das entregas planejadas.
+      -	Problemas técnicos: Foram identificados desafios na integração com a API externa.
+      -	Prazos e ajustes: O cronograma foi atualizado para refletir as novas dependências.
+
+    Decisões Tomadas:
+      -	A equipe técnica irá revisar a documentação da API até sexta-feira.
+      -	Será realizada uma reunião extra com o fornecedor da API para esclarecimentos.
+
+    Ações e Responsáveis:
+      -	Maria: Revisar documentação e testar API (até 15/02).
+      -	Pedro: Atualizar o relatório de progresso no sistema interno (até 14/02).
+
+    Prazos Importantes:
+      -	Revisão final do projeto em 25/02/2025.
+
+    Observações Adicionais:
+      -	Necessidade de acompanhamento semanal para garantir alinhamento.
+Juíz:
+  Audiência: |
+    O seguinte texto é uma transcrição de um depoimento em uma audiência que irá ser inclído na ata da audiência:
+    
+    {texto}
+    
+    A transcrição foi realizada em pacotes de áudio de 8 segundos com sobreposição de 1s.
+    O intuito é garantir que palavras que possam ter sido cortadas no final de um pacote seja capturada corretamente no início do novo pacote.
+    Essa estratégia foi criada pelo fato do modelo de transcrição (Whisper) tentar prever palavras cortadas, colocando palavras incorretas no lugar.
+
+    Seu objetivo é
+    1.  Unificar os pacotes de áudio, garantindo continuidade e coerência no texto final minimizando o erro pela predição do modelo.	
+    3.	O documento final deve conter apenas o texto exatamente como foi falado, respeitando o conteúdo original, sem resumir, simplificar ou alterar a intenção do depoimento.
+    4.  O texto que deve estar presente no documento final deve conter apenas a fala do Juíz.
+    5.  A fala do Juíz que deverá ser incluída na ata, será identificada na transcrição após a palavra ou comando transcreva
+    	
+
+    Importante
+    -	Revise palavras ou trechos que não façam sentido lógico com o restante do texto. Corrija essas previsões com base no contexto.
+    -	Caso não seja possível corrigir um erro de previsão por falta de contexto, marque a parte problemática como [inaudível/incompleto].
+    -	Não adicione interpretações próprias ou modifique o significado do texto.
+
+    
+
+    Recebendo a transcrição, prossiga com as correções necessárias, ajustando palavras erradas e completando com base no contexto, sem alterar o conteúdo original.

@@ -1,0 +1,182 @@
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    # Se não precisa acessar de fora, comente as portas
+    # ports:
+    #   - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  redis:
+    image: redis:7-alpine
+    restart: always
+    command: ["redis-server", "--appendonly", "yes"]
+    # ports:
+    #   - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "PING"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  init-db:
+    build: .
+    container_name: init_db
+    depends_on:
+      db:
+        condition: service_healthy
+    working_dir: /app
+    env_file:
+      - .env
+    volumes:
+      - ./logs:/app/logs
+    command: ["python", "-c", "from app.db.init_db import create_tables; create_tables()"]
+
+  backend:
+    build: .
+    container_name: fastapi_app
+    restart: always
+    depends_on:
+      init-db:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    working_dir: /app
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    volumes:
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:8000/health || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+
+  worker:
+    build: .
+    container_name: celery_worker
+    restart: always
+    depends_on:
+      init-db:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+    env_file:
+      - .env
+    working_dir: /app
+    volumes:
+      - ./logs:/app/logs
+    command: ["celery", "-A", "app.celery_app.tasks", "worker", "-l", "INFO", "-P", "threads", "-c", "16"]
+    # Se não ajustou o Dockerfile para usuário não-root, pode forçar:
+    # command: ["celery", "-A", "app.celery_app.tasks", "worker", "-l", "INFO", "-P", "threads", "-c", "16", "--uid", "nobody"]
+  beat:
+    build: .
+    container_name: celery_beat
+    restart: always
+    depends_on:
+      redis:
+        condition: service_healthy
+      worker:
+        condition: service_started
+    env_file:
+      - .env
+    working_dir: /app
+    # Se usa o mesmo módulo onde está o 'beat_schedule'
+    command: ["celery", "-A", "app.celery_app.tasks", "beat", "-l", "INFO"]
+    healthcheck:
+      test: ["CMD-SHELL", "celery -A app.celery_app.tasks status || exit 0"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+volumes:
+  postgres_data:
+
+  
+# services:
+#   db:
+#     image: postgres:15
+#     restart: always
+#     environment:
+#       POSTGRES_USER: ${POSTGRES_USER}
+#       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+#       POSTGRES_DB: ${POSTGRES_DB}
+#     volumes:
+#       - postgres_data:/var/lib/postgresql/data
+#     ports:
+#       - "5432:5432"
+#     healthcheck:
+#       test: ["CMD-SHELL", "pg_isready -U postgres"]
+#       interval: 1s
+#       timeout: 3s
+#       retries: 30
+
+#   redis:
+#     image: redis:7
+#     restart: always
+#     ports:
+#       - "6379:6379"
+
+#   init-db:
+#     build: .
+#     container_name: init_db
+#     depends_on:
+#       db:
+#         condition: service_healthy
+#     working_dir: /app
+#     env_file:
+#       - .env
+#     volumes:
+#       - ./logs:/app/logs
+#     command: ["python", "-c", "from app.db.init_db import create_tables; create_tables()"]
+
+#   backend:
+#     build: .
+#     container_name: fastapi_app
+#     restart: always
+#     depends_on:
+#       init-db:
+#         condition: service_completed_successfully
+#       redis:
+#         condition: service_started
+#     ports:
+#       - "8000:8000"
+#     env_file:
+#       - .env
+#     command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+#     working_dir: /app
+#     volumes:
+#       - ./logs:/app/logs 
+
+#   worker:
+#     build: .
+#     container_name: celery_worker
+#     restart: always
+#     depends_on:
+#       init-db:
+#         condition: service_completed_successfully
+#       redis:
+#         condition: service_started
+#     env_file:
+#       - .env
+#     volumes:
+#       - ./logs:/app/logs 
+#     # command: ["celery", "-A", "app.celery_app.tasks", "worker", "--loglevel=info",  "--autoscale=2,20"]
+#     command: ["celery", "-A", "app.celery_app.tasks", "worker", "--loglevel=info", "--pool=gevent", "--concurrency=10"]
+#     working_dir: /app
+
+# volumes:
+#   postgres_data:
