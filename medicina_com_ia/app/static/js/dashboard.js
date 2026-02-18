@@ -1,4 +1,3 @@
-// dashboard.js
 const nome = localStorage.getItem('nome');
 const profissao = localStorage.getItem('profissao');
 
@@ -7,7 +6,11 @@ if (nome) {
     primeiroNome = nome.split(" ")[0];
 }
 document.getElementById("nomeUsuario").textContent = primeiroNome;
-let consultasPendentes = []; // global
+const avatarEl = document.getElementById("avatarInitial");
+if (avatarEl && primeiroNome) {
+    avatarEl.textContent = primeiroNome.charAt(0).toUpperCase();
+}
+let consultasPendentes = [];
 
 // verificarSessaoPeriodicamente(); 
 
@@ -100,6 +103,8 @@ async function carregarDashboard(sessao_id) {
     if (data.consultasPendentes && data.consultasPendentes.length > 0) {
       document.getElementById('tabelaRetomada').classList.remove('d-none');
       document.getElementById('btnDescartarTodas').classList.remove('d-none');
+      const pendingCountEl = document.getElementById('pendingCount');
+      if (pendingCountEl) pendingCountEl.textContent = data.consultasPendentes.length;
       const tbody = document.getElementById('tbodyRetomada');
       tbody.innerHTML = "";
       data.consultasPendentes.forEach(consulta => {

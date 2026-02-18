@@ -1,107 +1,186 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Cadastro de Usuário</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro - Medicina com IA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/css/theme.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 50%, #0ea5e9 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+    .cadastro-wrapper {
+      width: 100%;
+      max-width: 520px;
+    }
+    .cadastro-card {
+      background: rgba(255,255,255,0.97);
+      border-radius: var(--radius-xl);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+      padding: 2.5rem 2rem;
+    }
+    .step-indicator {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .step-indicator .step {
+      flex: 1;
+      height: 4px;
+      border-radius: 4px;
+      background: var(--border);
+      transition: var(--transition);
+    }
+    .step-indicator .step.active {
+      background: var(--primary);
+    }
+    .cadastro-footer {
+      text-align: center;
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .cadastro-footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .cadastro-footer a:hover {
+      text-decoration: underline;
+    }
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 576px) {
+      .field-row { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-<body class="bg-light">
-    <div class="container mt-5">
-        <h2 class="mb-4">Cadastro de Usuário </h2>
-        <div id="mensagem" class="mt-3"></div>
-        
-        <form id="cadastroForm">
-            <h4>Dados do Usuário</h4>
-            <div class="mb-3">
-                <label for="nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nome" required>
-            </div>
-            <div class="mb-3">
-                <label for="cpf" class="form-label">CPF</label>
-                <input type="text" class="form-control" id="cpf" maxlength="14" required>
-            </div>
-            <script>
-            document.getElementById('cpf').addEventListener('input', function (e) {
-                let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não for dígito
-                if (value.length > 11) value = value.slice(0, 11);
-                value = value.replace(/(\d{3})(\d)/, '$1.$2');
-                value = value.replace(/(\d{3})(\d)/, '$1.$2');
-                value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-                e.target.value = value;
-            });
-            </script>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="senha" class="form-label">Senha</label>
-                <div class="input-group">
-                    <input type="password" class="form-control" id="senha" required>
-                    <button class="btn btn-outline-secondary" type="button" id="toggleSenha">
-                        👁️
-                    </button>
-                </div>
-            </div>
-            <script>
-            document.getElementById('toggleSenha').addEventListener('click', function () {
-                const senhaInput = document.getElementById('senha');
-                if (senhaInput.type === 'password') {
-                    senhaInput.type = 'text';
-                } else {
-                    senhaInput.type = 'password';
-                }
-            });
-            </script>
-            <div class="mb-3">
-                <label for="data_nascimento" class="form-label">Data de Nascimento</label>
-                <input type="date" class="form-control" id="data_nascimento" required autocomplete="bday">
-            </div>
-            <div class="mb-3">
-                <label for="profissao" class="form-label">Profissão</label>
-                <select class="form-select" id="profissao" name="profissao" required>
-                    <option value="" disabled selected>Selecione a profissão</option>
-                    <option value="Médico">Médico</option>
-                    <option value="Psicólogo">Psicólogo</option>
-                    <option value="Advogado">Advogado</option>
-                    <option value="Juíz">Juíz</option>
-                </select>
-            </div>
-            <!-- <div class="mb-3">
-                <label for="profissao" class="form-label">Profissão</label>
-                <input type="text" class="form-control" id="profissao" required>
-            </div> -->
-            <div class="mb-3">
-                <label for="token" class="form-label">Token de Acesso</label>
-                <input type="text" class="form-control" id="token" required>
-            </div>
-            <!-- Cartão de Crédito permanece igual
-            <h4 class="mt-4">Cartão de Crédito</h4>
-            <div class="mb-3">
-                <label for="nome_cartao" class="form-label">Nome no Cartão</label>
-                <input type="text" class="form-control" id="nome_cartao" required>
-            </div>
-            <div class="mb-3">
-                <label for="numero_mascarado" class="form-label">Número Mascarado</label>
-                <input type="text" class="form-control" id="numero_mascarado" required>
-            </div>
-            <div class="mb-3">
-                <label for="validade" class="form-label">Validade (MM/AA)</label>
-                <input type="text" class="form-control" id="validade" required>
-            </div>
-            <div class="mb-3">
-                <label for="bandeira" class="form-label">Bandeira</label>
-                <input type="text" class="form-control" id="bandeira" required>
-            </div> -->
+<body>
+  <div class="cadastro-wrapper fade-in-up">
+    <div class="cadastro-card">
+      <div class="brand-icon">
+        <i class="bi bi-person-plus"></i>
+      </div>
+      <div class="brand-title">Criar Conta</div>
+      <div class="brand-subtitle">Preencha os dados para se cadastrar</div>
 
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
-        </form>
-        
+      <div class="step-indicator">
+        <div class="step active"></div>
+        <div class="step active"></div>
+        <div class="step active"></div>
+      </div>
 
-        
+      <div id="mensagem"></div>
+
+      <form id="cadastroForm">
+        <div class="mb-3">
+          <label for="nome" class="form-label">
+            <i class="bi bi-person me-1"></i>Nome Completo
+          </label>
+          <input type="text" class="form-control" id="nome" placeholder="Seu nome completo" required>
+        </div>
+
+        <div class="field-row mb-3">
+          <div>
+            <label for="cpf" class="form-label">
+              <i class="bi bi-card-text me-1"></i>CPF
+            </label>
+            <input type="text" class="form-control" id="cpf" maxlength="14" placeholder="000.000.000-00" required>
+          </div>
+          <div>
+            <label for="data_nascimento" class="form-label">
+              <i class="bi bi-calendar me-1"></i>Data de Nascimento
+            </label>
+            <input type="date" class="form-control" id="data_nascimento" required autocomplete="bday">
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">
+            <i class="bi bi-envelope me-1"></i>E-mail
+          </label>
+          <input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="senha" class="form-label">
+            <i class="bi bi-lock me-1"></i>Senha
+          </label>
+          <div class="input-group">
+            <input type="password" class="form-control" id="senha" placeholder="Crie uma senha segura" required>
+            <button class="btn btn-outline-secondary" type="button" id="toggleSenha" style="border-color:var(--border);">
+              <i class="bi bi-eye" id="toggleSenhaIcon"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="field-row mb-3">
+          <div>
+            <label for="profissao" class="form-label">
+              <i class="bi bi-briefcase me-1"></i>Profissao
+            </label>
+            <select class="form-select" id="profissao" name="profissao" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="Medico">Medico</option>
+              <option value="Psicologo">Psicologo</option>
+              <option value="Advogado">Advogado</option>
+              <option value="Juiz">Juiz</option>
+            </select>
+          </div>
+          <div>
+            <label for="token" class="form-label">
+              <i class="bi bi-key me-1"></i>Token de Acesso
+            </label>
+            <input type="text" class="form-control" id="token" placeholder="Informe o token" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100 mt-2">
+          <i class="bi bi-check-circle"></i> Cadastrar
+        </button>
+      </form>
+
+      <div class="cadastro-footer">
+        <span style="color:var(--text-secondary);font-size:0.9rem;">Ja tem uma conta?</span>
+        <a href="/login">Fazer login</a>
+      </div>
     </div>
+  </div>
 
-    
-    <script src="/static/js/cadastro.js?v={{ now }}"></script>
+  <script>
+    document.getElementById('cpf').addEventListener('input', function (e) {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length > 11) value = value.slice(0, 11);
+      value = value.replace(/(\d{3})(\d)/, '$1.$2');
+      value = value.replace(/(\d{3})(\d)/, '$1.$2');
+      value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+      e.target.value = value;
+    });
+
+    document.getElementById('toggleSenha').addEventListener('click', function () {
+      const senhaInput = document.getElementById('senha');
+      const icon = document.getElementById('toggleSenhaIcon');
+      if (senhaInput.type === 'password') {
+        senhaInput.type = 'text';
+        icon.classList.replace('bi-eye', 'bi-eye-slash');
+      } else {
+        senhaInput.type = 'password';
+        icon.classList.replace('bi-eye-slash', 'bi-eye');
+      }
+    });
+  </script>
+  <script src="/static/js/cadastro.js?v={{ now }}"></script>
 </body>
 </html>
