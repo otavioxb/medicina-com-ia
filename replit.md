@@ -39,3 +39,8 @@ medicina_com_ia/
 - Modernized all 4 frontend pages with new CSS theme (Inter font, glass cards, gradient backgrounds)
 - Created shared theme.css for consistent styling
 - Added loading states and improved UX on login/register forms
+- Fixed Celery worker startup (must cd into medicina_com_ia directory first)
+- Removed external callback URL (apps.medicinacomia.com.br) from Celery tasks
+- Added empty transcription guard to prevent AI from hallucinating report content
+- Fixed download race condition: download now waits for WebSocket save confirmation before fetching file
+- Added timeout error handling for download preparation
