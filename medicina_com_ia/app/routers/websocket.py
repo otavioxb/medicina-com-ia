@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 import base64
 import asyncio
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect, Request
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 from app.db.database import get_db_connection,release_db_connection
 from app.modules.utils import add_log, marcar_sessao_como_inativa
@@ -23,6 +23,9 @@ templates = Jinja2Templates(directory="app/static/html")
 
 @router.get("/", response_class=HTMLResponse)
 async def exibir_pagina_principal(request: Request):
+    sessao_id = request.query_params.get("sessao_id")
+    if not sessao_id or sessao_id == "null":
+        return RedirectResponse(url="/login")
     return templates.TemplateResponse("main.html", {"request": request, "now": int(datetime.utcnow().timestamp())})
 
 # Armazena conexões ativas por sessão
@@ -40,7 +43,7 @@ async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
 
     sessao_id = websocket.query_params.get("sessao_id")
-    if not sessao_id:
+    if not sessao_id or sessao_id == "null" or sessao_id == "undefined":
         await websocket.send_json({"type": "error", "message": "sessao_id ausente na conexão"})
         await websocket.close()
         return

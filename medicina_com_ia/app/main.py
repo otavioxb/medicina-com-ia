@@ -59,10 +59,6 @@ app.mount("/static", StaticFiles(directory="app/static"), name="static")
 templates = Jinja2Templates(directory="app/static/html")
 
 
-@app.get("/")
-def root():
-    return RedirectResponse(url="/login")
-
 @app.get("/dashboard", response_class=HTMLResponse)
 def render_dashboard(request: Request):
     return templates.TemplateResponse("dashboard.html", {"request": request})
