@@ -4,157 +4,271 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cadastro - Medicina com IA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="/static/css/theme.css" rel="stylesheet" />
   <style>
     body {
-      background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 50%, #0ea5e9 100%);
+      background: var(--slate-900);
+      display: flex;
+      min-height: 100vh;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .auth-layout {
+      display: flex;
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    .auth-hero {
+      flex: 1;
+      background: linear-gradient(145deg, var(--emerald-600) 0%, var(--primary-700) 50%, var(--slate-900) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .auth-hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(16,185,129,0.25) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 480px;
+    }
+
+    .hero-logo {
+      width: 52px;
+      height: 52px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px);
+      border-radius: var(--radius-md);
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      padding: 2rem 1rem;
+      color: #fff;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(255,255,255,0.1);
     }
-    .cadastro-wrapper {
-      width: 100%;
-      max-width: 520px;
+
+    .hero-content h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
     }
-    .cadastro-card {
-      background: rgba(255,255,255,0.97);
-      border-radius: var(--radius-xl);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-      padding: 2.5rem 2rem;
+
+    .hero-content p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
     }
-    .step-indicator {
+
+    .trust-badges {
       display: flex;
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
     }
-    .step-indicator .step {
-      flex: 1;
-      height: 4px;
-      border-radius: 4px;
-      background: var(--border);
-      transition: var(--transition);
+
+    .trust-badge {
+      text-align: center;
     }
-    .step-indicator .step.active {
-      background: var(--primary);
+
+    .trust-badge .num {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+      display: block;
     }
-    .cadastro-footer {
+
+    .trust-badge .label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+
+    .auth-form-side {
+      width: 540px;
+      flex-shrink: 0;
+      background: var(--surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+      overflow-y: auto;
+    }
+
+    .auth-form-wrapper {
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .auth-form-wrapper h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+    }
+
+    .auth-form-wrapper .subtitle {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.75rem;
+    }
+
+    .auth-footer {
       text-align: center;
       margin-top: 1.5rem;
-      padding-top: 1rem;
+      padding-top: 1.25rem;
       border-top: 1px solid var(--border);
     }
-    .cadastro-footer a {
-      color: var(--primary);
+
+    .auth-footer a {
+      color: var(--primary-600);
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.875rem;
     }
-    .cadastro-footer a:hover {
-      text-decoration: underline;
-    }
+
+    .auth-footer a:hover { text-decoration: underline; }
+
+    .form-group { margin-bottom: 1rem; }
+
     .field-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1rem;
+      gap: 0.75rem;
     }
+
+    .toggle-pw {
+      border-color: var(--border) !important;
+      color: var(--text-muted);
+    }
+
+    .toggle-pw:hover { color: var(--text-secondary); background: var(--slate-50); }
+
+    @media (max-width: 960px) {
+      .auth-hero { display: none; }
+      .auth-form-side { width: 100%; }
+      body { background: var(--surface); overflow-y: auto; }
+    }
+
     @media (max-width: 576px) {
       .field-row { grid-template-columns: 1fr; }
+      .auth-form-side { padding: 2rem 1.5rem; }
     }
   </style>
 </head>
 <body>
-  <div class="cadastro-wrapper fade-in-up">
-    <div class="cadastro-card">
-      <div class="brand-icon">
-        <i class="bi bi-person-plus"></i>
+  <div class="auth-layout">
+    <div class="auth-hero">
+      <div class="hero-content fade-in-up">
+        <div class="hero-logo">
+          <i class="bi bi-heart-pulse-fill"></i>
+        </div>
+        <h1>Junte-se a plataforma</h1>
+        <p>Crie sua conta e comece a usar inteligencia artificial para gerar prontuarios e laudos de forma automatica.</p>
+        <div class="trust-badges">
+          <div class="trust-badge">
+            <span class="num">500+</span>
+            <span class="label">Profissionais</span>
+          </div>
+          <div class="trust-badge">
+            <span class="num">10K+</span>
+            <span class="label">Transcricoes</span>
+          </div>
+          <div class="trust-badge">
+            <span class="num">99.9%</span>
+            <span class="label">Uptime</span>
+          </div>
+        </div>
       </div>
-      <div class="brand-title">Criar Conta</div>
-      <div class="brand-subtitle">Preencha os dados para se cadastrar</div>
+    </div>
 
-      <div class="step-indicator">
-        <div class="step active"></div>
-        <div class="step active"></div>
-        <div class="step active"></div>
-      </div>
+    <div class="auth-form-side">
+      <div class="auth-form-wrapper fade-in-up">
+        <h2>Criar conta</h2>
+        <p class="subtitle">Preencha seus dados para comecar</p>
 
-      <div id="mensagem"></div>
+        <div id="mensagem"></div>
 
-      <form id="cadastroForm">
-        <div class="mb-3">
-          <label for="nome" class="form-label">
-            <i class="bi bi-person me-1"></i>Nome Completo
-          </label>
-          <input type="text" class="form-control" id="nome" placeholder="Seu nome completo" required>
-        </div>
-
-        <div class="field-row mb-3">
-          <div>
-            <label for="cpf" class="form-label">
-              <i class="bi bi-card-text me-1"></i>CPF
-            </label>
-            <input type="text" class="form-control" id="cpf" maxlength="14" placeholder="000.000.000-00" required>
+        <form id="cadastroForm">
+          <div class="form-group">
+            <label for="nome" class="form-label">Nome completo</label>
+            <input type="text" class="form-control" id="nome" placeholder="Seu nome completo" required>
           </div>
-          <div>
-            <label for="data_nascimento" class="form-label">
-              <i class="bi bi-calendar me-1"></i>Data de Nascimento
-            </label>
-            <input type="date" class="form-control" id="data_nascimento" required autocomplete="bday">
+
+          <div class="field-row form-group">
+            <div>
+              <label for="cpf" class="form-label">CPF</label>
+              <input type="text" class="form-control" id="cpf" maxlength="14" placeholder="000.000.000-00" required>
+            </div>
+            <div>
+              <label for="data_nascimento" class="form-label">Nascimento</label>
+              <input type="date" class="form-control" id="data_nascimento" required autocomplete="bday">
+            </div>
           </div>
-        </div>
 
-        <div class="mb-3">
-          <label for="email" class="form-label">
-            <i class="bi bi-envelope me-1"></i>E-mail
-          </label>
-          <input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
-        </div>
-
-        <div class="mb-3">
-          <label for="senha" class="form-label">
-            <i class="bi bi-lock me-1"></i>Senha
-          </label>
-          <div class="input-group">
-            <input type="password" class="form-control" id="senha" placeholder="Crie uma senha segura" required>
-            <button class="btn btn-outline-secondary" type="button" id="toggleSenha" style="border-color:var(--border);">
-              <i class="bi bi-eye" id="toggleSenhaIcon"></i>
-            </button>
+          <div class="form-group">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
           </div>
-        </div>
 
-        <div class="field-row mb-3">
-          <div>
-            <label for="profissao" class="form-label">
-              <i class="bi bi-briefcase me-1"></i>Profissao
-            </label>
-            <select class="form-select" id="profissao" name="profissao" required>
-              <option value="" disabled selected>Selecione</option>
-              <option value="Medico">Medico</option>
-              <option value="Psicologo">Psicologo</option>
-              <option value="Advogado">Advogado</option>
-              <option value="Juiz">Juiz</option>
-            </select>
+          <div class="form-group">
+            <label for="senha" class="form-label">Senha</label>
+            <div class="input-group">
+              <input type="password" class="form-control" id="senha" placeholder="Crie uma senha segura" required>
+              <button class="btn toggle-pw" type="button" id="toggleSenha">
+                <i class="bi bi-eye" id="toggleSenhaIcon"></i>
+              </button>
+            </div>
           </div>
-          <div>
-            <label for="token" class="form-label">
-              <i class="bi bi-key me-1"></i>Token de Acesso
-            </label>
-            <input type="text" class="form-control" id="token" placeholder="Informe o token" required>
+
+          <div class="field-row form-group">
+            <div>
+              <label for="profissao" class="form-label">Profissao</label>
+              <select class="form-select" id="profissao" name="profissao" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="Medico">Medico</option>
+                <option value="Psicologo">Psicologo</option>
+                <option value="Advogado">Advogado</option>
+                <option value="Juiz">Juiz</option>
+              </select>
+            </div>
+            <div>
+              <label for="token" class="form-label">Token de acesso</label>
+              <input type="text" class="form-control" id="token" placeholder="Informe o token" required>
+            </div>
           </div>
+
+          <button type="submit" class="btn btn-primary w-100 mt-1" style="padding:0.75rem;">
+            Criar conta
+          </button>
+        </form>
+
+        <div class="auth-footer">
+          <span style="color:var(--text-secondary);font-size:0.875rem;">Ja tem uma conta? </span>
+          <a href="/login">Fazer login</a>
         </div>
-
-        <button type="submit" class="btn btn-primary w-100 mt-2">
-          <i class="bi bi-check-circle"></i> Cadastrar
-        </button>
-      </form>
-
-      <div class="cadastro-footer">
-        <span style="color:var(--text-secondary);font-size:0.9rem;">Ja tem uma conta?</span>
-        <a href="/login">Fazer login</a>
       </div>
     </div>
   </div>

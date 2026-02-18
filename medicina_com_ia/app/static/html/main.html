@@ -4,57 +4,180 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Prontuario Inteligente</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="/static/css/theme.css" rel="stylesheet" />
   <style>
-    body { padding: 1.5rem; }
-    .main-topbar {
+    body {
+      background: var(--bg);
+      padding: 0;
+    }
+
+    .app-shell {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 260px;
+      background: var(--sidebar-bg);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 100;
+    }
+
+    .sidebar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+      padding: 0 0.25rem;
+    }
+
+    .sidebar-brand .logo {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, var(--primary-500), var(--sky-500));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .sidebar-brand span {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .sidebar-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      flex: 1;
+    }
+
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.65rem 0.85rem;
+      border-radius: var(--radius-sm);
+      color: var(--sidebar-text);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.875rem;
+      transition: all 0.15s var(--ease);
+    }
+
+    .sidebar-link:hover {
+      background: var(--sidebar-hover);
+      color: #fff;
+    }
+
+    .sidebar-link.active {
+      background: var(--primary-600);
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(99, 102, 241, 0.35);
+    }
+
+    .sidebar-link i { font-size: 1.1rem; width: 20px; text-align: center; }
+
+    .sidebar-footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 1rem;
+      margin-top: 1rem;
+    }
+
+    .sidebar-user {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem;
+    }
+
+    .sidebar-user .user-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-full);
+      background: linear-gradient(135deg, var(--primary-400), var(--sky-400));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .sidebar-user .user-info { flex: 1; min-width: 0; }
+
+    .sidebar-user .user-name {
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .sidebar-user .user-role {
+      color: var(--sidebar-text);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 600;
+    }
+
+    .main-content {
+      flex: 1;
+      margin-left: 260px;
+      padding: 2rem;
+      max-width: 100%;
+    }
+
+    .page-topbar {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 1.5rem;
       flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .main-topbar .app-brand {
-      display: flex;
-      align-items: center;
       gap: 0.75rem;
     }
-    .main-topbar .app-brand .icon-box {
-      width: 44px;
-      height: 44px;
-      border-radius: var(--radius-sm);
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 1.3rem;
-    }
-    .main-topbar .app-brand h1 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin: 0;
+
+    .page-topbar h1 {
+      font-size: 1.5rem;
+      font-weight: 800;
       color: var(--text);
+      margin: 0;
+      letter-spacing: -0.02em;
     }
-    .main-topbar .nav-actions {
+
+    .topbar-actions {
       display: flex;
       gap: 0.5rem;
     }
-    .tab-content > .tab-pane { padding-top: 1rem; }
+
     .section-card {
       background: var(--surface);
-      border-radius: var(--radius-md);
+      border-radius: var(--radius-lg);
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--border);
       padding: 1.5rem;
       margin-bottom: 1rem;
     }
-    .section-card h5 {
-      font-size: 1rem;
+
+    .section-card .section-title {
+      font-size: 0.9rem;
       font-weight: 700;
       margin-bottom: 1rem;
       display: flex;
@@ -62,54 +185,65 @@
       gap: 0.5rem;
       color: var(--text);
     }
-    .section-card h5 i {
-      color: var(--primary);
+
+    .section-card .section-title i {
+      color: var(--primary-500);
+      font-size: 1rem;
     }
+
     .recording-controls {
       display: flex;
       align-items: center;
       gap: 0.75rem;
       flex-wrap: wrap;
     }
+
     .timer-display {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 700;
-      color: var(--primary);
+      color: var(--primary-600);
       font-variant-numeric: tabular-nums;
       display: flex;
       align-items: center;
       gap: 0.4rem;
       margin-left: auto;
+      background: var(--primary-50);
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-full);
     }
+
     #transcriptionArea, #relatorioArea {
       border: 1.5px solid var(--border);
       border-radius: var(--radius-sm);
-      font-size: 0.95rem;
+      font-size: 0.925rem;
       resize: vertical;
+      font-family: inherit;
     }
+
     #micTestPanel {
       display: none;
-      background: var(--primary-light);
+      background: var(--primary-50);
       border-radius: var(--radius-md);
       padding: 1.25rem;
       margin-top: 1rem;
-      border: 1px solid #bfdbfe;
+      border: 1px solid var(--primary-200);
     }
-    #micTestPanel h5 i { color: var(--accent); }
+
     .audio-level-bar {
       height: 20px;
-      background: var(--border);
-      border-radius: 10px;
+      background: var(--slate-200);
+      border-radius: var(--radius-full);
       overflow: hidden;
-      position: relative;
     }
+
     .audio-level-bar .fill {
       height: 100%;
-      background: linear-gradient(90deg, var(--success), #34d399);
+      background: linear-gradient(90deg, var(--emerald-400), var(--emerald-500));
       width: 0%;
       transition: width 0.15s;
-      border-radius: 10px;
+      border-radius: var(--radius-full);
     }
+
     #statusBanner {
       position: fixed;
       top: 0.75rem;
@@ -119,199 +253,214 @@
       width: 90%;
       padding: 0.6rem 1rem;
       border-radius: var(--radius-sm);
-      box-shadow: var(--shadow-md);
+      box-shadow: var(--shadow-lg);
       z-index: 1050;
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       display: none;
     }
-    .toast-container {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      z-index: 1055;
-    }
+
     @media (max-width: 768px) {
-      .main-topbar { flex-direction: column; align-items: flex-start; }
-      .main-topbar .nav-actions { width: 100%; }
-      .main-topbar .nav-actions .btn { flex: 1; }
+      .sidebar { display: none; }
+      .main-content { margin-left: 0; padding: 1.25rem; }
+      .page-topbar { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
-  <div class="container-fluid" style="max-width:1100px;margin:0 auto;">
-    <div class="main-topbar fade-in-up">
-      <div class="app-brand">
-        <div class="icon-box"><i class="bi bi-heart-pulse"></i></div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="logo"><i class="bi bi-heart-pulse-fill"></i></div>
+        <span>Medicina IA</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="/dashboard" class="sidebar-link">
+          <i class="bi bi-grid-1x2-fill"></i> Dashboard
+        </a>
+        <a href="/" class="sidebar-link active">
+          <i class="bi bi-mic-fill"></i> Nova Transcricao
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <div class="user-avatar" id="sidebarAvatar"></div>
+          <div class="user-info">
+            <div class="user-name" id="sidebarNome"></div>
+            <div class="user-role" id="sidebarProfissao"></div>
+          </div>
+          <button id="logoutBtn" class="btn btn-ghost" title="Sair" style="color:var(--sidebar-text);padding:0.35rem;">
+            <i class="bi bi-box-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-topbar fade-in-up">
         <h1>Prontuario Inteligente</h1>
-      </div>
-      <div class="d-flex align-items-center gap-2">
-        <button id="toggleMicTest" class="btn btn-outline-secondary btn-sm">
-          <i class="bi bi-mic"></i> Testar Mic
-        </button>
-      </div>
-      <div class="nav-actions">
-        <button class="btn btn-outline-primary" onclick="window.location.href='/dashboard'">
-          <i class="bi bi-speedometer2"></i> Dashboard
-        </button>
-        <button id="logoutBtn" class="btn btn-outline-danger">
-          <i class="bi bi-box-arrow-right"></i> Sair
-        </button>
-      </div>
-    </div>
-
-    <ul class="nav nav-tabs fade-in-up" id="tabs" role="tablist">
-      <li class="nav-item">
-        <button class="nav-link active" id="dados-tab" data-bs-toggle="tab" data-bs-target="#dados" type="button" role="tab">
-          <i class="bi bi-person-fill me-1"></i>Paciente
-        </button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link" id="consulta-tab" data-bs-toggle="tab" data-bs-target="#consulta" type="button" role="tab">
-          <i class="bi bi-briefcase-medical me-1"></i>Consulta
-        </button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link" id="transcricao-tab" data-bs-toggle="tab" data-bs-target="#transcricao" type="button" role="tab">
-          <i class="bi bi-mic me-1"></i>Transcricao
-        </button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link" id="relatorio-tab" data-bs-toggle="tab" data-bs-target="#relatorio" type="button" role="tab">
-          <i class="bi bi-file-earmark-text me-1"></i>Relatorio
-        </button>
-      </li>
-    </ul>
-
-    <div class="tab-content fade-in-up">
-      <div class="tab-pane fade show active" id="dados" role="tabpanel">
-        <div class="section-card">
-          <h5><i class="bi bi-person-fill"></i> Informacoes do Paciente</h5>
-          <form id="formDadosPaciente">
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="nome" class="form-label">Nome <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="nome" placeholder="Nome do paciente" required>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label for="dataNascimento" class="form-label">Nascimento</label>
-                <input type="date" class="form-control" id="dataNascimento">
-              </div>
-              <div class="col-md-3 mb-3">
-                <label for="cpf" class="form-label">CPF</label>
-                <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-8 mb-3">
-                <label for="endereco" class="form-label">Informacoes Adicionais</label>
-                <input type="text" class="form-control" id="endereco" placeholder="Endereco, observacoes...">
-              </div>
-            </div>
-            <p class="text-danger" style="font-size:0.8rem;">* Campo obrigatorio</p>
-            <div class="d-flex gap-2">
-              <button type="button" class="btn btn-primary" id="sendDataBtn" disabled>
-                <i class="bi bi-send-fill"></i> Enviar Dados
-              </button>
-              <button class="btn btn-outline-secondary" id="novaConsultaBtn" style="display:none">
-                <i class="bi bi-plus-circle"></i> Nova Transcricao
-              </button>
-            </div>
-          </form>
-
-          <div id="micTestPanel">
-            <h5><i class="bi bi-mic-fill"></i> Teste de Microfone</h5>
-            <div class="row align-items-end">
-              <div class="col-md-4 mb-2">
-                <label for="select-mic" class="form-label">Microfone:</label>
-                <select id="select-mic" class="form-select"></select>
-              </div>
-              <div class="col-md-4 mb-2 d-flex gap-2">
-                <button type="button" id="start-mic-test" class="btn btn-outline-primary w-100">
-                  <i class="bi bi-play-circle"></i> Iniciar
-                </button>
-                <button type="button" id="stop-mic-test" class="btn btn-outline-danger w-100" disabled>
-                  <i class="bi bi-stop-circle"></i> Parar
-                </button>
-              </div>
-              <div class="col-md-4 mb-2">
-                <div class="audio-level-bar">
-                  <div id="audio-level" class="fill"></div>
-                </div>
-              </div>
-              <div class="col-md-12 mt-2">
-                <span id="status" class="fw-bold text-muted" style="font-size:0.85rem;">Selecione e teste seu microfone</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tab-pane fade" id="consulta" role="tabpanel">
-        <div class="section-card">
-          <h5><i class="bi bi-briefcase-medical"></i> Finalidade da Transcricao</h5>
-          <div id="selecaoProfissaoNecessidade">
-            <div class="row align-items-end">
-              <div class="col-md-4 mb-3">
-                <label class="form-label">Profissao:</label>
-                <span id="profissaoDisplay" class="form-control-plaintext fw-bold"></span>
-              </div>
-              <div class="col-md-5 mb-3">
-                <label for="selecaoNecessidade" class="form-label">Necessidade:</label>
-                <select class="form-select" id="selecaoNecessidade" disabled>
-                  <option value="" disabled selected>Selecione a necessidade</option>
-                </select>
-              </div>
-              <div class="col-md-3 mb-3">
-                <button id="startConsultaBtn" class="btn btn-success w-100" disabled>
-                  <i class="bi bi-mic-fill"></i> Iniciar Consulta
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tab-pane fade" id="transcricao" role="tabpanel">
-        <div class="section-card" id="gravacaoHeader" style="display:none">
-          <h5><i class="bi bi-mic"></i> Captura de Audio</h5>
-          <div class="recording-controls">
-            <button id="startBtn" class="btn btn-primary">
-              <i class="bi bi-record-circle"></i> Iniciar
-            </button>
-            <button id="stopBtn" class="btn btn-danger">
-              <i class="bi bi-stop-circle"></i> Parar
-            </button>
-            <div class="timer-display">
-              <i class="bi bi-stopwatch"></i>
-              <span id="timer">00:00:00</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="section-card">
-          <h5><i class="bi bi-journal-text"></i> Transcricao</h5>
-          <textarea id="transcriptionArea" class="form-control" rows="8" readonly placeholder="A transcricao aparecera aqui..."></textarea>
-        </div>
-
-        <div class="d-flex gap-2">
-          <button class="btn btn-primary" id="gerarRelatorioBtn" style="display:none">
-            <i class="bi bi-lightning-fill"></i> Gerar Relatorio
+        <div class="topbar-actions">
+          <button id="toggleMicTest" class="btn btn-outline-secondary btn-sm">
+            <i class="bi bi-mic"></i> Testar Mic
           </button>
         </div>
       </div>
 
-      <div class="tab-pane fade" id="relatorio" role="tabpanel">
-        <div class="section-card">
-          <h5><i class="bi bi-file-earmark-text"></i> Relatorio</h5>
-          <textarea id="relatorioArea" class="form-control mb-3" rows="10" placeholder="Seu relatorio sera exibido aqui..."></textarea>
+      <ul class="nav nav-tabs fade-in-up" id="tabs" role="tablist">
+        <li class="nav-item">
+          <button class="nav-link active" id="dados-tab" data-bs-toggle="tab" data-bs-target="#dados" type="button" role="tab">
+            <i class="bi bi-person-fill me-1"></i>Paciente
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" id="consulta-tab" data-bs-toggle="tab" data-bs-target="#consulta" type="button" role="tab">
+            <i class="bi bi-briefcase-medical me-1"></i>Consulta
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" id="transcricao-tab" data-bs-toggle="tab" data-bs-target="#transcricao" type="button" role="tab">
+            <i class="bi bi-mic me-1"></i>Transcricao
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" id="relatorio-tab" data-bs-toggle="tab" data-bs-target="#relatorio" type="button" role="tab">
+            <i class="bi bi-file-earmark-text me-1"></i>Relatorio
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content fade-in-up" style="padding-top:1rem;">
+        <div class="tab-pane fade show active" id="dados" role="tabpanel">
+          <div class="section-card">
+            <div class="section-title"><i class="bi bi-person-fill"></i> Informacoes do Paciente</div>
+            <form id="formDadosPaciente">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="nome" class="form-label">Nome <span style="color:var(--rose-500)">*</span></label>
+                  <input type="text" class="form-control" id="nome" placeholder="Nome do paciente" required>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="dataNascimento" class="form-label">Nascimento</label>
+                  <input type="date" class="form-control" id="dataNascimento">
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="cpf" class="form-label">CPF</label>
+                  <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8 mb-3">
+                  <label for="endereco" class="form-label">Informacoes adicionais</label>
+                  <input type="text" class="form-control" id="endereco" placeholder="Endereco, observacoes...">
+                </div>
+              </div>
+              <p style="font-size:0.75rem;color:var(--text-muted);">* Campo obrigatorio</p>
+              <div class="d-flex gap-2">
+                <button type="button" class="btn btn-primary" id="sendDataBtn" disabled>
+                  <i class="bi bi-send-fill"></i> Enviar Dados
+                </button>
+                <button class="btn btn-outline-secondary" id="novaConsultaBtn" style="display:none">
+                  <i class="bi bi-plus-circle"></i> Nova Transcricao
+                </button>
+              </div>
+            </form>
+
+            <div id="micTestPanel">
+              <div class="section-title"><i class="bi bi-mic-fill"></i> Teste de Microfone</div>
+              <div class="row align-items-end">
+                <div class="col-md-4 mb-2">
+                  <label for="select-mic" class="form-label">Microfone:</label>
+                  <select id="select-mic" class="form-select"></select>
+                </div>
+                <div class="col-md-4 mb-2 d-flex gap-2">
+                  <button type="button" id="start-mic-test" class="btn btn-outline-primary w-100">
+                    <i class="bi bi-play-circle"></i> Iniciar
+                  </button>
+                  <button type="button" id="stop-mic-test" class="btn btn-outline-danger w-100" disabled>
+                    <i class="bi bi-stop-circle"></i> Parar
+                  </button>
+                </div>
+                <div class="col-md-4 mb-2">
+                  <div class="audio-level-bar">
+                    <div id="audio-level" class="fill"></div>
+                  </div>
+                </div>
+                <div class="col-md-12 mt-2">
+                  <span id="status" class="fw-bold" style="font-size:0.8rem;color:var(--text-muted);">Selecione e teste seu microfone</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="consulta" role="tabpanel">
+          <div class="section-card">
+            <div class="section-title"><i class="bi bi-briefcase-medical"></i> Finalidade da Transcricao</div>
+            <div id="selecaoProfissaoNecessidade">
+              <div class="row align-items-end">
+                <div class="col-md-4 mb-3">
+                  <label class="form-label">Profissao</label>
+                  <span id="profissaoDisplay" class="form-control-plaintext fw-bold" style="padding:0.7rem 0;"></span>
+                </div>
+                <div class="col-md-5 mb-3">
+                  <label for="selecaoNecessidade" class="form-label">Necessidade</label>
+                  <select class="form-select" id="selecaoNecessidade" disabled>
+                    <option value="" disabled selected>Selecione a necessidade</option>
+                  </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <button id="startConsultaBtn" class="btn btn-success w-100" disabled>
+                    <i class="bi bi-mic-fill"></i> Iniciar Consulta
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="transcricao" role="tabpanel">
+          <div class="section-card" id="gravacaoHeader" style="display:none">
+            <div class="section-title"><i class="bi bi-mic"></i> Captura de Audio</div>
+            <div class="recording-controls">
+              <button id="startBtn" class="btn btn-primary">
+                <i class="bi bi-record-circle"></i> Iniciar
+              </button>
+              <button id="stopBtn" class="btn btn-danger">
+                <i class="bi bi-stop-circle"></i> Parar
+              </button>
+              <div class="timer-display">
+                <i class="bi bi-stopwatch"></i>
+                <span id="timer">00:00:00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-title"><i class="bi bi-journal-text"></i> Transcricao</div>
+            <textarea id="transcriptionArea" class="form-control" rows="8" readonly placeholder="A transcricao aparecera aqui..."></textarea>
+          </div>
+
           <div class="d-flex gap-2">
-            <button class="btn btn-success" id="baixarRelatorioBtn" style="display:none">
-              <i class="bi bi-download"></i> Download
+            <button class="btn btn-primary" id="gerarRelatorioBtn" style="display:none">
+              <i class="bi bi-lightning-fill"></i> Gerar Relatorio
             </button>
           </div>
         </div>
+
+        <div class="tab-pane fade" id="relatorio" role="tabpanel">
+          <div class="section-card">
+            <div class="section-title"><i class="bi bi-file-earmark-text"></i> Relatorio</div>
+            <textarea id="relatorioArea" class="form-control mb-3" rows="10" placeholder="Seu relatorio sera exibido aqui..."></textarea>
+            <div class="d-flex gap-2">
+              <button class="btn btn-success" id="baixarRelatorioBtn" style="display:none">
+                <i class="bi bi-download"></i> Download
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
   </div>
 
   <div id="statusBanner" class="alert alert-primary d-flex align-items-center" role="alert">
@@ -322,9 +471,11 @@
   <div class="modal fade" id="modalProgresso" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content text-center p-4">
-        <h5><i class="bi bi-hourglass-split text-primary"></i> Gerando Relatorio</h5>
-        <p class="text-muted">Aguarde enquanto organizamos as informacoes.</p>
-        <div class="spinner-border mx-auto" role="status"></div>
+        <div style="margin-bottom:1rem;">
+          <div class="spinner-border" role="status" style="width:2.5rem;height:2.5rem;"></div>
+        </div>
+        <h5 style="font-weight:700;">Gerando Relatorio</h5>
+        <p class="text-muted" style="font-size:0.875rem;">Aguarde enquanto organizamos as informacoes.</p>
       </div>
     </div>
   </div>
@@ -332,15 +483,14 @@
   <div class="modal fade" id="modalNovaTranscricao" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content text-center p-4">
-        <h5><i class="bi bi-question-circle-fill text-warning"></i> Nova Transcricao</h5>
-        <p>Deseja realizar uma nova transcricao para o mesmo paciente?</p>
+        <div style="margin-bottom:1rem;">
+          <i class="bi bi-question-circle-fill" style="font-size:2rem;color:var(--amber-500);"></i>
+        </div>
+        <h5 style="font-weight:700;">Nova Transcricao</h5>
+        <p style="color:var(--text-secondary);font-size:0.9rem;">Deseja realizar uma nova transcricao para o mesmo paciente?</p>
         <div class="d-flex justify-content-center gap-3 mt-3">
-          <button type="button" class="btn btn-primary px-4" id="btnSimNovaTranscricao">
-            <i class="bi bi-check-circle-fill me-1"></i> Sim
-          </button>
-          <button type="button" class="btn btn-outline-secondary px-4" id="btnNaoNovaTranscricao">
-            <i class="bi bi-x-circle-fill me-1"></i> Nao
-          </button>
+          <button type="button" class="btn btn-primary px-4" id="btnSimNovaTranscricao">Sim</button>
+          <button type="button" class="btn btn-outline-secondary px-4" id="btnNaoNovaTranscricao">Nao</button>
         </div>
       </div>
     </div>
@@ -349,15 +499,14 @@
   <div class="modal fade" id="modalContinuarGravacao" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content text-center p-4">
-        <h5><i class="bi bi-question-circle-fill text-warning"></i> Gravacao Interrompida</h5>
-        <p>Deseja continuar com esta gravacao?</p>
+        <div style="margin-bottom:1rem;">
+          <i class="bi bi-question-circle-fill" style="font-size:2rem;color:var(--amber-500);"></i>
+        </div>
+        <h5 style="font-weight:700;">Gravacao Interrompida</h5>
+        <p style="color:var(--text-secondary);font-size:0.9rem;">Deseja continuar com esta gravacao?</p>
         <div class="d-flex justify-content-center gap-3 mt-3">
-          <button type="button" class="btn btn-primary px-4" id="btnSimContinuarGravacao">
-            <i class="bi bi-check-circle-fill me-1"></i> Sim
-          </button>
-          <button type="button" class="btn btn-outline-secondary px-4" id="btnNaoContinuarGravacao">
-            <i class="bi bi-x-circle-fill me-1"></i> Nao
-          </button>
+          <button type="button" class="btn btn-primary px-4" id="btnSimContinuarGravacao">Sim</button>
+          <button type="button" class="btn btn-outline-secondary px-4" id="btnNaoContinuarGravacao">Nao</button>
         </div>
       </div>
     </div>
@@ -366,6 +515,18 @@
   <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/recorderjs/0.1.0/recorder.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (function() {
+      const nome = localStorage.getItem('nome') || '';
+      const profissao = localStorage.getItem('profissao') || '';
+      const el1 = document.getElementById('sidebarNome');
+      const el2 = document.getElementById('sidebarProfissao');
+      const el3 = document.getElementById('sidebarAvatar');
+      if (el1) el1.textContent = nome;
+      if (el2) el2.textContent = profissao;
+      if (el3 && nome) el3.textContent = nome.charAt(0).toUpperCase();
+    })();
+  </script>
   <script src="/static/js/main.js?v={{ now }}"></script>
 </body>
 </html>

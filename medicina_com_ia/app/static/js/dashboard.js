@@ -10,6 +10,10 @@ const avatarEl = document.getElementById("avatarInitial");
 if (avatarEl && primeiroNome) {
     avatarEl.textContent = primeiroNome.charAt(0).toUpperCase();
 }
+const sidebarNomeEl = document.getElementById("sidebarNome");
+if (sidebarNomeEl) sidebarNomeEl.textContent = nome || '';
+const sidebarProfEl = document.getElementById("sidebarProfissao");
+if (sidebarProfEl) sidebarProfEl.textContent = profissao || '';
 let consultasPendentes = [];
 
 // verificarSessaoPeriodicamente(); 
