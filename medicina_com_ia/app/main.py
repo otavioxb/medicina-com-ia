@@ -7,7 +7,7 @@ from redis import asyncio as aioredis
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from starlette.templating import Jinja2Templates
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.requests import Request
 
 from app.routers import auth_routes, websocket as ws_router, cadastro_routes, transcription_routes, download_relatorio_routes, dashboard_routes
@@ -58,6 +58,10 @@ app.include_router(dashboard_routes.router)
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 templates = Jinja2Templates(directory="app/static/html")
 
+
+@app.get("/")
+def root():
+    return RedirectResponse(url="/login")
 
 @app.get("/dashboard", response_class=HTMLResponse)
 def render_dashboard(request: Request):

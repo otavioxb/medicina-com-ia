@@ -23,6 +23,10 @@ language = "pt"
 localPort = 5000
 externalPort = 80
 
+[[ports]]
+localPort = 6379
+externalPort = 80
+
 [workflows]
 runButton = "Project"
 
