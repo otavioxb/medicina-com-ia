@@ -2,6 +2,9 @@
 let socket;
 let isSocketConnected = false;
 const sessao_id = localStorage.getItem("sessao_id");
+if (!sessao_id || sessao_id === "null" || sessao_id === "undefined") {
+    window.location.href = "/login";
+}
 const profissao = localStorage.getItem('profissao');
 let necessidade = "";
 let patient_id;

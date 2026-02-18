@@ -23,9 +23,6 @@ templates = Jinja2Templates(directory="app/static/html")
 
 @router.get("/", response_class=HTMLResponse)
 async def exibir_pagina_principal(request: Request):
-    sessao_id = request.query_params.get("sessao_id")
-    if not sessao_id or sessao_id == "null":
-        return RedirectResponse(url="/login")
     return templates.TemplateResponse("main.html", {"request": request, "now": int(datetime.utcnow().timestamp())})
 
 # Armazena conexões ativas por sessão

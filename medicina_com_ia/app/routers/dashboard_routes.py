@@ -88,9 +88,9 @@ def get_dashboard_data(sessao_id: str):
             })
 
         response = {
-            "totalConsultas": int(stats["total_consultas"]),
-            "tempoTranscrito": f"{int(stats['tempo_transcrito'])} min",
-            "tempoMedio": f"{int(stats['tempo_medio'])} min",
+            "totalConsultas": int(stats["total_consultas"]) if stats else 0,
+            "tempoTranscrito": f"{int(stats['tempo_transcrito'])} min" if stats else "0 min",
+            "tempoMedio": f"{int(stats['tempo_medio'])} min" if stats else "0 min",
             "mesMaisConsultas": mes_mais_consultas["mes"].strip() if mes_mais_consultas else "--",
             "consultasPendentes": pendencias_result,
             "uid": uid
