@@ -5,6 +5,7 @@ packages = ["cargo", "ffmpeg-full", "libev", "libiconv", "libxcrypt", "redis", "
 
 [agent]
 expertMode = true
+integrations = ["github:1.0.0"]
 
 [userenv]
 
