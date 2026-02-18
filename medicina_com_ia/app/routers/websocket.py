@@ -530,6 +530,14 @@ async def handle_gerar_relatorio(data, websocket: WebSocket):
 
         transcricao_texto = transcricao[0]
 
+        if not transcricao_texto or not transcricao_texto.strip():
+            await websocket.send_json({
+                "type": "resumo_classificacao",
+                "resumo_classificacao": "Nenhuma transcrição de áudio foi capturada. Verifique se o microfone está funcionando e tente gravar novamente."
+            })
+            add_log("Relatório cancelado: transcrição vazia", "warning", sessao_id=sessao_id, necessidade=necessidade)
+            return
+
         resumo = resumir_classificar(transcricao_texto, profissao, necessidade)
 
         cursor.execute("""

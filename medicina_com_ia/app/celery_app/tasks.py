@@ -107,12 +107,6 @@ def transcrever_audio_task(self, audio_data, pacote_id, sessao_id, patient_id, n
                 WHERE pacote_id = %s
             """, ('concluída', transcricao_parcial, pacote_id))
 
-            # Notifica via API
-            requests.post(
-                "https://apps.medicinacomia.com.br/notify_transcription_done",
-                json={"pacote_id": pacote_id, "status": "finalizado"}
-            )
-
             # Atualiza transcrição completa
             cursor.execute("""
                 UPDATE complete_transcriptions 

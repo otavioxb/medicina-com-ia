@@ -334,16 +334,15 @@ function tratarMensagemWebSocket(data) {
 
     case "baixar_relatorio_status":
         if (data.status === "success") {
-            // logMessage(data.message);
-    
-            // Habilita e exibe o botão de download apenas quando estiver tudo certo
             const btnDownload = document.getElementById('baixarRelatorioBtn');
             btnDownload.style.display = 'inline';
             btnDownload.disabled = false;
-    
         } else {
-            // logMessage("Erro ao salvar relatório: " + data.message);
             alert(data.message);
+        }
+        if (window._onDownloadReady) {
+            window._onDownloadReady(data.status);
+            window._onDownloadReady = null;
         }
         break;
 
@@ -955,6 +954,17 @@ document.getElementById('gerarRelatorioBtn').addEventListener("click", () => {
 document.getElementById('baixarRelatorioBtn').addEventListener("click", async () => {
     const relatorioEditado = document.getElementById('relatorioArea').value;
     
+    atualizarStatusBanner("Preparando relatório para download...", "info");
+
+    const downloadReady = new Promise((resolve, reject) => {
+        const timeout = setTimeout(() => reject(new Error("Timeout")), 15000);
+        window._onDownloadReady = (status) => {
+            clearTimeout(timeout);
+            if (status === "success") resolve();
+            else reject(new Error("Erro ao salvar relatório"));
+        };
+    });
+
     enviarWebSocket("preparar_relatorio", {
         relatorio_editado: relatorioEditado,
         sessao_id,
@@ -963,9 +973,10 @@ document.getElementById('baixarRelatorioBtn').addEventListener("click", async ()
     });
 
     try {
+        await downloadReady;
+
         const response = await fetch(`/download_relatorio?sessao_id=${sessao_id}&patient_id=${patient_id}&necessidade=${necessidade}`);
         if (!response.ok) {
-            // logMessage("Erro ao baixar relatório:", response.statusText);
             alert("Erro ao baixar relatório. Tente novamente.");
             return;
         }
@@ -983,15 +994,21 @@ document.getElementById('baixarRelatorioBtn').addEventListener("click", async ()
         const a = document.createElement('a');
         a.href = url;
         a.download = suggestedFilename;
+        a.target = '_blank';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
 
-        // logMessage("Download concluído.");
         atualizarStatusBanner("Download concluído.", "success");
     } catch (error) {
         console.error("Erro ao salvar relatório no backend:", error);
-        alert("Erro ao salvar relatório. Tente novamente.");
+        if (error.message === "Timeout") {
+            alert("O servidor demorou muito para preparar o relatório. Tente novamente.");
+        } else {
+            alert("Erro ao salvar relatório. Tente novamente.");
+        }
+        atualizarStatusBanner("Erro no download. Tente novamente.", "danger");
     }
     // Permite nova seleção de necessidade
     const necessidadeSelect = document.getElementById('selecaoNecessidade');
