@@ -348,10 +348,10 @@ function tratarMensagemWebSocket(data) {
 
     case "nova_consulta_status":
       if (data.status === "success") {
-        alert("Consulta reiniciada com sucesso. Dados antigos foram removidos.");
+        alert("Sessao reiniciada com sucesso. Dados antigos foram removidos.");
         resetInterface();
       } else if (data.status === "error") {
-        alert(`Erro ao reiniciar consulta: ${data.message}`);
+        alert(`Erro ao reiniciar sessao: ${data.message}`);
       }
       break;
 
@@ -432,7 +432,7 @@ function atualizarStatusBanner(mensagem, tipo = 'primary', duracao = 3000) {
     const modal = bootstrap.Modal.getInstance(document.getElementById('modalProgresso'));
     if (modal) modal.hide();
   }
-// ========== Funções de Dados do Paciente ==========
+// ========== Funcoes de Dados do Participante ==========
 
 function gerarUUID() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -500,7 +500,7 @@ function configurarSelecaoProfissaoNecessidade() {
       document.getElementById('profissaoDisplay').textContent = profissao;
 
       // Popula necessidades conforme profissão
-      necessidadeSelect.innerHTML = '<option value="" disabled selected>Selecione a necessidade</option>';
+      necessidadeSelect.innerHTML = '<option value="" disabled selected>Selecione a finalidade</option>';
       if (opcoesNecessidade[profissao]) {
           necessidadeSelect.disabled = false;
           opcoesNecessidade[profissao].forEach(necessidadeOp => {
@@ -663,7 +663,7 @@ document.getElementById('sendDataBtn').onclick = () => {
       // Fallback: também simula clique
       setTimeout(() => abaConsultaBtn.click(), 100);
   } else {
-      console.error("Botão da aba Consulta não encontrado!");
+      console.error("Botao da aba Sessao nao encontrado!");
   }
 };
 
@@ -778,7 +778,7 @@ function pararGravacao() {
     // Bloquear clique duplo
     stopBtn.disabled = true;
     stopTimer();
-    const duracaoConsultaParcial = timeToString(elapsedTime); // Tempo decorrido atual formatado
+    const duracaoSessaoParcial = timeToString(elapsedTime);
     if (elapsedTime < 8000) {
         
         atualizarStatusBanner("Você precisa gravar pelo menos um trecho antes de gerar o relatório.", "warning");
@@ -925,20 +925,18 @@ function verificarPacotesPendentes() {
 // ========== Geração de relatório ==========
 
 document.getElementById('gerarRelatorioBtn').addEventListener("click", () => {
-    const duracaoConsulta = timeToString(elapsedTime);
-    // Após gerar o relatório, mostrar o botão "Nova Consulta"
+    const duracaoSessao = timeToString(elapsedTime);
     const btn = document.getElementById('gerarRelatorioBtn');
 
-    btn.disabled = true; // evitar múltiplos cliques
-    btn.innerHTML = '<i class="bi bi-file-earmark-text"></i> Gerar Relatório...';
+    btn.disabled = true;
+    btn.innerHTML = '<i class="bi bi-file-earmark-text"></i> Gerar Relatorio...';
     
-    document.getElementById('baixarRelatorioBtn').style.display = 'inline';  // Exibe o botão de baixar relatório
-    // document.getElementById('novaConsultaBtn').style.display = 'inline';
+    document.getElementById('baixarRelatorioBtn').style.display = 'inline';
     document.getElementById('startBtn').style.display = 'none';
     document.getElementById('stopBtn').style.display = 'none';
     mostrarModalProgresso();
     enviarWebSocket("gerar_relatorio", {
-        duracaoConsulta,
+        duracaoConsulta: duracaoSessao,
         sessao_id,
         profissao,
         necessidade,

@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
       sessionStorage.setItem('necessidade', necessidade);
       window.location.href = "/";
     } else {
-      alert('Não foi possível retomar a consulta.');
+      alert('Nao foi possivel retomar a sessao.');
     }
   });
 
@@ -77,10 +77,10 @@ document.addEventListener("DOMContentLoaded", () => {
         sessionStorage.removeItem('sessao_id_retomada');
         sessionStorage.removeItem('patient_id_retomada');
         sessionStorage.removeItem('necessidade_retomada');
-        alert('Consulta descartada com sucesso.');
+        alert('Sessao descartada com sucesso.');
         carregarDashboard(sessao_id);
       } else {
-        alert('Erro ao descartar a consulta.');
+        alert('Erro ao descartar a sessao.');
       }
     } catch (error) {
       console.error("Erro ao descartar consulta:", error);
@@ -186,16 +186,16 @@ async function baixarRelatorio(sessao_id, patient_id, necessidade,profissao) {
 }
 
 async function descartarConsulta(sessao_id, patient_id, necessidade) {
-  if (!confirm('Deseja realmente descartar esta consulta?')) return;
+  if (!confirm('Deseja realmente descartar esta sessao?')) return;
   try {
     const url = `/descartar_consulta?sessao_id=${encodeURIComponent(sessao_id)}&patient_id=${encodeURIComponent(patient_id)}&necessidade=${encodeURIComponent(necessidade)}`;
     const response = await fetch(url, { method: 'DELETE' });
     const result = await response.json();
     if (result.message && result.message.includes("sucesso")) {
-      alert('Consulta descartada com sucesso.');
+      alert('Sessao descartada com sucesso.');
       location.reload();
     } else {
-      alert('Erro ao descartar a consulta.');
+      alert('Erro ao descartar a sessao.');
     }
   } catch (error) {
     console.error("Erro ao descartar consulta:", error);
@@ -213,7 +213,7 @@ function esconderModalProgresso() {
 }
 
 async function descartarTodasConsultas() {
-  if (!confirm('Deseja realmente descartar todas as consultas pendentes?')) return;
+  if (!confirm('Deseja realmente descartar todas as sessoes pendentes?')) return;
 
   for (const c of consultasPendentes) {
     try {
@@ -228,7 +228,7 @@ async function descartarTodasConsultas() {
     }
   }
 
-  alert('Todas as consultas pendentes foram descartadas.');
+  alert('Todas as sessoes pendentes foram descartadas.');
   location.reload();
 }
 
