@@ -446,11 +446,14 @@ function verificarCampos() {
     document.querySelectorAll('#formDadosPaciente input').forEach(input => {
         input.addEventListener('input', validarFormulario);
     });
+
+// Inicializa estado do botão
+validarFormulario();
 }
 
 function validarFormulario() {
-    const nome = document.getElementById('nome').value;
-    document.getElementById('sendDataBtn').disabled = !(nome);
+    const nome = (document.getElementById('nome').value || '').trim();
+    document.getElementById('sendDataBtn').disabled = (nome.length === 0);
 }
 
 
@@ -669,7 +672,7 @@ document.getElementById("baixarRelatorioBtn").addEventListener("click", resetTim
 
 
 document.getElementById('sendDataBtn').onclick = () => {
-  const nome = document.getElementById('nome').value;
+    const nome = (document.getElementById('nome').value || '').trim();
   const endereco = document.getElementById('endereco').value || 'Não informado';
   const dataNascimento = document.getElementById('dataNascimento').value || 'Não informado';
   const cpf = document.getElementById('cpf').value || 'Não informado';
