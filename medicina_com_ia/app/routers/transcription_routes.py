@@ -1,6 +1,7 @@
+import asyncio
 from fastapi import APIRouter, Query, HTTPException
 from fastapi import Request
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, StreamingResponse
 from app.db.database import get_db_connection, release_db_connection
 from app.modules.utils import add_log
 from app.db.schemas import TranscriptionNotifyPayload  # ✅ Agora importado corretamente
@@ -41,6 +42,45 @@ async def get_transcriptions(request: Request, sessao_id: str, patient_id: str =
     finally:
         cursor.close()
         release_db_connection(connection)
+
+
+@router.get("/transcriptions/stream/{sessao_id}")
+async def stream_transcriptions(request: Request, sessao_id: str, patient_id: str = Query(...), necessidade: str = Query(...)):
+    # Server-Sent Events: envia o texto concatenado conforme o Redis muda.
+    if not (patient_id and necessidade):
+        raise HTTPException(status_code=400, detail="Dados incompletos na solicitação.")
+
+    r = request.app.state.redis
+    base = f"transcricao:{sessao_id}:{patient_id}:{necessidade}"
+    key_text = f"{base}:partial_text"
+    key_last = f"{base}:last_update"
+
+    async def event_gen():
+        last_sent = None
+        last_keepalive = 0.0
+        while True:
+            if await request.is_disconnected():
+                break
+
+            try:
+                lu = await r.get(key_last)
+                if lu and lu != last_sent:
+                    txt = await r.get(key_text) or ""
+                    last_sent = lu
+                    safe = txt.replace("\\", "\\\\").replace("\n", "\\n")
+                    yield f"event: transcription\ndata: {safe}\n\n"
+                else:
+                    now = asyncio.get_event_loop().time()
+                    if now - last_keepalive > 15:
+                        last_keepalive = now
+                        yield "event: ping\ndata: ok\n\n"
+            except Exception as e:
+                add_log("Erro no stream SSE", "warning", erro=str(e), sessao_id=sessao_id, patient_id=patient_id)
+                yield "event: ping\ndata: ok\n\n"
+
+            await asyncio.sleep(1)
+
+    return StreamingResponse(event_gen(), media_type="text/event-stream")
 
 
 @router.post("/notify_transcription_done")

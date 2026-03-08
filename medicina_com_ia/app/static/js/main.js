@@ -559,7 +559,7 @@ function fetchTranscriptions() {
     }
 
     // Monta a URL com os parâmetros de query string
-    const url = `/transcriptions/${sessao_id}?patient_id=${patient_id}&necessidade=${necessidade}`;
+    const url = `/transcriptions/${sessao_id}?patient_id=${encodeURIComponent(patient_id)}&necessidade=${encodeURIComponent(necessidade)}`;
 
     fetch(url)
         .then(response => response.json())
@@ -578,19 +578,50 @@ function fetchTranscriptions() {
 
 // Inicie o polling usando a função fetchTranscriptions()
 function startPolling() {
-    if (pollingInterval) clearInterval(pollingInterval);  // Garante que não existam intervalos duplicados
+    // Prefer SSE stream; fallback to polling
+    if (eventSource) {
+        try { eventSource.close(); } catch (e) {}
+        eventSource = null;
+    }
 
-    pollingInterval = setInterval(fetchTranscriptions, 2000);  // Configura o polling a cada 2 segundos
-    // logMessage("Polling iniciado.");
+    const transcriptionArea = document.getElementById(transcriptionArea);
+    if (window.EventSource) {
+        const url = `/transcriptions/stream/${sessao_id}?patient_id=${encodeURIComponent(patient_id)}&necessidade=${encodeURIComponent(necessidade)}`;
+        eventSource = new EventSource(url);
+
+        eventSource.addEventListener(transcription, (evt) => {
+            const transcription = (evt.data || ).replace(/
+/g, n);
+            transcriptionArea.value = transcription;
+            transcriptionArea.scrollTop = transcriptionArea.scrollHeight;
+        });
+
+        eventSource.addEventListener(error, () => {
+            try { eventSource.close(); } catch (e) {}
+            eventSource = null;
+            if (pollingInterval) clearInterval(pollingInterval);
+            pollingInterval = setInterval(fetchTranscriptions, 2000);
+        });
+
+        return;
+    }
+
+    if (pollingInterval) clearInterval(pollingInterval);
+    pollingInterval = setInterval(fetchTranscriptions, 2000);
 }
+
 
 function stopPolling() {
+    if (eventSource) {
+        try { eventSource.close(); } catch (e) {}
+        eventSource = null;
+    }
     if (pollingInterval) {
-        clearInterval(pollingInterval);  // Para o polling
+        clearInterval(pollingInterval);
         pollingInterval = null;
-        // logMessage("Polling parado.");
     }
 }
+
 
 
 // Chama a função para validar o formulário sempre que um campo é alterado
