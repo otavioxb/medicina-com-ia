@@ -568,7 +568,7 @@ function fetchTranscriptions() {
             const transcriptionArea = document.getElementById('transcriptionArea');
 
             // Adiciona a nova transcrição ao final do texto existente
-            if (typeof transcription === string) {
+            if (typeof transcription === 'string') {
                 transcriptionArea.value = transcription;
                 transcriptionArea.scrollTop = transcriptionArea.scrollHeight;
             }
