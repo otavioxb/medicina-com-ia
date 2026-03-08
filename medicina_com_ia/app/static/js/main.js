@@ -380,6 +380,9 @@ document.addEventListener('DOMContentLoaded', () => {
     configurarSelecaoProfissaoNecessidade();
     configurarLogout();
     verificarCampos();
+    // Garantia extra: alguns navegadores/fluxos não disparam os listeners como esperado
+    document.getElementById('nome').addEventListener('input', validarFormulario);
+    validarFormulario();
 });
 
 
