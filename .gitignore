@@ -8,3 +8,10 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Deployment/local files
+medicina_com_ia/.env
+medicina_com_ia/docker-compose.override.yml
+**/*.BACKUP-*
+**/*.BACKUPFIX-*
+**/*.BACKUP2-*

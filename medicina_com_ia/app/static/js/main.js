@@ -456,7 +456,18 @@ function validarFormulario() {
 
 // ========== Funções de Profissão e Necessidade ==========
 function configurarSelecaoProfissaoNecessidade() {
-  const profissao = localStorage.getItem('profissao');
+  const rawProfissao = localStorage.getItem('profissao');
+  const normalize = (s) => (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase();
+  const profissaoNorm = normalize(rawProfissao);
+  const PROFISSAO_MAP = {
+    'medico': 'Médico',
+    'psicologo': 'Psicólogo',
+    'juiz': 'Juíz',
+    'administrador': 'Administrador',
+    'advogado': 'Advogado'
+  };
+  const profissao = PROFISSAO_MAP[profissaoNorm] || rawProfissao;
+
   const necessidadeSelect = document.getElementById('selecaoNecessidade');
   const startConsultaBtn = document.getElementById('startConsultaBtn');
   // let necessidade = "";
@@ -489,6 +500,10 @@ function configurarSelecaoProfissaoNecessidade() {
           "Receita",
           "Exame",
           "Reunião", 
+          "Consulta de Dermatologia",
+          "Exame de Colonoscopia",
+          "Exame de Endoscopia Digestiva Alta",
+
       ],
       "Psicólogo": ["Consulta", "Atestado"],
       "Advogado": ["Depoimento", "Reunião"],
@@ -817,7 +832,7 @@ function pararGravacao() {
         sessao_id: sessao_id,
         patient_id: patient_id,
         necessidade: necessidade,
-        duracao_transcricao_parcial: duracaoConsultaParcial
+        duracao_transcricao_parcial: duracaoSessaoParcial
     });
 
     if (isRecording) {

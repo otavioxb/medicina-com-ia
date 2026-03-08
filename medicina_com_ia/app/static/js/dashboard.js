@@ -1,5 +1,14 @@
 const nome = localStorage.getItem('nome');
-const profissao = localStorage.getItem('profissao');
+const rawProfissao = localStorage.getItem('profissao');
+const normalize = (s) => (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase();
+const PROFISSAO_MAP = {
+  medico: 'Médico',
+  psicologo: 'Psicólogo',
+  juiz: 'Juiz',
+  administrador: 'Administrador',
+  advogado: 'Advogado',
+};
+const profissao = PROFISSAO_MAP[normalize(rawProfissao)] || rawProfissao;
 
 let primeiroNome = "";
 if (nome) {
