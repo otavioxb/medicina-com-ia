@@ -382,6 +382,8 @@ document.addEventListener('DOMContentLoaded', () => {
     verificarCampos();
     // Garantia extra: alguns navegadores/fluxos não disparam os listeners como esperado
     document.getElementById('nome').addEventListener('input', validarFormulario);
+    document.getElementById('nome').addEventListener('change', validarFormulario);
+    document.getElementById('nome').addEventListener('keyup', validarFormulario);
     validarFormulario();
 });
 
