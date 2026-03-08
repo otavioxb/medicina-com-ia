@@ -592,19 +592,19 @@ function startPolling() {
         eventSource = null;
     }
 
-    const transcriptionArea = document.getElementById(transcriptionArea);
+    const transcriptionArea = document.getElementById("transcriptionArea");
+
     if (window.EventSource) {
         const url = `/transcriptions/stream/${sessao_id}?patient_id=${encodeURIComponent(patient_id)}&necessidade=${encodeURIComponent(necessidade)}`;
         eventSource = new EventSource(url);
 
-        eventSource.addEventListener(transcription, (evt) => {
-            const transcription = (evt.data || ).replace(/
-/g, n);
+        eventSource.addEventListener("transcription", (evt) => {
+            const transcription = (evt.data || "").replace(/\n/g, "\n");
             transcriptionArea.value = transcription;
             transcriptionArea.scrollTop = transcriptionArea.scrollHeight;
         });
 
-        eventSource.addEventListener(error, () => {
+        eventSource.addEventListener("error", () => {
             try { eventSource.close(); } catch (e) {}
             eventSource = null;
             if (pollingInterval) clearInterval(pollingInterval);
@@ -618,19 +618,11 @@ function startPolling() {
     pollingInterval = setInterval(fetchTranscriptions, 2000);
 }
 
-
 function stopPolling() {
     if (eventSource) {
         try { eventSource.close(); } catch (e) {}
         eventSource = null;
     }
-    if (pollingInterval) {
-        clearInterval(pollingInterval);
-        pollingInterval = null;
-    }
-}
-
-
 
 // Chama a função para validar o formulário sempre que um campo é alterado
 document.querySelectorAll('#formDadosPaciente input').forEach(input => {
