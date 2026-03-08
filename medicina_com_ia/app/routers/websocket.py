@@ -378,6 +378,21 @@ async def handle_parar_gravacao(data, websocket: WebSocket):
         connection.commit()
 
         add_log("Atualizada duração parcial no banco", "info", sessao_id=sessao_id, patient_id=patient_id, necessidade=necessidade)
+
+
+        # Scale A (Fase 2): flush Redis->Postgres (garante relatório completo mesmo antes do checkpoint)
+        try:
+            r = websocket.scope["app"].state.redis
+            base = f"transcricao:{sessao_id}:{patient_id}:{necessidade}"
+            cached = await r.get(f"{base}:partial_text")
+            if cached is not None:
+                cursor.execute(
+                    "UPDATE complete_transcriptions SET transcricao_completa = %s WHERE sessao_id = %s AND patient_id = %s AND necessidade = %s",
+                    (cached, sessao_id, patient_id, necessidade)
+                )
+                connection.commit()
+        except Exception as e:
+            add_log("Falha ao flush Redis->Postgres", "warning", erro=str(e), sessao_id=sessao_id, patient_id=patient_id)
     except Exception as e:
         connection.rollback()
         add_log("Erro ao atualizar duração parcial", "error", erro=str(e), sessao_id=sessao_id, patient_id=patient_id)
@@ -500,6 +515,21 @@ async def handle_gerar_relatorio(data, websocket: WebSocket):
 
     connection = get_db_connection()
     cursor = connection.cursor()
+
+
+    # Scale A (Fase 2): flush Redis->Postgres (garante relatório completo mesmo antes do checkpoint)
+    try:
+        r = websocket.scope["app"].state.redis
+        base = f"transcricao:{sessao_id}:{patient_id}:{necessidade}"
+        cached = await r.get(f"{base}:partial_text")
+        if cached is not None:
+            cursor.execute(
+                "UPDATE complete_transcriptions SET transcricao_completa = %s WHERE sessao_id = %s AND patient_id = %s AND necessidade = %s",
+                (cached, sessao_id, patient_id, necessidade)
+            )
+            connection.commit()
+    except Exception as e:
+        add_log("Falha ao flush Redis->Postgres", "warning", erro=str(e), sessao_id=sessao_id, patient_id=patient_id)
     try:
         add_log("Iniciando geração de relatório", "info", sessao_id=sessao_id, patient_id=patient_id, necessidade=necessidade)
 

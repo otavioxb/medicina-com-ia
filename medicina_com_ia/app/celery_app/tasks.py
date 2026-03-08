@@ -106,13 +106,7 @@ def transcrever_audio_task(self, audio_data, pacote_id, sessao_id, patient_id, n
                 SET status = %s, transcription = %s 
                 WHERE pacote_id = %s
             """, ('concluída', transcricao_parcial, pacote_id))
-
-            # Atualiza transcrição completa
-            cursor.execute("""
-                UPDATE complete_transcriptions 
-                SET transcricao_completa = COALESCE(transcricao_completa, '') || %s
-                WHERE sessao_id = %s AND patient_id = %s AND necessidade = %s
-            """, (transcricao_parcial + " ", sessao_id, patient_id, necessidade))
+            # Scale A (Fase 2): não persistir no Postgres a cada pacote (checkpoint/stop faz flush)
 
             # === Scale A (Fase 1): transcrição parcial em Redis ===
             # Cache volátil para UI; não pode quebrar o processamento.
@@ -125,6 +119,31 @@ def transcrever_audio_task(self, audio_data, pacote_id, sessao_id, patient_id, n
                 r.setex(f"transcricao:{sessao_id}:{patient_id}:{necessidade}:last_update", 60 * 60 * 24, str(time.time()))
             except Exception as _e:
                 add_log("Falha ao escrever transcrição parcial no Redis", "warning", erro=str(_e), sessao_id=sessao_id, pacote_id=pacote_id)
+
+
+            # === Scale A (Fase 2): checkpoint no Postgres (a cada 60s) ===
+            try:
+                redis_url = os.getenv("REDIS_BROKER_URL", "redis://localhost:6379/0")
+                r = Redis.from_url(redis_url, decode_responses=True)
+                base = f"transcricao:{sessao_id}:{patient_id}:{necessidade}"
+                key_text = f"{base}:partial_text"
+                key_last = f"{base}:last_checkpoint"
+                lock_key = f"{base}:checkpoint_lock"
+
+                now = time.time()
+                last = r.get(key_last)
+                last = float(last) if last else 0.0
+
+                if (now - last) >= 60 and r.set(lock_key, "1", nx=True, ex=30):
+                    cached = r.get(key_text) or ""
+                    cursor.execute(
+                        "UPDATE complete_transcriptions SET transcricao_completa = %s WHERE sessao_id = %s AND patient_id = %s AND necessidade = %s",
+                        (cached, sessao_id, patient_id, necessidade)
+                    )
+                    connection.commit()
+                    r.setex(key_last, 60 * 60 * 24, str(now))
+            except Exception as _e:
+                add_log("Falha no checkpoint Redis->Postgres", "warning", erro=str(_e), sessao_id=sessao_id, pacote_id=pacote_id)
 
         else:
             cursor.execute("""
