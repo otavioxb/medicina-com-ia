@@ -113,6 +113,19 @@ def transcrever_audio_task(self, audio_data, pacote_id, sessao_id, patient_id, n
                 SET transcricao_completa = COALESCE(transcricao_completa, '') || %s
                 WHERE sessao_id = %s AND patient_id = %s AND necessidade = %s
             """, (transcricao_parcial + " ", sessao_id, patient_id, necessidade))
+
+            # === Scale A (Fase 1): transcrição parcial em Redis ===
+            # Cache volátil para UI; não pode quebrar o processamento.
+            try:
+                redis_url = os.getenv("REDIS_BROKER_URL", "redis://localhost:6379/0")
+                r = Redis.from_url(redis_url, decode_responses=True)
+                redis_key = f"transcricao:{sessao_id}:{patient_id}:{necessidade}:partial_text"
+                r.append(redis_key, transcricao_parcial + " ")
+                r.expire(redis_key, 60 * 60 * 24)  # 24h
+                r.setex(f"transcricao:{sessao_id}:{patient_id}:{necessidade}:last_update", 60 * 60 * 24, str(time.time()))
+            except Exception as _e:
+                add_log("Falha ao escrever transcrição parcial no Redis", "warning", erro=str(_e), sessao_id=sessao_id, pacote_id=pacote_id)
+
         else:
             cursor.execute("""
                 UPDATE transcriptions 

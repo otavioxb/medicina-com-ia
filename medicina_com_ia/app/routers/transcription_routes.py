@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Query, HTTPException
+from fastapi import Request
 from fastapi.responses import JSONResponse
 from app.db.database import get_db_connection, release_db_connection
 from app.modules.utils import add_log
@@ -7,49 +8,31 @@ from app.db.schemas import TranscriptionNotifyPayload  # ✅ Agora importado cor
 router = APIRouter()
 
 @router.get("/transcriptions/{sessao_id}")
-async def get_transcriptions(sessao_id: str, patient_id: str = Query(...), necessidade: str = Query(...)):
+async def get_transcriptions(request: Request, sessao_id: str, patient_id: str = Query(...), necessidade: str = Query(...)):
+    # Fonte primária para UI (Scale A): Redis (parcial), fallback Postgres
+    if not (patient_id and necessidade):
+        raise HTTPException(status_code=400, detail="Dados incompletos na solicitação.")
+
+    redis_key = f"transcricao:{sessao_id}:{patient_id}:{necessidade}:partial_text"
+    try:
+        r = request.app.state.redis
+        cached = await r.get(redis_key)
+        if cached:
+            return {"transcription": cached.strip()}
+    except Exception as e:
+        add_log("Erro ao ler transcrição parcial do Redis", "warning", erro=str(e), sessao_id=sessao_id, patient_id=patient_id)
+
     connection = get_db_connection()
     cursor = connection.cursor()
     try:
-        if not (patient_id and necessidade):
-            add_log(
-                "Solicitação rejeitada: parâmetros incompletos para get_transcriptions",
-                "warning",
-                sessao_id=sessao_id,
-                patient_id=patient_id,
-                necessidade=necessidade
-            )
-            raise HTTPException(status_code=400, detail="Dados incompletos na solicitação.")
-
         cursor.execute(
-            """
-            SELECT pacote_id, transcription 
-            FROM transcriptions 
-            WHERE sessao_id = %s AND patient_id = %s AND necessidade = %s AND status = 'concluída'
-            ORDER BY timestamp DESC 
-            LIMIT 1
-            """,
+            "SELECT transcription FROM transcriptions WHERE sessao_id = %s AND patient_id = %s AND necessidade = %s AND status = 'concluída' ORDER BY timestamp DESC LIMIT 1",
             (sessao_id, patient_id, necessidade)
         )
         result = cursor.fetchone()
-
-        if result:
-            pacote_id, transcription_text = result
-
-            # Atualiza o status para "enviado_tabela_completa"
-            cursor.execute(
-                """
-                UPDATE transcriptions 
-                SET status = 'enviado_tabela_completa' 
-                WHERE pacote_id = %s AND patient_id = %s AND necessidade = %s AND status = 'concluída'
-                """,
-                (pacote_id, patient_id, necessidade)
-            )
-            connection.commit()
-
-            return {"transcription": transcription_text}
-        else:
-            return {"transcription": ""}
+        if result and result[0]:
+            return {"transcription": result[0]}
+        return {"transcription": ""}
 
     except Exception as e:
         add_log("Erro ao recuperar transcrição", "error", erro=str(e), sessao_id=sessao_id, patient_id=patient_id)

@@ -568,9 +568,9 @@ function fetchTranscriptions() {
             const transcriptionArea = document.getElementById('transcriptionArea');
 
             // Adiciona a nova transcrição ao final do texto existente
-            if (transcription && !transcriptionArea.value.endsWith(transcription)) {
-                transcriptionArea.value += transcription + "\n";  // Inclui nova linha para separação
-                transcriptionArea.scrollTop = transcriptionArea.scrollHeight;  // Mantém a rolagem no final
+            if (typeof transcription === string) {
+                transcriptionArea.value = transcription;
+                transcriptionArea.scrollTop = transcriptionArea.scrollHeight;
             }
         })
         .catch(error => console.error("Erro ao buscar transcrição:", error));
