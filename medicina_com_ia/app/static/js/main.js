@@ -380,11 +380,6 @@ document.addEventListener('DOMContentLoaded', () => {
     configurarSelecaoProfissaoNecessidade();
     configurarLogout();
     verificarCampos();
-    // Garantia extra: alguns navegadores/fluxos não disparam os listeners como esperado
-    document.getElementById('nome').addEventListener('input', validarFormulario);
-    document.getElementById('nome').addEventListener('change', validarFormulario);
-    document.getElementById('nome').addEventListener('keyup', validarFormulario);
-    validarFormulario();
 });
 
 
@@ -451,14 +446,11 @@ function verificarCampos() {
     document.querySelectorAll('#formDadosPaciente input').forEach(input => {
         input.addEventListener('input', validarFormulario);
     });
-
-// Inicializa estado do botão
-validarFormulario();
 }
 
 function validarFormulario() {
-    const nome = (document.getElementById('nome').value || '').trim();
-    document.getElementById('sendDataBtn').disabled = (nome.length === 0);
+    const nome = document.getElementById('nome').value;
+    document.getElementById('sendDataBtn').disabled = !(nome);
 }
 
 
@@ -592,19 +584,19 @@ function startPolling() {
         eventSource = null;
     }
 
-    const transcriptionArea = document.getElementById("transcriptionArea");
+    const transcriptionArea = document.getElementById('transcriptionArea');
 
     if (window.EventSource) {
         const url = `/transcriptions/stream/${sessao_id}?patient_id=${encodeURIComponent(patient_id)}&necessidade=${encodeURIComponent(necessidade)}`;
         eventSource = new EventSource(url);
 
-        eventSource.addEventListener("transcription", (evt) => {
+        eventSource.addEventListener('transcription', (evt) => {
             const transcription = (evt.data || "").replace(/\n/g, "\n");
             transcriptionArea.value = transcription;
             transcriptionArea.scrollTop = transcriptionArea.scrollHeight;
         });
 
-        eventSource.addEventListener("error", () => {
+        eventSource.addEventListener('error', () => {
             try { eventSource.close(); } catch (e) {}
             eventSource = null;
             if (pollingInterval) clearInterval(pollingInterval);
@@ -623,6 +615,14 @@ function stopPolling() {
         try { eventSource.close(); } catch (e) {}
         eventSource = null;
     }
+
+    if (pollingInterval) {
+        clearInterval(pollingInterval);
+        pollingInterval = null;
+    }
+}
+
+
 
 // Chama a função para validar o formulário sempre que um campo é alterado
 document.querySelectorAll('#formDadosPaciente input').forEach(input => {
@@ -669,7 +669,7 @@ document.getElementById("baixarRelatorioBtn").addEventListener("click", resetTim
 
 
 document.getElementById('sendDataBtn').onclick = () => {
-    const nome = (document.getElementById('nome').value || '').trim();
+  const nome = document.getElementById('nome').value;
   const endereco = document.getElementById('endereco').value || 'Não informado';
   const dataNascimento = document.getElementById('dataNascimento').value || 'Não informado';
   const cpf = document.getElementById('cpf').value || 'Não informado';
