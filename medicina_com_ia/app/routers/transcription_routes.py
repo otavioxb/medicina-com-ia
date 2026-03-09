@@ -59,6 +59,11 @@ async def stream_transcriptions(request: Request, sessao_id: str, patient_id: st
         last_sent = None
         last_keepalive = 0.0
         while True:
+            # initial ping (flush headers)
+            if last_sent is None and last_keepalive == 0.0:
+                last_keepalive = asyncio.get_event_loop().time()
+                yield "event: ping\ndata: ok\n\n"
+
             if await request.is_disconnected():
                 break
 
@@ -71,7 +76,7 @@ async def stream_transcriptions(request: Request, sessao_id: str, patient_id: st
                     yield f"event: transcription\ndata: {safe}\n\n"
                 else:
                     now = asyncio.get_event_loop().time()
-                    if now - last_keepalive > 15:
+                    if now - last_keepalive > 5:
                         last_keepalive = now
                         yield "event: ping\ndata: ok\n\n"
             except Exception as e:
@@ -80,7 +85,7 @@ async def stream_transcriptions(request: Request, sessao_id: str, patient_id: st
 
             await asyncio.sleep(1)
 
-    return StreamingResponse(event_gen(), media_type="text/event-stream")
+    return StreamingResponse(event_gen(), media_type="text/event-stream", headers={"Cache-Control": "no-cache", "Connection": "keep-alive", "X-Accel-Buffering": "no"})
 
 
 @router.post("/notify_transcription_done")
