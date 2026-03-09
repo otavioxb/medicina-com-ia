@@ -9,6 +9,7 @@ const profissao = localStorage.getItem('profissao');
 let necessidade = "";
 let patient_id;
 let pollingInterval;
+let eventSource = null;
 let isRecording = false;
 let audioContext;
 let inputStream;
@@ -591,7 +592,7 @@ function startPolling() {
         eventSource = new EventSource(url);
 
         eventSource.addEventListener('transcription', (evt) => {
-            const transcription = (evt.data || "").replace(/\n/g, "\n");
+            const transcription = (evt.data || "").replace(/\\n/g, "\n");
             transcriptionArea.value = transcription;
             transcriptionArea.scrollTop = transcriptionArea.scrollHeight;
         });
