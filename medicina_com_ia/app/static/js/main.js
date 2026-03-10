@@ -9,6 +9,7 @@ const profissao = localStorage.getItem('profissao');
 let necessidade = "";
 let patient_id;
 let pollingInterval;
+let eventSource = null;
 let isRecording = false;
 let audioContext;
 let inputStream;
@@ -559,7 +560,7 @@ function fetchTranscriptions() {
     }
 
     // Monta a URL com os parâmetros de query string
-    const url = `/transcriptions/${sessao_id}?patient_id=${patient_id}&necessidade=${necessidade}`;
+    const url = `/transcriptions/${sessao_id}?patient_id=${encodeURIComponent(patient_id)}&necessidade=${encodeURIComponent(necessidade)}`;
 
     fetch(url)
         .then(response => response.json())
@@ -568,9 +569,9 @@ function fetchTranscriptions() {
             const transcriptionArea = document.getElementById('transcriptionArea');
 
             // Adiciona a nova transcrição ao final do texto existente
-            if (transcription && !transcriptionArea.value.endsWith(transcription)) {
-                transcriptionArea.value += transcription + "\n";  // Inclui nova linha para separação
-                transcriptionArea.scrollTop = transcriptionArea.scrollHeight;  // Mantém a rolagem no final
+            if (typeof transcription === 'string') {
+                transcriptionArea.value = transcription;
+                transcriptionArea.scrollTop = transcriptionArea.scrollHeight;
             }
         })
         .catch(error => console.error("Erro ao buscar transcrição:", error));
@@ -578,19 +579,50 @@ function fetchTranscriptions() {
 
 // Inicie o polling usando a função fetchTranscriptions()
 function startPolling() {
-    if (pollingInterval) clearInterval(pollingInterval);  // Garante que não existam intervalos duplicados
+    // Prefer SSE stream; fallback to polling
+    if (eventSource) {
+        try { eventSource.close(); } catch (e) {}
+        eventSource = null;
+    }
 
-    pollingInterval = setInterval(fetchTranscriptions, 2000);  // Configura o polling a cada 2 segundos
-    // logMessage("Polling iniciado.");
+    const transcriptionArea = document.getElementById('transcriptionArea');
+
+    if (window.EventSource) {
+        const url = `/transcriptions/stream/${sessao_id}?patient_id=${encodeURIComponent(patient_id)}&necessidade=${encodeURIComponent(necessidade)}`;
+        eventSource = new EventSource(url);
+
+        eventSource.addEventListener('transcription', (evt) => {
+            const transcription = (evt.data || "").replace(/\\n/g, "\n");
+            transcriptionArea.value = transcription;
+            transcriptionArea.scrollTop = transcriptionArea.scrollHeight;
+        });
+
+        eventSource.addEventListener('error', () => {
+            try { eventSource.close(); } catch (e) {}
+            eventSource = null;
+            if (pollingInterval) clearInterval(pollingInterval);
+            pollingInterval = setInterval(fetchTranscriptions, 2000);
+        });
+
+        return;
+    }
+
+    if (pollingInterval) clearInterval(pollingInterval);
+    pollingInterval = setInterval(fetchTranscriptions, 2000);
 }
 
 function stopPolling() {
+    if (eventSource) {
+        try { eventSource.close(); } catch (e) {}
+        eventSource = null;
+    }
+
     if (pollingInterval) {
-        clearInterval(pollingInterval);  // Para o polling
+        clearInterval(pollingInterval);
         pollingInterval = null;
-        // logMessage("Polling parado.");
     }
 }
+
 
 
 // Chama a função para validar o formulário sempre que um campo é alterado

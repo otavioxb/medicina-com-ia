@@ -40,18 +40,10 @@ def is_silent(audio_data: bytes) -> bool:
         # add_log(f"[Pydub] Segmentos não silenciosos: {non_silent}", "debug")
         return len(non_silent) == 0
     except Exception as e:
-        add_log(f"Erro ao calcular silêncio com pydub: {e}", level="error")
-
-        # Fallback para método antigo
-        try:
-            if len(audio_data) % 2 != 0:
-                audio_data = audio_data[:-1]
-            rms = audioop.rms(audio_data, 2)
-            # add_log(f"[Fallback RMS] Valor RMS: {rms}", "debug")
-            return rms < 500
-        except Exception as e2:
-            add_log(f"Erro no fallback de cálculo de silêncio: {e2}", level="error")
-            return False
+        # Se não conseguimos decodificar o chunk (webm), não dá para inferir silêncio de forma confiável.
+        # Preferimos NÃO bloquear a transcrição (retorna False = não é silêncio).
+        add_log(f"Falha ao calcular silêncio (decode): {e}", level="warning")
+        return False
 
 def formatar_duracao(segundos: int) -> str:
     horas = segundos // 3600
