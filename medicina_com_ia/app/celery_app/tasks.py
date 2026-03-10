@@ -103,9 +103,9 @@ def transcrever_audio_task(self, audio_data, pacote_id, sessao_id, patient_id, n
         if transcricao_parcial and "Erro na transcrição" not in transcricao_parcial:
             cursor.execute("""
                 UPDATE transcriptions 
-                SET status = %s, transcription = %s 
+                SET status = %s 
                 WHERE pacote_id = %s
-            """, ('concluída', transcricao_parcial, pacote_id))
+            """, ('concluída', pacote_id))
             # Scale A (Fase 2): não persistir no Postgres a cada pacote (checkpoint/stop faz flush)
 
             # === Scale A (Fase 1): transcrição parcial em Redis ===

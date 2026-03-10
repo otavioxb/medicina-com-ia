@@ -338,13 +338,13 @@ async def handle_audio_chunk(data, websocket: WebSocket):
             INSERT INTO transcriptions (pacote_id, sessao_id, patient_id, necessidade, status)
             VALUES (%s, %s, %s, %s, %s)
         """, (pacote_id, sessao_id, patient_id, necessidade, 'pendente'))
-        connection.commit()
 
         # add_log(f"Pacote {pacote_id} recebido e enfileirado.")
         # Atualiza status
         cursor.execute("""
             UPDATE transcriptions SET status = 'processando' WHERE pacote_id = %s
         """, (pacote_id,))
+
         connection.commit()
 
         # Envia para Celery
@@ -428,8 +428,8 @@ async def handle_verificar_pacotes_pendentes(data, websocket: WebSocket):
             UPDATE transcriptions 
             SET status = 'erro_pendente'
             WHERE sessao_id = %s AND patient_id = %s AND necessidade = %s 
-            AND status IN ('pendente', 'processando')
-            AND timestamp < (NOW() - INTERVAL '3 seconds')
+            AND status = 'pendente'
+            AND timestamp < (NOW() - INTERVAL '60 seconds')
         """, (sessao_id, patient_id, necessidade))
         atualizados = cursor.rowcount
         if atualizados > 0:
