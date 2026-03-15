@@ -1,7 +1,38 @@
+async function carregarProfissoes() {
+    const select = document.getElementById("profissao");
+    if (!select) return;
+
+    try {
+        const response = await fetch("/catalog/profissoes");
+        if (!response.ok) {
+            throw new Error(`Falha ao carregar profissões: HTTP ${response.status}`);
+        }
+        const data = await response.json();
+        const profissoes = Array.isArray(data.profissoes) ? data.profissoes : [];
+
+        select.innerHTML = '<option value="" disabled selected>Selecione</option>';
+        profissoes.forEach((profissao) => {
+            const option = document.createElement("option");
+            option.value = profissao;
+            option.textContent = profissao;
+            select.appendChild(option);
+        });
+        select.disabled = profissoes.length === 0;
+    } catch (error) {
+        console.error("Erro ao carregar profissões:", error);
+        select.innerHTML = '<option value="" disabled selected>Erro ao carregar profissões</option>';
+        select.disabled = true;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    carregarProfissoes();
+});
+
 document.getElementById('cadastroForm').addEventListener('submit', async function(event) {
     event.preventDefault();
 
-    const token = document.getElementById('token').value;  // campo que você deve incluir no HTML
+    const token = document.getElementById('token').value;
     const usuario = {
         nome: document.getElementById('nome').value,
         cpf: document.getElementById('cpf').value,
@@ -11,17 +42,9 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
         profissao: document.getElementById('profissao').value
     };
 
-    // const cartao = {
-    //     nome_cartao: document.getElementById('nome_cartao').value,
-    //     numero_mascarado: document.getElementById('numero_mascarado').value,
-    //     validade: document.getElementById('validade').value,
-    //     bandeira: document.getElementById('bandeira').value
-    // };
-
     const payload = {
-        token: token,         // <- ESSENCIAL!
+        token: token,
         usuario: usuario,
-        // cartao: cartao
     };
     console.log("Payload enviado novo:", JSON.stringify(payload, null, 2));
 
@@ -39,20 +62,18 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
             mensagemDiv.innerHTML = `<div class="alert alert-success">Cadastro realizado com sucesso! Bem-vindo, ${result.nome}.</div>`;
             window.scrollTo({ top: 0, behavior: 'smooth' });
             document.getElementById("cadastroForm").reset();
-            
+
             if (result.redirect) {
                 setTimeout(() => {
                     window.location.href = result.redirect;
                 }, 2000);
             }
         } else {
-            // Tenta extrair JSON do erro
             try {
                 const error = await response.json();
                 mensagemDiv.innerHTML = `<div class="alert alert-danger">Erro: ${error.detail || "Erro ao processar cadastro."}</div>`;
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             } catch (e) {
-                // Se não for JSON, tenta mostrar texto
                 const errorText = await response.text();
                 mensagemDiv.innerHTML = `<div class="alert alert-danger">Erro inesperado: ${errorText}</div>`;
                 window.scrollTo({ top: 0, behavior: 'smooth' });

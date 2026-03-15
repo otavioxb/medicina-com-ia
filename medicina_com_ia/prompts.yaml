@@ -675,3 +675,1856 @@ Juíz:
     
 
     Recebendo a transcrição, prossiga com as correções necessárias, ajustando palavras erradas e completando com base no contexto, sem alterar o conteúdo original.
+
+Médico - Shwarts e Paiva:
+  Consulta de Coloproctologia: |
+    O seguinte texto é uma transcrição de uma consulta médica de coloproctologia:
+
+    {texto}
+
+    Você receberá a transcrição que foi realizada em pacotes de áudio de 8 segundos. 
+    Como o modelo de transcrição (Whisper) pode inserir palavras incorretas ao tentar completar trechos de áudio cortados, 
+    pode haver erros ou palavras mal transcritas. Alguns termos médicos, como nomes de medicamentos, doenças colorretais, procedimentos e regiões anatômicas podem ser reconhecidos de forma incorreta. 
+    Caso algum medicamento, diagnóstico ou procedimento esteja mal transcrito, tente corrigir para o nome correto, com base no contexto da consulta e nas listas abaixo. 
+    Caso um medicamento, doença ou procedimento não esteja na lista, tente identificá-lo pela semelhança fonética ou por palavras-chave relacionadas à sua classe, efeito ou apresentação clínica.
+
+    Lista de Doenças Mais Comuns:
+      Hemorroidas internas, Hemorroidas externas, Doença hemorroidária, Fissura anal, Fístula anal, Abscesso perianal, Trombose hemorroidária externa,
+      Plicoma anal, Prurido anal, Condiloma acuminado, Prolapso retal, Prolapso mucoso, Incontinência fecal, Constipação intestinal, Obstipação,
+      Síndrome do intestino irritável, Doença diverticular dos cólons, Diverticulose, Diverticulite, Retocolite ulcerativa, Doença de Crohn perianal,
+      Colite, Proctite, Retite actínica, Doença inflamatória intestinal, Pólipos colorretais, Adenoma tubular, Adenoma túbulo-viloso, Adenoma viloso,
+      Câncer colorretal, Neoplasia de reto, Neoplasia de cólon, Endometriose intestinal, Doença pilonidal, Cisto pilonidal, Sinus pilonidal,
+      Enterorragia, Hematoquezia, Sangramento anal, Tenesmo, Dor anorretal, Retocele, Anismus, Disfunção do assoalho pélvico, Megacólon, Volvo,
+      Estenose anal, Estenose de reto, Úlcera retal solitária, Colite isquêmica, Angiodisplasia, Lesão anal, Lesão perianal, Papilite anal,
+      Criptite, Doença celíaca com sintomas intestinais, Parasitose intestinal, Oxiuríase, Procidência, Síndrome da defecação obstruída.
+
+    Lista de Medicamentos Mais Comuns:
+      Diosmina, Hesperidina, Daflon, Lidocaína pomada, Lidocaína gel, Nifedipina tópica, Diltiazem tópico, Nitroglicerina tópica, Isossorbida tópica,
+      Hidrocortisona, Triancinolona, Prednisona, Prednisolona, Mesalazina, Sulfassalazina, Budesonida, Metronidazol, Ciprofloxacino, Cefalexina,
+      Amoxicilina + clavulanato, Rifaximina, Albendazol, Mebendazol, Nitazoxanida, Psyllium, Plantago ovata, Lactulose, Macrogol, Polietilenoglicol,
+      Bisacodil, Picossulfato de sódio, Glicerina, Óleo mineral, Paracetamol, Dipirona, Ibuprofeno, Cetoprofeno, Naproxeno, Tramadol, Codeína,
+      Amitriptilina, Gabapentina, Pregabalina, Ondansetrona, Bromoprida, Metoclopramida, Omeprazol, Pantoprazol, Esomeprazol, Sucralfato,
+      Clorexidina, Pomadas cicatrizantes, Neomicina + bacitracina, Mupirocina, Tacrolimo, Azatioprina, Infliximabe, Adalimumabe, Ustequinumabe,
+      Vedolizumabe.
+
+    Lista de Procedimentos Mais Comuns:
+      Toque retal, Anuscopia, Retossigmoidoscopia, Colonoscopia, Ligadura elástica, Hemorroidectomia, Fissurectomia, Esfincterotomia lateral interna,
+      Drenagem de abscesso perianal, Fistulotomia, Seton, Exérese de plicoma, Exérese de lesão anal, Biópsia de lesão anal, Cauterização,
+      Coleta para anatomopatológico, Manometria anorretal, Ultrassonografia endoanal, Ressonância de pelve, Pesquisa de sangue oculto nas fezes.
+
+    Regiões Anatômicas Mais Comuns:
+      Região perianal, Ânus, Canal anal, Margem anal, Esfíncter anal, Ampola retal, Reto, Junção anorretal, Cólon sigmoide, Descendente, Transverso,
+      Ascendente, Ceco, Íleo terminal, Sacrococcígea, Sulco interglúteo, Assoalho pélvico.
+
+    Sintomas e Achados Mais Comuns:
+      Dor ao evacuar, Sangramento ao evacuar, Sangue vivo nas fezes, Ardor anal, Prurido anal, Exteriorização ao esforço, Prolapso, Secreção anal,
+      Supuração, Nódulo anal, Abaulamento perianal, Edema local, Constipação, Fezes ressecadas, Diarreia, Alternância do hábito intestinal,
+      Incontinência para gases, Incontinência fecal, Tenesmo, Sensação de evacuação incompleta, Urgência evacuatória, Distensão abdominal, Flatulência,
+      Muco nas fezes, Perda ponderal, Dor abdominal, Febre, Fístula com orifício externo, fissura posterior, fissura anterior, hemorroidas prolapsadas,
+      mamilos hemorroidários, plicoma sentinela, hipertonia esfincteriana.
+
+    Instruções:
+      1.Verifique e corrija os nomes dos medicamentos:
+        - Ao identificar um medicamento na transcrição, corrija o nome, se necessário, comparando com a lista acima.
+      2.Verifique e corrija diagnósticos, procedimentos e regiões anatômicas:
+        - Corrija termos coloproctológicos mal transcritos com base no contexto clínico.
+      3.Contextualize a transcrição:
+        - Se não tiver certeza sobre um nome de medicamento, doença ou procedimento, faça uma suposição educada com base no contexto clínico.
+      4.Classificação da consulta:
+        - Sumarize a consulta em tópicos principais com uma estrutura clara e fácil de ler, sem símbolos de formatação como # ou *.
+        - Organize a consulta em categorias como descritas abaixo.
+      5.Não adicione informações que não estão na transcrição:
+        - Não inclua suposições além do que foi dito pelo médico ou paciente.
+      6.Se houver descrição de exame proctológico, preserve os detalhes mencionados:
+        - inspeção da região perianal
+        - toque retal
+        - anuscopia
+        - localização da lesão
+        - presença de dor, sangramento, secreção, prolapso ou nódulos
+      7.Se houver exames complementares já realizados, inclua os achados mencionados:
+        - colonoscopia
+        - biópsias
+        - anatomopatológico
+        - ressonância
+        - ultrassonografia
+        - manometria
+      8.Se houver procedimento realizado ou indicado, descreva de forma objetiva.
+      9.Se houver hipótese diagnóstica sem confirmação, deixe claro que se trata de hipótese diagnóstica.
+      10.Se houver classificação de hemorroida, fissura, fístula ou doença inflamatória, registrar exatamente como mencionado, sem inventar graduação.
+
+    Exemplo de resposta:
+
+    Classificação da Consulta
+
+    Queixa Principal:
+      - Motivo principal da consulta.
+      - Ex.: sangramento anal, dor ao evacuar, constipação, prurido, exteriorização anal, secreção perianal, alteração do hábito intestinal.
+
+    História da Doença Atual (HDA):
+      - Início dos sintomas.
+      - Tempo de evolução.
+      - Frequência e intensidade dos sintomas.
+      - Presença de dor, sangramento, prolapso, secreção, muco, urgência evacuatória, tenesmo, constipação ou diarreia.
+      - Fatores de piora ou melhora.
+      - Relação com evacuação, alimentação ou esforço evacuatório.
+
+    Hábitos Intestinais:
+      - Frequência evacuatória.
+      - Consistência das fezes.
+      - Esforço evacuatório.
+      - Sensação de evacuação incompleta.
+      - Uso de laxantes, fibras ou enemas.
+      - Episódios de incontinência, urgência ou escapes.
+
+    História Médica e Cirúrgica Prévia:
+      - Doenças intestinais, inflamatórias, infecciosas ou neoplásicas prévias.
+      - Cirurgias anorretais ou abdominais prévias.
+      - Episódios prévios semelhantes.
+      - Histórico de radioterapia pélvica, traumas ou partos, se mencionado.
+
+    História Familiar:
+      - Histórico familiar de câncer colorretal, pólipos, doença inflamatória intestinal ou outras doenças intestinais relevantes.
+
+    Uso de Medicações:
+      - Medicamentos em uso contínuo.
+      - Pomadas, supositórios, laxantes, fibras, antibióticos, anti-inflamatórios, imunobiológicos ou analgésicos já utilizados.
+      - Corrigir os nomes, se necessário.
+
+    Hábitos e Fatores de Risco:
+      - Baixa ingestão de fibras.
+      - Baixa ingesta hídrica.
+      - Sedentarismo.
+      - Esforço evacuatório crônico.
+      - Longo tempo no vaso sanitário.
+      - História de tabagismo, etilismo ou fatores associados, se mencionados.
+
+    Exame Proctológico:
+      - Inspeção da região perianal.
+      - Presença de fissura, plicoma, hemorroidas, trombose, secreção, orifício fistuloso, abscesso, condilomas ou prolapso.
+      - Toque retal.
+      - Anuscopia, se realizada.
+      - Descrever os achados do exame físico mencionados pelo médico.
+
+    Exames Realizados ou Avaliados:
+      - Colonoscopia, retossigmoidoscopia, anuscopia, ressonância, ultrassonografia endoanal, manometria, biópsias, anatomopatológico ou exames laboratoriais mencionados.
+      - Incluir data e local/profissional responsável, se mencionados.
+
+    Hipótese Diagnóstica:
+      - Diagnóstico provável ou diferencial descrito pelo médico.
+
+    Conduta:
+      - Tratamento clínico prescrito.
+      - Orientações dietéticas e comportamentais.
+      - Uso de fibras, laxativos, pomadas ou analgésicos.
+      - Solicitação de exames complementares.
+      - Indicação de procedimento ambulatorial ou cirúrgico.
+      - Seguimento e retorno, quando orientados.
+  Laudo EDA - NORMAL: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Exame realizado com paciente sob assistência anestésica, O2 contínuo, monitorizado.
+
+    ESÔFAGO:
+    Calibre, distensibilidade e peristaltismo habituais. Mucosa de todo órgão de coloração e aspecto normais. Junção esôfago-gástrica ao nível do pinçamento diafragmático. Cárdia transposto sem resistência.
+
+    ESTÔMAGO:
+    Lago muco-bilioso em pequena quantidade, sem restos alimentares. Volume e distensibilidade conservados. Corpo com pregueado e coloração normais. À retrovisão, cárdia ajustada ao aparelho, fundo com aspecto normal. Incisura angularis íntegra. Mucosa do antro de aspecto habitual. Piloro pérvio e centrado.
+
+    DUODENO:
+    Bulbo duodenal amplo e anatômico, mucosa de aspecto normal. Segunda porção com pregueado circular e uniforme.
+
+    CONCLUSÃO: ESÔFAGO, ESTÔMAGO E DUODENO ENDOSCOPICAMENTE NORMAIS
+
+    Obs.: Realizadas biópsias de antro/corpo para pesquisa de H. pylori
+  Laudo EDA - NORMAL 2: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    ESÔFAGO
+    Órgão apresentando calibre e peristaltismo normais. Mucosa íntegra. Linha " Z" da transição esôfagogástrica situada ao nível do pinçamento diafragmático. Cárdia típica, transposto sem resistência, a {distancia_arcada_cm} cm da arcada dentária.
+
+    ESTÔMAGO
+    Volume e distensibilidade normais. Relevo mucoso anatômico. Lago mucoso com líquido claro. Mucosa de fundo gástrico, corpo, incisura angularis e antro normais. Piloro circular, centrado e facilmente transposto.
+
+    DUODENO
+    Bulbo anatômico, mucosa normal. Segunda porção sem alterações. Presença de bile em seu interior.
+
+    CONCLUSÃO
+    1. Normal.
+  Laudo EDA - GASTRITE: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Esôfago de curso, calibre e motilidade normais, mucosa macroscopicamente normal, transição esôfago-gástrica ao nível do pinçamento diafragmático.
+
+    Estômago com líquido de estase de volume e coloração normais, mucosa de corpo e fundo macroscopicamente normais, havia enantema antral leve (BIÓPSIAS ). Piloro pérvio.
+
+    Duodeno com preservação da anatomia bulbar, mucosa macroscopicamente normal até segunda porção duodenal.
+
+    Conclusão: Gastrite antral leve.
+  Laudo EDA - ESOFAGITE EDEMATOSA: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Exame realizado com paciente sob assistência anestésica, O2 contínuo, monitorizado.
+
+    ESÔFAGO:
+    com calibre e motilidade normais, mucosa opacificada, edemaciada em seu terço distal. Junção esôfago-gástrica ao nível do pinçamento diafragmático.
+
+    ESTÔMAGO:
+    Lago muco-bilioso em pequena quantidade, sem restos alimentares. Volume e distensibilidade conservados. Corpo com pregueado e coloração normais. À retrovisão, cárdia ajustada ao aparelho, fundo com aspecto normal. Incisura angularis íntegra. Mucosa do antro de aspecto habitual. Piloro pérvio e centrado.
+
+    DUODENO:
+    Bulbo duodenal amplo e anatômico, mucosa de aspecto normal. Segunda porção com pregueado circular e uniforme.
+
+    Obs.: Realizadas biópsias de antro/corpo para pesquisa de H. pylori
+
+    Conclusão: Esofagite edematosa de refluxo.
+  Laudo EDA - ESOFAGITE GASTRITE: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Esôfago de curso, calibre e motilidade normais, mucosa macroscopicamente normal até terço distal, onde havia opacificação da mesma, transição esôfago-gástrica ao nível do pinçamento diafragmático.
+
+    Estômago com líquido de estase de volume e coloração normais, mucosa de corpo e fundo macroscopicamente normais, havia enantema antral leve (BIÓPSIAS). Piloro pérvio.
+
+    Duodeno com preservação da anatomia bulbar, mucosa macroscopicamente normal até segunda porção duodenal.
+
+    Conclusão: Esofagite não erosiva.
+    Gastrite antral leve.
+  Laudo EDA - ESAFAGITE EROSIVA: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Exame realizado com paciente sob assistência anestésica, O2 contínuo, monitorizado.
+
+    ESÔFAGO:
+    Calibre e distensibilidade habituais. Transição esôfago-gástrica ao nível do pinçamento diafragmático, presença de erosão menores que 5 mm. Cárdia transposto sem resistência.
+
+    ESTÔMAGO:
+    Lago muco-bilioso. Distensibilidade e motilidade preservadas. À retrovisão, cárdia ajustada ao aparelho, fundo de aspecto normal Corpo com relevo mucoso preservado. Incisura angularis anatômica. Mucosa do antro de aspecto habitual. Piloro pérvio e centrado.
+
+    DUODENO:
+    Bulbo duodenal amplo e anatômico, mucosa de aspecto normal. Segunda porção com pregueado circular e uniforme.
+
+    Obs.: Realizadas biópsias de corpo e antro para pesquisa de H. pylori.
+
+    CONCLUSÃO: Esofagite erosiva de refluxo (grau {grau_los_angeles} de Los Angeles).
+  Laudo EDA - ESAFAGITE EROSIVA HERNIA: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Esôfago de curso, calibre e motilidade normais, mucosa macroscopicamente normal até terço inferior onde havia opacificação da mesma, acompanhado de erosão esofágica. Transição esôfago-gástrica cm acima do pinçamento diafragmático.
+
+    Estômago com líquido de estase de volume e coloração normais, mucosa macroscopicamente normal. Piloro pérvio.
+
+    Duodeno com preservação da anatomia bulbar, mucosa macroscopicamente normal até segunda porção duodenal.
+
+    Conclusão: Esofagite erosiva grau {grau_los_angeles} de Los Angeles.
+    Hérnia Hiatal.
+  Laudo EDA - NORMAL HENRIQUE: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Esôfago de curso, calibre e motilidade normais, mucosa macroscopicamente normal, transição esôfago-gástrica ao nível do pinçamento diafragmático.
+
+    Estômago com líquido de estase de volume e coloração normais, mucosa macroscopicamente normal. Piloro pérvio.
+
+    Duodeno com preservação da anatomia bulbar, mucosa macroscopicamente normal até segunda porção duodenal.
+
+    Conclusão: Exame normal.
+  Laudo EDA - OBESIDADE: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    ESÔFAGO:
+    Órgão limpo. Calibre e peristaltismo habituais. Mucosa de todo órgão de coloração e aspecto normais. Transição esôfago-gástrica ao nível do pinçamento diafragmático. Cárdia transposto sem resistência.
+
+    ESTÔMAGO:
+    Operado com coto pequeno, com cerca de {extensao_coto_cm} cm de extensão, contendo líquido claro e límpido em pequena quantidade. Elasticidade expansibilidade preservadas. Mucosa íntegra, de coloração normal. Anastomose elástica, regular e de fácil transposição.
+
+    JEJUNO:
+    Alça em fundo cego apresentando mucosa íntegra e de coloração normal. Penetrada alça eferente em cerca de 30 cm sem alterações de mucosa
+
+    CONCLUSÃO:
+    Esôfago e delgado endoscopicamente normais
+    Estômago operado - Gastroplastia Redutora
+
+    Obs.: Procedidas biópsias de coto gástrico para pesquisa de H. pylori
+  Laudo EDA - ENDOSCOPIA PARA OBESIDADE: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    EXAME:
+    Fácil passagem do aparelho pelo EES por visão direta, sob sedação e com boa tolerância.
+
+    ESÔFAGO:
+    Apresentando mucosa íntegra e de coloração normal em toda a sua extensão, com os vasos submucosos bem visíveis no terço inferior (biópsias para histologia). Linha Z situada a aproximadamente 3 cm da arcada dentária. Transição esôfago-gástrica ao nível do pinçamento diafragmático.
+
+    ESTÔMAGO:
+    Operado com coto pequeno, contendo líquido claro e límpido em pequena quantidade. Elasticidade e expansibilidade preservadas. Mucosa íntegra, de coloração normal. (Biópsias para exame Anátomo-Patológico). Anastomose elástica, regular e de fácil transposição.
+
+    JEJUNO:
+    Alça em fundo cego apresentando mucosa íntegra e de coloração normal. Penetrada alça eferente em cerca de 20 cm sem alteração da mucosa.
+
+    CONCLUSÃO:
+    Esôfago e delgado endoscopicamente normais.
+    Estômago operado.
+  Laudo EDA - GASTRECTOMIA VERTICAL - SLEEVE: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    ESÔFAGO:
+    Órgão limpo. Calibre e peristaltismo habituais. Mucosa de todo órgão de coloração e aspecto normais. Transição esôfago-gástrica ao nível do pinçamento diafragmático. Cárdia transposto sem resistência.
+
+    ESTÔMAGO:
+    Estômago de forma e volume alterados às custas de gastrectomia vertical. À retroversão anel hiatal ajustado ao aparelho. Logo abaixo da junção esôfago-gástrica, nota-se estômago tunelizado com diâmetro medindo cerca de 2-3 cm, que termina em discreta angulação distal. Linha de sutura lateral não apresenta orifícios fistulosos suspeitos.Piloro algo desviado, porém pérvio. A mucosa gástrica é normal sem lesões ativas ou cicatriciais. Não se observam resíduos alimentares.
+
+    DUODENO:
+    Bulbo duodenal amplo e anatômico. Mucosa de aspecto normal. Porção descendente do órgão sem alterações.
+
+    BIÓPSIA:
+    Procedidas biópsias de antro e corpo para pesquisa de H. pylori
+
+    CONCLUSÃO:
+    Esôfago e duodeno sem alterações endoscópicas.
+    Estômago operado pela técnica de Sleeve
+  Laudo EDA - BANDA GÉSTRICA AJUSTAVEL: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    ENDOSCOPIA DIGESTIVA ALTA
+    ESÔFAGO:
+    Órgão limpo. Calibre e peristaltismo habituais. Mucosa de todo órgão de coloração e aspecto normais. Transição esôfago-gástrica ao nível do pinçamento diafragmático. Cárdia transposto sem resistência.
+
+    ESTÔMAGO:
+    Lago mucoso sem bile ou restos alimentares. Volume e elasticidade parietal preservado. Fundo com pregueado e coloração normais. À retroversão anel hiatal ajustado ao aparelho, onde observo compressão extrínseca circunferencial uniforme da porção proximal do estômago, de aspecto anelar, cerca de 2 cm da TEG Corpo com pregas mucosas e coloração normais. Incisura angularis anatômica. Mucosa do antro de aspecto habitual. Piloro pérvio e centrado.
+
+    DUODENO:
+    Bulbo duodenal amplo e anatômico. Mucosa de aspecto normal. Porção descendente do órgão sem alterações.
+
+    CONCLUSÃO:
+    ESÔFAGO, ESTÔMAGO E DUODENO ENDOSCOPICAMENTE NORMAIS
+    BANDA GÁSTRICA AJUSTÁVEL BEM CONFIGURADA
+
+    Obs.: Procedidas biópsias de antro/corpo para pesquisa de H. pylori
+  Laudo EDA - NORMAL - 3: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Introdução do aparelho pelo cricofaríngeo, sem intercorrências.
+
+    Esôfago: Calibre e distensibilidade preservados em todo trajeto. A mucosa se apresenta íntegra em toda a extensão do órgão. A transição esôfagogástrica se localiza no nível do pinçamento diafragmático.
+
+    Estômago: Forma, volume e expansibilidade preservados. Lago mucoso claro e em pequena quantidade. À retrovisão, observa-se hiato diafragmático ajustado ao aparelho. Cárdia com aspecto endoscópico normal. Mucosa de fundo e corpo sem alterações. Incisura angularis íntegra. Mucosa de antro sem alterações. Piloro pérvio, regular e centrado.
+
+    Duodeno: Bulbo distensível e sem deformidades. Mucosa bulbar com aspecto endoscópico normal. Segunda porção sem alterações.
+
+    CONCLUSÃO:
+
+    ESOFAGOGASTRODUODENOSCOPIA DENTRO DOS LIMITES DA NORMALIDADE
+
+    Nota: Realizadas biópsias para pesquisa de H. pylori pelo método histológico.
+  Laudo EDA - HH + EER(A): |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Realizado exame com paciente monitorizado, sob assistência anestésica, cateter de O2.
+
+    ESÔFAGO:
+    Calibre e distensibilidade conservados. Transição esôfago-gástrica a cerca de {distancia_hernia_cm} cm do pinçamento diafragmático, formando uma bolsa herniária, mucosa do terço distal do órgão edemaciada e presença de erosões menores que 5 mm.
+
+    ESTÔMAGO:
+    Lago mucoso sem bile ou restos alimentares. Distensibilidade e motilidade conservadas. Corpo com pregueado mucoso e coloração normais. À retroversão, cárdia alargada em relação ao aparelho, fundo de aspecto normal. Incisura angularis íntegra. Mucosa do antro de aspecto normal. Piloro pérvio e centrado.
+
+    DUODENO:
+    Bulbo duodenal amplo e anatômico, mucosa de aspecto normal. Segunda porção duodenal com pregueado circular e uniforme.
+
+    CONCLUSÃO: Hérnia hiatal por deslizamento.
+    Esofagite erosiva de refluxo ( A de Los Angeles).
+
+    Obs.: Realizadas biópsias de antro/corpo para pesquisa de H. pylori
+  Laudo EDA - ESOFAG EROS (A): |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Realizado exame com paciente monitorizado, sob assistência anestésica, cateter de O2.
+
+    ESÔFAGO:
+    Calibre e distensibilidade conservados. Transição esôfago-gástrica ao nível do pinçamento diafragmático e mucosa edemaciada, com pequenas erosões menores que 5 mm.
+
+    ESTÔMAGO:
+    Lago mucoso sem bile ou restos alimentares. Distensibilidade e motilidade conservadas. Corpo com pregueado mucoso e coloração normais. À retroversão, cárdia ajustada em relação ao aparelho, fundo de aspecto normal. Incisura angularis íntegra. Mucosa do antro de aspecto normal. Piloro pérvio e centrado.
+
+    DUODENO:
+    Bulbo duodenal amplo e anatômico, mucosa de aspecto normal. Segunda porção duodenal com pregueado circular e uniforme.
+
+    CONCLUSÃO: Esofagite erosiva de refluxo( A de Los Angeles).
+
+    Obs.: Realizadas biópsias de antro/corpo para pesquisa de H. pylori
+  Laudo EDA - ESOF (A) + GELA: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Realizado exame com paciente monitorizado, sob assistência anestésica, cateter de O2.
+
+    ESÔFAGO:
+    Calibre e distensibilidade conservados. Transição esôfago-gástrica ao nível do pinçamento diafragmático e mucosa edemaciada, com pequenas erosões menores que 5 mm.
+
+    ESTÔMAGO:
+    Lago mucoso sem bile ou restos alimentares. Distensibilidade e motilidade conservadas. Corpo com pregueado mucoso e coloração normais. À retroversão, cárdia ajustada em relação ao aparelho, fundo de aspecto normal. Incisura angularis íntegra. Mucosa do antro com áreas de leve enantema. Piloro pérvio e centrado.
+
+    DUODENO:
+    Bulbo duodenal amplo e anatômico, mucosa de aspecto normal. Segunda porção duodenal com pregueado circular e uniforme.
+
+    CONCLUSÃO: Esofagite erosiva de refluxo ( A de Los Angeles).
+    Gastrite endoscópica enantematosa leve de antro.
+
+    Obs.: Realizadas biópsias de antro/corpo para pesquisa de H. pylori
+  Laudo EDA - GELA: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Exame realizado em paciente monitorizado, sob assistência anestésica, O2 contínuo.
+
+    ESÔFAGO:
+    Calibre e peristaltismo habituais, mucosa de todo órgão de coloração e aspecto normais. Transição esôfago-gástrica ao nível do pinçamento diafragmático. Cárdia transposto sem resistência.
+
+    ESTÔMAGO:
+    Lago mucoso sem bile ou restos alimentares. Volume e distensibilidade preservadas. Corpo com relevo mucoso e coloração normais. À retrovisão, cárdia ajustada ao aparelho, fundo com aspecto e coloração normais. Incisura angularis íntegra. Antro com enantema em leve intensidade. Piloro centrado e pérvio.
+
+    DUODENO:
+    Bulbo duodenal amplo e anatômico, mucosa de aspecto normal. Segunda porção com pregueado circular e uniforme.
+
+    Obs.: realizadas biópsias gástricas para pesquisa de H. pylori.
+
+    CONCLUSÃO: Gastrite enantematosa leve de antro.
+  Laudo EDA - PGEL: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Exame realizado em paciente monitorizado, sob assistência anestésica, O2 contínuo.
+
+    ESÔFAGO:
+    Calibre e distensibilidade habituais, mucosa de todo órgão de coloração e aspecto normais. Transição esôfago-gástrica ao nível do pinçamento diafragmático. Cárdia transposto sem resistência.
+
+    ESTÔMAGO:
+    Lago mucoso sem bile ou restos alimentares. Volume e distensibilidade preservadas. Corpo com relevo mucoso regular, com leve enantema difuso. À retroversão cárdia ajustada ao aparelho, fundo com aspecto e coloração normais. Incisura angularis íntegra. Mucosa do antro com áreas de leve enantema. Piloro centrado e pérvio.
+
+    DUODENO:
+    Bulbo duodenal amplo e anatômico, mucosa de aspecto normal. Segunda porção com pregueado circular e uniforme.
+
+    Obs.: realizadas biópsias para pesquisa de H. pylori.
+
+    CONCLUSÃO: Pangastrite endoscópica enantematosa leve.
+  Laudo EDA - GELA + BDEL: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Exame realizado em paciente monitorizado, sob assistência anestésica, O2 contínuo.
+
+    ESÔFAGO:
+    Calibre e peristaltismo habituais, mucosa de todo órgão de coloração e aspecto normais. Transição esôfago-gástrica ao nível do pinçamento diafragmático. Cárdia transposto sem resistência.
+
+    ESTÔMAGO:
+    Lago mucoso sem bile ou restos alimentares. Volume e distensibilidade preservadas. Corpo com relevo mucoso e coloração normais. À retrovisão, cárdia ajustada ao aparelho, fundo com aspecto e coloração normais. Incisura angularis íntegra. Antro com áreas de leve enantema. Piloro centrado e pérvio.
+
+    DUODENO:
+    Bulbo duodenal amplo, com áreas de enantema em leve intensidade. Segunda porção com pregueado circular e uniforme.
+
+    Obs.: realizadas biópsias para pesquisa de H. pylori.
+
+    CONCLUSÃO: Gastrite endoscópica enantematosa leve de antro.
+    Bulboduodenite enantematosa leve.
+  Laudo EDA - GERIA: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Exame realizado em paciente monitorizado, sob assistência anestésica, O2 contínuo.
+
+    ESÔFAGO:
+    Calibre e peristaltismo habituais, mucosa de todo órgão de coloração e aspecto normais. Transição esôfago-gástrica ao nível do pinçamento diafragmático. Cárdia transposto sem resistência.
+
+    ESTÔMAGO:
+    Lago mucoso sem bile ou restos alimentares. Volume e distensibilidade preservadas. Corpo com relevo mucoso e coloração normais. À retrovisão, cárdia ajustada ao aparelho, fundo com aspecto e coloração normais. Incisura angularis íntegra. Antro com erosões vermelhas em grande intensidade. Piloro centrado e pérvio.
+
+    DUODENO:
+    Bulbo duodenal amplo e anatômico, mucosa de aspecto normal. Segunda porção com pregueado circular e uniforme.
+
+    Obs.: realizadas biópsias para pesquisa de H. pylori.
+
+    CONCLUSÃO: Gastrite endoscópica erosiva intensa de antro.
+  Laudo EDA - NORMAL ZÉ MILTON: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Realizado exame com paciente monitorizado, sob assistência anestésica, cateter de O2.
+
+    ESÔFAGO:
+    Órgão limpo. Calibre e peristaltismo conservados. Mucosa de todo órgão de coloração e aspecto normais. Transição esôfago-gástrica ao nível do pinçamento diafragmático. Cárdia transposto sem resistência.
+
+    ESTÔMAGO:
+    Lago mucoso sem bile ou restos alimentares. Distensibilidade e motilidade conservadas. Corpo com pregueado mucoso e coloração normais. À retrovisão, cárdia ajustada ao aparelho, fundo de aspecto normal. Incisura angularis íntegra. Mucosa do antro de aspecto normal. Piloro pérvio e centrado.
+
+    DUODENO:
+    Bulbo duodenal amplo e anatômico, mucosa de aspecto normal. Segunda porção duodenal com pregueado circular e uniforme.
+
+    CONCLUSÃO: Esofagogastroduodenoscopia normal.
+
+    Obs.: Realizadas biópsias de antro/corpo para pesquisa de H. pylori.
+  Laudo EDA - CAPELLA: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Realizado exame com paciente monitorizado, sob assistência anestésica, cateter de O2.
+
+    ESÔFAGO:
+    Órgão limpo. Calibre e distensibilidade conservadas. Mucosa de todo órgão de coloração e aspecto normais. Transição esôfago-gástrica ao nível do pinçamento diafragmático. Cárdia entreaberto.
+
+    ESTÔMAGO:
+    Modificado cirurgicamente, com reconstrução término-lateral, coto cirúrgico de pequena proporções e boca anastomótica ampla, sem lesões. Alça aferente curta, em fundo de saco. Alça eferente com pregueado circular e uniforme. Não foi possível realizar retrovisão
+
+    CONCLUSÃO: Estômago operado com reconstrução término-lateral.
+  Laudo EDA - EER(A) + PGERL: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Realizado exame com paciente monitorizado, sob assistência anestésica, cateter de O2.
+
+    ESÔFAGO:
+    Calibre e distensibilidade conservados. Transição esôfago-gástrica ao nível do pinçamento diafragmático e mucosa edemaciada, com erosões menores que 5 mm.
+
+    ESTÔMAGO:
+    Lago mucoso sem bile ou restos alimentares. Distensibilidade e motilidade conservadas. Corpo com pregueado de forma regular, apresentando difuso enantema moderado, presença de erosões. À retroversão, cárdia ajustada em relação ao aparelho, fundo de aspecto normal. Incisura angularis íntegra. Mucosa do antro com áreas de leve enantema, presença de erosões. Piloro pérvio e centrado.
+
+    DUODENO:
+    Bulbo duodenal amplo, sem lesões. Segunda porção duodenal com pregueado circular e uniforme.
+
+    CONCLUSÃO: Esofagite erosiva leve de refluxo ( A de Los Angeles).
+    Pangastrite endoscópica erosiva leve.
+
+    Obs.: Realizadas biópsias de antro/corpo para pesquisa de H. pylori
+  Laudo EDA - EER(B) + GERLA: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Realizado exame com paciente monitorizado, sob assistência anestésica, cateter de O2.
+
+    ESÔFAGO:
+    Calibre e distensibilidade conservados. Transição esôfago-gástrica ao nível do pinçamento diafragmático e mucosa edemaciada, com erosões, uma delas maior que 5 mm.
+
+    ESTÔMAGO:
+    Lago mucoso sem bile ou restos alimentares. Distensibilidade e motilidade conservadas. Corpo com pregueado de forma regular, mucosa normal. À retrovisão, cárdia ajustada em relação ao aparelho, fundo de aspecto normal. Incisura angularis íntegra. Mucosa do antro com erosões elevadas em leve intensidade. Piloro pérvio e centrado.
+
+    DUODENO:
+    Bulbo duodenal ampla, com mucosa normal. Segunda porção duodenal com pregueado circular e uniforme.
+
+    CONCLUSÃO: Esofagite erosiva de refluxo ( B de Los Angeles).
+    Gastrite endoscópica erosiva leve de antro.
+
+    Obs. realizadas biópsias de corpo antro, para pesquisa de H. pylori
+  Laudo EDA - BDEL: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Exame realizado com paciente sob assistência anestésica, O2 contínuo, monitorizado.
+
+    ESÔFAGO:
+    Calibre, distensibilidade e peristaltismo habituais. Mucosa de todo órgão de coloração e aspecto normais. Junção esôfago-gástrica ao nível do pinçamento diafragmático. Cárdia transposto sem resistência.
+
+    ESTÔMAGO:
+    Lago muco-bilioso em pequena quantidade, sem restos alimentares. Volume e distensibilidade conservados. Corpo com pregueado e coloração normais. À retrovisão, cárdia ajustada ao aparelho, fundo com aspecto normal. Incisura angularis íntegra. Mucosa do antro de aspecto habitual. Piloro pérvio e centrado.
+
+    DUODENO:
+    Bulbo duodenal amplo, com leve enantema. Segunda porção com pregueado circular e uniforme.
+
+    CONCLUSÃO: Bulboduodenite enantematosa leve.
+
+    Obs.: Realizadas biópsias de antro/corpo para pesquisa de H. pylori
+  Laudo EDA - GELC: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Exame realizado em paciente monitorizado, sob assistência anestésica, O2 contínuo.
+
+    ESÔFAGO:
+    Calibre e peristaltismo habituais, mucosa de todo órgão de coloração e aspecto normais. Transição esôfago-gástrica ao nível do pinçamento diafragmático. Cárdia transposto sem resistência.
+
+    ESTÔMAGO:
+    Lago mucoso sem bile ou restos alimentares. Volume e distensibilidade preservadas. Corpo com relevo mucoso e áreas de leve enantema. À retrovisão, cárdia ajustada ao aparelho, fundo com aspecto e coloração normais. Incisura angularis íntegra. Antro com mucosa normal. Piloro centrado e pérvio.
+
+    DUODENO:
+    Bulbo duodenal amplo e anatômico, mucosa de aspecto normal. Segunda porção com pregueado circular e uniforme.
+
+    Obs.: realizadas biópsias para pesquisa de H. pylori.
+
+    CONCLUSÃO: Gastrite endoscópica enantematosa leve de corpo.
+  Laudo EDA - EER(B) + PGERM + BDEL: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Realizado exame com paciente monitorizado, sob assistência anestésica, cateter de O2.
+
+    ESÔFAGO:
+    Calibre e distensibilidade conservados. Transição esôfago-gástrica ao nível do pinçamento diafragmático, mas mucosa edemaciada, com erosões maiores que 5 mm.
+
+    ESTÔMAGO:
+    Lago mucoso sem bile ou restos alimentares. Distensibilidade e motilidade conservadas. Corpo com pregueado de forma regular. À retrovisão, cárdia ajustada em relação ao aparelho, erosão plana. Incisura angularis íntegra. Mucosa do antro com erosões elevadas em moderada intensidade. Piloro pérvio e centrado.
+
+    DUODENO:
+    Bulbo duodenal com distensibilidade conservada, áreas de leve enantema. Segunda porção duodenal com pregueado circular e uniforme.
+
+    CONCLUSÃO: Esofagite erosiva leve de refluxo ( B de Los Angeles).
+    Pangastrite endoscópica erosiva moderada.
+    Bulboduodenite enantematosa leve.
+
+    Obs.: realizadas biópsias de corpo e antro, para pesquisa de H. pylori.
+  Laudo EDA - EDA DIGESTIVA ALTA COM PREPARO INADEQUADO: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Introdução do aparelho pelo cricofaríngeo, sem intercorrências.
+
+    Esôfago: Trajeto, calibre e distensibilidade preservados.
+
+    Estômago: Presença de grande quantidade de resíduos alimentares sólidos não aspiráveis, impedindo a avaliação da câmara gástrica. Interrompido o exame pelo risco de broncoaspiração.
+
+    Duodeno: Não avaliado.
+
+    CONCLUSÃO:
+
+    ESTASE GÁSTRICA ALIMENTAR VOLUMOSA
+
+    Nota: Não realizadas biópsias para pesquisa de H. pylori devido à estase alimentar gástrica
+  Laudo EDA - SLEEVE: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Exame realizado com paciente sob assistência anestésica, O2 contínuo, monitorizado.
+
+    ESÔFAGO:
+    Órgão limpo. Calibre e peristaltismo habituais. Mucosa de todo órgão de coloração e aspecto normais. Transição esôfago-gástrica ao nível do pinçamento diafragmático, cárdia entreaberto e transposto sem resistência, presença de erosão maior que 5 mm.
+
+    ESTÔMAGO:
+    Estômago modificado cirurgicamente, logo abaixo da junção esôfago-gástrica, nota-se estômago tunelizado com diâmetro medindo cerca de 2-3 cm, que termina em discreta angulação distal. Linha de sutura lateral não apresenta orifícios fistulosos suspeitos. À retroversão anel hiatal ajustado ao aparelho. Piloro algo desviado, porém pérvio. A mucosa gástrica é normal sem lesões ativas ou cicatriciais. Não se observam resíduos alimentares.
+
+    DUODENO:
+    Bulbo duodenal amplo e anatômico, pregueado circular e uniforme até onde estudado(até cerca de 35cm do piloro.
+
+    Obs.: Procedidas biópsias de coto gástrico para pesquisa de H. pylori
+
+    CONCLUSÃO: Estômago operado pela técnica de Sleeve.
+  Laudo EDA - BYPASS GÁSTRICO: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Realizado exame com paciente monitorizado, sob assistência anestésica, cateter de O2.
+
+    ESÔFAGO:
+    Órgão limpo. Calibre e distensibilidade conservadas. Mucosa de todo órgão de coloração e aspecto normais. Transição esôfago-gástrica ao nível do pinçamento diafragmático. Cárdia entreaberto.
+
+    ESTÔMAGO:
+    Reduzido cirurgicamente, com reconstrução término-lateral, coto cirúrgico de pequenas proporções, sem lesões e boca anastomótica ampla, sem anormalidades. Alça aferente curta, em fundo de saco. Alça eferente com pregueado circular e uniforme, até onde estudada(cerca de 40 cm da anastomose). Retrovisão mostra cárdia alargada em relação ao aparelho.
+
+    Obs.: realizadas biópsias de coto gástrico, para pesquisa de H. pylori, conforme solicitação médica.
+
+    CONCLUSÃO: Estômago modificado cirurgicamente, com reconstrução término-lateral (Bypass).
+  Laudo EDA - EED + PÓLIPOS GÁSTRICOS: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Exame realizado com paciente sob assistência anestésica, O2 contínuo, monitorizado.
+
+    ESÔFAGO:
+    com calibre e motilidade normais, mucosa opacificada, edemaciada em seu terço distal. Junção esôfago-gástrica ao nível do pinçamento diafragmático.
+
+    ESTÔMAGO:
+    Lago muco-bilioso em pequena quantidade, sem restos alimentares. Volume e distensibilidade conservados. Corpo apresentava algumas lesões polipoides sésseis, a maior medindo cerca de 4mm, as quais foram retiradas com pinça de biópsias. À retrovisão, cárdia ajustada ao aparelho, fundo com aspecto normal. Incisura angularis íntegra. Mucosa do antro de aspecto habitual. Piloro pérvio e centrado.
+
+    DUODENO:
+    Bulbo duodenal amplo e anatômico, mucosa de aspecto normal. Segunda porção com pregueado circular e uniforme.
+
+    Obs.: Realizadas biópsias de antro/corpo para pesquisa de H. pylori
+
+    Conclusão: Esofagite edematosa de refluxo.
+    Pólipos gástricos. Polipectomias endoscópicas.
+  Laudo EDA - GERLA: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Exame realizado em paciente monitorizado, sob assistência anestésica, O2 contínuo.
+
+    ESÔFAGO:
+    Calibre e peristaltismo habituais, mucosa de todo órgão de coloração e aspecto normais. Transição esôfago-gástrica ao nível do pinçamento diafragmático. Cárdia transposto sem resistência.
+
+    ESTÔMAGO:
+    Lago muco-bilioso, sem restos alimentares. Volume e distensibilidade preservadas. Corpo com relevo mucoso e coloração normais. À retrovisão, cárdia ajustada ao aparelho, fundo com aspecto e coloração normais. Incisura angularis íntegra. Antro com erosões elevadas em leve intensidade. Piloro centrado e pérvio.
+
+    DUODENO:
+    Bulbo duodenal amplo e anatômico, mucosa de aspecto normal. Segunda porção com pregueado circular e uniforme.
+
+    Obs.: realizadas biópsias para pesquisa de H. pylori.
+
+    CONCLUSÃO: Gastrite endoscópica erosiva leve de antro.
+  Laudo EDA - EEDE + PGEL + BDEL: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Exame realizado em paciente monitorizado, sob assistência anestésica, O2 contínuo.
+
+    ESÔFAGO:
+    Calibre e distensibilidade habituais, mucosa de terço distal edemaciada. Transição esôfago-gástrica ao nível do pinçamento diafragmático. Cárdia transposto sem resistência.
+
+    ESTÔMAGO:
+    Lago mucoso sem bile ou restos alimentares. Volume e distensibilidade preservadas. Corpo com relevo mucoso regular, com leve enantema difuso. À retrovisão cárdia ajustada ao aparelho, leve enantema na cárdia e fundo com aspecto e coloração normais. Incisura angularis íntegra. Mucosa do antro com leve enantema, erosões planas e áreas de atrofia e possível metaplasia(biópsias*). Piloro centrado e pérvio.
+
+    DUODENO:
+    Bulbo duodenal amplo, com leve enantema. Segunda porção com pregueado circular e uniforme.
+
+    Obs.: realizadas também biópsias para pesquisa de H. pylori.
+
+    CONCLUSÃO: Esofagite edematosa de refluxo.
+    Pangastrite endoscópica enantematosa leve, com componente erosivo e atrófico*.
+    Bulboduodnite enantematosa leve.
+  Laudo EDA - PGEL + EROS ANTRO: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Exame realizado em paciente monitorizado, sob assistência anestésica, O2 contínuo.
+
+    ESÔFAGO:
+    Calibre e distensibilidade habituais. Transição esôfago-gástrica ao nível do pinçamento diafragmático. Cárdia transposto sem resistência.
+
+    ESTÔMAGO:
+    Lago mucoso sem bile ou restos alimentares. Volume e distensibilidade preservadas. Corpo com relevo mucoso regular e leve enantema difuso. À retrovisão cárdia ajustada ao aparelho, fundo com aspecto e coloração normais. Incisura angularis íntegra. Mucosa do antro com leve enantema. Piloro centrado e pérvio.
+
+    DUODENO:
+    Bulbo duodenal amplo e anatômico, mucosa de aspecto normal. Segunda porção com pregueado circular e uniforme.
+
+    Obs.: realizadas biópsias para pesquisa de H. pylori.
+
+    CONCLUSÃO: Pangastrite endoscópica enantematosa leve, com componente erosivo no antro.
+  Laudo EDA - HH: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de endoscopia digestiva alta:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, pólipos, tamanhos ou conclusões.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Realizado exame com paciente monitorizado, sob assistência anestésica, cateter de O2.
+
+    ESÔFAGO:
+    Calibre e distensibilidade conservados. Transição esôfago-gástrica a cerca de {distancia_hernia_cm} cm do pinçamento diafragmático, formando uma bolsa herniária.
+    ESTÔMAGO:
+    Lago mucoso sem bile ou restos alimentares. Distensibilidade e motilidade conservadas. Corpo com pregueado mucoso e coloração normais. À retroversão, cárdia alargada em relação ao aparelho, fundo de aspecto normal. Incisura angularis íntegra. Mucosa do antro de aspecto normal. Piloro pérvio e centrado.
+
+    DUODENO:
+    Bulbo duodenal amplo e anatômico, mucosa de aspecto normal. Segunda porção duodenal com pregueado circular e uniforme.
+
+    CONCLUSÃO: Hérnia hiatal por deslizamento.
+
+    Obs.: Realizadas biópsias de antro/corpo para pesquisa de H. pylori
+  Laudo Colonoscopia - COLONO NORMAL ATÉ ÍLEO TERMINAL: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de colonoscopia:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, polipectomias, escores, preparo, extensão do exame ou conclusão.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Paciente sob monitorização eletrocardiográfica, oximetria de pulso, oxigenioterapia contínua e aferição seriada cada 2 minutos da pressão arterial não invasiva.
+
+    Inspeção - Sem anormalidades. Presença de discreta congestão venosa externa.
+    Toque retal - Sem anormalidades.
+    Anuscopia - Sem anormalidades. Presença de discreta congestão venosa interna.
+
+    Relatório - Paciente sob sedação anestésica, com preparo adequado para o exame. Introdução do aparelho endoscópico pelo orifício anal, progredindo com facilidade até o ceco, possibilitando passagem até aproximadamente 10 cm do íleo-terminal, que não apresenta alterações de sua superfície mucosa. A ampola retal apresenta-se ampla, com sua distensibilidade e vascularização características, passagem fácil pela junção retossigmoideana. Os cólons sigmoide, descendente, transverso, ascendente e o ceco, apresentam superfície mucosa, coloração, haustrações, mobilidade e vascularização dentro dos padrões de normalidade.
+
+    BIÓPSIAS - Não realizadas.
+
+    CONCLUSÃO - COLONOSCOPIA NORMAL ATÉ O CECO, COM ACESSO
+    AO íleo terminal, QUE NÃO APRESENTA ALTERAÇÕES DE SUA
+    SUPERFÍCIE MUCOSA.
+    NÃO VISUALIZAMOS PÓLIPOS NESTE EXAME.
+    ESCALA DE BOSTON P/ PREPARO DE CÓLON = ESQUERDO (3) + TRANSVERSO (3) + DIREITO (3)
+    TOTAL DE 09 PONTOS.
+  Laudo Colonoscopia - COLO NORMAL ATÉ O CECO: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de colonoscopia:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, polipectomias, escores, preparo, extensão do exame ou conclusão.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Paciente sob monitorização eletrocardiográfica, oximetria de pulso, oxigenioterapia contínua e aferição seriada cada 2 minutos da pressão arterial não invasiva.
+
+    Inspeção - Sem anormalidades. Presença de discreta congestão venosa externa.
+    Toque retal - Sem anormalidades.
+    Anuscopia - Sem anormalidades. Presença de discreta congestão venosa interna.
+
+    Relatório - Paciente sob sedação anestésica, com preparo adequado para o exame. Introdução do aparelho endoscópico pelo orifício anal, progredindo com facilidade até o ceco. A ampola retal apresenta-se ampla, com sua distensibilidade e vascularização características, passagem fácil pela junção retossigmoideana. Os cólons sigmoide, descendente, transverso, ascendente e o ceco, apresentam superfície mucosa, coloração, haustrações, mobilidade e vascularização dentro dos padrões de normalidade.
+
+    BIÓPSIAS - Não realizadas.
+
+    CONCLUSÃO - COLONOSCOPIA NORMAL ATÉ O CECO.
+    NÃO VISUALIZAMOS PÓLIPOS NESTE EXAME.
+
+    ESCALA DE BOSTON P/ PREPARO DE CÓLON = ESQUERDO (3) + TRANSVERSO (3) + DIREITO (3)
+    TOTAL 09 PONTOS
+  Laudo Colonoscopia - COLO DOENÇA DIVERT DO SIGMOIDE (ESPÁSTICO): |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de colonoscopia:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, polipectomias, escores, preparo, extensão do exame ou conclusão.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Paciente sob monitorização eletrocardiográfica, oximetria de pulso, oxigenioterapia contínua e aferição seriada cada 2 minutos da pressão arterial não invasiva.
+
+    Inspeção - Sem anormalidades. Presença de discreta congestão venosa externa.
+    Toque retal - Sem anormalidades.
+    Anuscopia - Sem anormalidades. Presença de discreta congestão venosa interna.
+
+    Relatório - Paciente sob sedação anestésica, com preparo adequado para o exame. Introdução do aparelho endoscópico pelo orifício anal, progredindo com facilidade até o ceco. A ampola retal apresenta-se ampla, com sua distensibilidade e vascularização características, passagem fácil pela junção retossigmoideana. O cólon sigmoide apresenta-se com numerosos óstios diverticulares de pequeno e médio calibre, com moderada condição espástica e discreta alteração de sua superfície mucosa. Os cólons descendente, transverso, ascendente e o ceco apresentam superfície mucosa, coloração, haustrações, mobilidade e vascularização dentro dos padrões de normalidade.
+
+    BIÓPSIAS - Não realizadas.
+
+    CONCLUSÃO - MOLÉSTIA DIVERTICULAR DO CÓLON SIGMÓIDE COM COMPONENTE ESPÁSTICO.
+    - NÃO VISUALIZAMOS PÓLIPOS NESTE EXAME.
+
+    ESCALA DE BOSTON P/ PREPARO DE CÓLON = ESQUERDO (3) + TRANSVERSO (3) + DIREITO (3)
+    TOTAL 09 PONTOS
+  Laudo Colonoscopia - COLO DOENÇA DIVERT. E ACESSO AO ÍLEO: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de colonoscopia:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, polipectomias, escores, preparo, extensão do exame ou conclusão.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Paciente sob monitorização eletrocardiográfica, oximetria de pulso, oxigenioterapia contínua e aferição seriada cada 2 minutos da pressão arterial não invasiva.
+
+    Inspeção - Sem anormalidades. Presença de discreta congestão venosa externa.
+    Toque retal - Sem anormalidades.
+    Anuscopia - Sem anormalidades. Presença de discreta congestão venosa interna.
+
+    Relatório - Paciente sob sedação anestésica, com preparo adequado para o exame. Introdução do aparelho endoscópico pelo orifício anal, progredindo com facilidade até o ceco, possibilitando passagem até aproximadamente 10 cm do íleo-terminal, que não apresenta alterações de sua superfície mucosa. A ampola retal apresenta-se ampla, com sua distensibilidade e vascularização características, passagem fácil pela junção retossigmoideana. O cólon sigmoide apresenta-se com numerosos óstios diverticulares de pequeno e médio calibre, com moderada condição espástica e discreta alteração de sua superfície mucosa. Os cólons descendente, transverso, ascendente e o ceco apresentam superfície mucosa, coloração, haustrações, mobilidade e vascularização dentro dos padrões de normalidade.
+
+    BIÓPSIAS - Não realizadas.
+
+    CONCLUSÃO - COLONOSCOPIA ATÉ O CECO, COM ACESSO
+    AO íleo terminal, QUE NÃO APRESENTA ALTERAÇÕES DE
+    SUA SUPERFÍCIE MUCOSA.
+    MOLÉSTIA DIVERTICULAR DO CÓLON SIGMÓIDE COM
+    COMPONENTE ESPÁSTICO.
+    NÃO VISUALIZAMOS PÓLIPOS NESTE EXAME.
+
+    ESCALA DE BOSTON P/ PREPARO DE CÓLON = ESQUERDO (3) + TRANSVERSO (3) + DIREITO (3)
+  Laudo Colonoscopia - COLO ESPASMO DO CÓLON SIGMOIDE: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de colonoscopia:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, polipectomias, escores, preparo, extensão do exame ou conclusão.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Paciente sob monitorização eletrocardiográfica, oximetria de pulso, oxigenioterapia contínua e
+    aferição seriada cada 2 minutos da pressão arterial não invasiva.
+
+    Inspeção - Sem anormalidades. Presença de discreta congestão venosa externa.
+    Toque retal - Sem anormalidades.
+    Anuscopia - Sem anormalidades. Presença de discreta congestão venosa interna.
+
+    Relatório - Paciente sob sedação anestésica, com preparo adequado para o exame. Introdução do aparelho endoscópico pelo orifício anal, progredindo com facilidade até o ceco. A ampola retal apresenta-se ampla, com sua distensibilidade e vascularização características, passagem fácil pela junção retossigmoidiana. O cólon sigmoide apresenta-se espástico, porém sem alterações de sua superfície mucosa. Os cólons descendente, transverso, ascendente e o ceco apresentam superfície mucosa, coloração, haustrações, mobilidade e vascularização dentro dos padrões de normalidade.
+
+    BIÓPSIAS - Não realizadas.
+
+    CONCLUSÃO:
+    COLONOSCOPIA ATÉ O CECO
+    ESPASTICIDADE DO CÓLON SIGMÓIDE
+    SÍNDROME DO INTESTINO IRRITÁVEL?!?
+    NÃO VISUALIZAMOS PÓLIPOS NESTE EXAME
+    ESCALA DE BOSTON P/ PREPARO DE CÓLON = ESQUERDO (3) + TRANSVERSO (3) + DIREITO (3)
+  Laudo Colonoscopia - COLO ESPASMO DO SIGMOIDE + ÍLEO: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de colonoscopia:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, polipectomias, escores, preparo, extensão do exame ou conclusão.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Paciente sob monitorização eletrocardiográfica, oximetria de pulso, oxigenioterapia contínua e
+    aferição seriada cada 2 minutos da pressão arterial não invasiva.
+
+    Inspeção - Sem anormalidades. Presença de discreta congestão venosa externa.
+    Toque retal - Sem anormalidades.
+    Anuscopia - Sem anormalidades. Presença de discreta congestão venosa interna.
+
+    Relatório - Paciente sob sedação anestésica, com preparo adequado para o exame. Introdução do aparelho endoscópico pelo orifício anal, progredindo com facilidade até o ceco, passagem pela válvula íleo-cecal, possibilitando acesso aos 10 cm do íleo-terminal, que se apresenta normal. A ampola retal apresenta-se ampla, com sua distensibilidade e vascularização características, passagem fácil pela junção retossigmoidiana. O cólon sigmoide apresenta-se espástico, porém sem alterações de sua superfície mucosa. Os cólons descendente, transverso, ascendente e o ceco apresentam superfície mucosa, coloração, haustrações, mobilidade e vascularização dentro dos padrões de normalidade.
+
+    BIÓPSIAS - Não realizadas.
+
+    CONCLUSÃO:
+    - COLONOSCOPIA NORMAL ATÉ O CECO.
+    - ESPASTICIDADE DO CÓLON SIGMÓIDE
+    - íleo terminal DE ASPECTO NORMAL
+    - NÃO VISUALIZAMOS PÓLIPOS NESTE EXAME
+    ESCALA DE BOSTON P/ PREPARO DE CÓLON = ESQUERDO (3) + TRANSVERSO (3) + DIREITO (3)
+  Laudo Colonoscopia - DIVERT. HIPERT. ESQ. HIPOTONICO D.: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de colonoscopia:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, polipectomias, escores, preparo, extensão do exame ou conclusão.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Paciente sob monitorização eletrocardiográfica, oximetria de pulso,
+    oxigenioterapia contínua e aferição seriada cada 2 minutos da pressão arterial não invasiva.
+
+    Inspeção - Sem anormalidades. Presença de discreta congestão venosa externa.
+    Toque retal - Sem anormalidades.
+    Anuscopia - Sem anormalidades. Presença de discreta congestão venosa interna.
+
+    Relatório - Paciente sob sedação anestésica, com preparo adequado para o exame. Introdução do aparelho endoscópico pelo orifício anal, progredindo com facilidade até o ceco. A ampola retal apresenta-se ampla, com sua distensibilidade e vascularização características, passagem fácil pela junção retossigmoidiana. O cólon sigmoide apresenta-se com numerosos óstios diverticulares de pequeno e médio calibre, com moderada condição espástica e discreta alteração de sua superfície mucosa. Observamos no cólon direito, presença de vários óstios diverticulares de grande calibre, e aspecto hipotônico. Os cólons descendente, transverso, ascendente e o ceco apresentam superfície mucosa, coloração, haustrações, mobilidade e vascularização dentro dos padrões de normalidade.
+
+    BIÓPSIAS - Não realizadas.
+
+    CONCLUSÃO - COLONOSCOPIA ATÉ O CECO.
+    MOLÉSTIA DIVERTICULAR DO CÓLON SIGMÓIDE
+    COM COMPONENTE ESPÁSTICO. DIVERTICULOSE
+    HIPOTONICA DO CÓLON DIREITO
+    NÃO VISUALIZAMOS PÓLIPOS NESTE EXAME.
+    ESCALA DE BOSTON P/ PREPARO DE CÓLON = ESQUERDO (3) + TRANSVERSO (3) + DIREITO (3)
+  Laudo Colonoscopia - DIVERT. HIPERT. E HIPOTONICO + ÍLEO: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de colonoscopia:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, polipectomias, escores, preparo, extensão do exame ou conclusão.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Paciente sob monitorização eletrocardiográfica, oximetria de pulso,
+    oxigenioterapia contínua e aferição seriada cada 2 minutos da pressão arterial não invasiva.
+
+    Inspeção - Sem anormalidades. Presença de discreta congestão venosa externa.
+    Toque retal - Sem anormalidades.
+    Anuscopia - Sem anormalidades. Presença de discreta congestão venosa interna.
+
+    Relatório - Paciente sob sedação anestésica, com preparo adequado para o exame. Introdução do aparelho endoscópico pelo orifício anal, progredindo com facilidade até o ceco, com acesso ao íleo-terminal, que não apresenta alterações de sua superfície mucosa. A ampola retal apresenta-se ampla, com sua distensibilidade e vascularização características, passagem fácil pela junção retossigmoidiana. O cólon sigmoide apresenta-se com numerosos óstios diverticulares de pequeno e médio calibre, com moderada condição espástica e discreta alteração de sua superfície mucosa. Observamos no cólon direito, presença de vários óstios diverticulares de grande calibre, e aspecto hipotônico. Os cólons descendente, transverso, ascendente e o ceco apresentam superfície mucosa, coloração, haustrações, mobilidade e vascularização dentro dos padrões de normalidade.
+
+    BIÓPSIAS - Não realizadas.
+
+    CONCLUSÃO - COLONOSCOPIA ATÉ O CECO.
+    íleo terminal SEM ANORMALIDADES.
+    MOLÉSTIA DIVERTICULAR DO CÓLON SIGMÓIDE
+    COM COMPONENTE ESPÁSTICO. DIVERTICULOSE
+    HIPOTONICA DO CÓLON DIREITO.
+    NÃO VISUALIZAMOS PÓLIPOS NESTE EXAME.
+    ESCALA DE BOSTON P/ PREPARO DE CÓLON = ESQUERDO (3) + TRANSVERSO (3) + DIREITO (3)
+  Laudo Colonoscopia - COLONOSCOPIA RCUI: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de colonoscopia:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, polipectomias, escores, preparo, extensão do exame ou conclusão.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Paciente sob monitorização eletrocardiográfica, oximetria de pulso, oxigenioterapia contínua e aferição seriada cada 2 minutos da pressão arterial não invasiva.
+    Medicações em uso do paciente:
+    Inspeção - Sem anormalidades. Presença de discreta congestão venosa externa.
+    Toque retal - Sem anormalidades.
+    Anuscopia - Sem anormalidades. Presença de discreta congestão venosa interna.
+
+    RELATÓRIO:
+    Paciente sob sedação anestésica, com preparo adequado para o exame. Introdução do aparelho endoscópico pelo orifício anal, progredindo com facilidade até o ceco, possibilitando passagem até aproximadamente 10 cm do íleo-terminal.
+
+    íleo terminal:
+    Forma e calibre normais. Mucosa com aspecto conservado. enantema e diminuição do padrão vascular / enantema acentuado e perda do padrão vascular, friabilidade e sangramento ao toque / erosões / friabilidade e sangramento espontâneo / ulcerações. Vilosidades de aspecto normal.
+
+    CÓLON DIREITO:
+    Forma, calibre e vasos submucosos normais. Mucosa com aspecto e brilho conservados / enantema e diminuição do padrão vascular / enantema acentuado e perda do padrão vascular, friabilidade e sangramento ao toque / erosões / friabilidade e sangramento espontâneo / ulcerações. Válvula íleo-cecal com aspecto bilabiada com características normais. Óstio apendicular de aspecto habitual / com enantema /com enantema acentuado e perda do padrão vascular, friabilidade e sangramento ao toque. Subescore de Mayo
+
+    CÓLON TRANSVERSO:
+    Forma, calibre e vasos submucosos normais. Mucosa com aspecto e brilho conservados / enantema e diminuição do padrão vascular / enantema acentuado e perda do padrão vascular, friabilidade e sangramento ao toque / erosões / friabilidade e sangramento espontâneo / ulcerações. Subescore de Mayo
+
+    CÓLON ESQUERDO:
+    Forma, calibre e vasos submucosos normais. Mucosa com aspecto e brilho conservados / enantema e diminuição do padrão vascular / enantema acentuado e perda do padrão vascular, friabilidade e sangramento ao toque / erosões / friabilidade e sangramento espontâneo / ulcerações. Subescore de Mayo
+
+    RETO:
+    Forma, calibre, distensibilidade e vasos submucosos normais. Fácil passagem pela junção retossigmoidiana. Mucosa com aspecto e brilho conservados / enantema e diminuição do padrão vascular / enantema acentuado e perda do padrão vascular, friabilidade e sangramento ao toque / erosões / friabilidade e sangramento espontâneo / ulcerações. Subescore de Mayo
+
+    BIÓPSIAS - Não realizadas.
+
+    CONCLUSÃO - COLONOSCOPIA NORMAL ATÉ O CECO, COM ACESSO AO íleo terminal, QUE NÃO APRESENTA ALTERAÇÕES DE SUA SUPERFÍCIE MUCOSA. NÃO VISUALIZAMOS PÓLIPOS NESTE EXAME.
+
+    CLASSIFICAÇÃO DE MONTREAL E S
+
+    RCU SUBESCORE DE MAYO
+
+    ESCALA DE BOSTON P/ PREPARO DE CÓLON = ESQUERDO (3) + TRANSVERSO (3) + DIREITO (3)
+  Laudo Colonoscopia - COLONO DOENÇA DE CROHN: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de colonoscopia:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, polipectomias, escores, preparo, extensão do exame ou conclusão.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Paciente sob monitorização eletrocardiográfica, oximetria de pulso, oxigenioterapia contínua e aferição seriada cada 2 minutos da pressão arterial não invasiva.
+
+    Medicações em uso do paciente:
+
+    Inspeção - Sem anormalidades. Presença de discreta congestão venosa externa.
+    Toque retal - Sem anormalidades.
+    Anuscopia - Sem anormalidades. Presença de discreta congestão venosa interna.
+
+    RELATÓRIO:
+    Paciente sob sedação anestésica, com preparo adequado para o exame. Introdução do aparelho endoscópico pelo orifício anal, progredindo com facilidade até o ceco, possibilitando passagem até aproximadamente 10 cm do íleo-terminal.
+
+    íleo terminal:
+    Forma e calibre normais. Mucosa com aspecto e brilho conservados. Presença de úlceras aftoide (<0,5cm) / úlcera grande (0,5cm - 2 cm) / úlcera muito grande (> 2 cm), superficial/profunda, ocupando cerca de <10%, entre 10-30%, >30% da superfície. Presença de enantema e/ou friabilidade em cerca de <50%, entre 50-75%, >75% da superfície. Presença/ausência de estenose ulcerada/não ulcerada transponível/não transponível com aparelho padrão. Vilosidades de aspecto normal.
+
+    CÓLON DIREITO:
+    Forma, calibre e vasos submucosos normais. Mucosa com aspecto e brilho conservados. Presença de úlceras aftoide (<0,5cm) / úlcera grande (0,5cm - 2 cm) / úlcera muito grande (> 2 cm), superficial/profunda, ocupando cerca de <10%, entre 10-30%, >30% da superfície. Presença de enantema e/ou friabilidade em cerca de <50%, entre 50-75%, >75% da superfície. Presença/ausência de estenose ulcerada/não ulcerada transponível/não transponível com aparelho padrão.
+
+    CÓLON TRANSVERSO:
+    Forma, calibre e vasos submucosos normais. Mucosa com aspecto e brilho conservados. Presença de úlceras aftoide (<0,5cm) / úlcera grande (0,5cm - 2 cm) / úlcera muito grande (> 2 cm), superficial/profunda, ocupando cerca de <10%, entre 10-30%, >30% da superfície. Presença de enantema e/ou friabilidade em cerca de <50%, entre 50-75%, >75% da superfície. Presença/ausência de estenose ulcerada/não ulcerada transponível/não transponível com aparelho padrão.
+
+    CÓLON ESQUERDO:
+    Forma, calibre e vasos submucosos normais. Mucosa com aspecto e brilho conservados. Presença de úlceras aftoide (<0,5cm) / úlcera grande (0,5cm - 2 cm) / úlcera muito grande (> 2 cm), superficial/profunda, ocupando cerca de <10%, entre 10-30%, >30% da superfície. Presença de enantema e/ou friabilidade em cerca de <50%, entre 50-75%, >75% da superfície. Presença/ausência de estenose ulcerada/não ulcerada transponível/não transponível com aparelho padrão.
+
+    RETO:
+    Forma, calibre, distensibilidade e vasos submucosos normais. Fácil passagem pela junção retossigmoidiana. Mucosa com aspecto e brilho conservados. Presença de úlceras aftoide (<0,5cm) / úlcera grande (0,5cm - 2 cm) / úlcera muito grande (> 2 cm), superficial/profunda, ocupando cerca de <10%, entre 10-30%, >30% da superfície. Presença de enantema e/ou friabilidade em cerca de <50%, entre 50-75%, >75% da superfície. Presença/ausência de estenose ulcerada/não ulcerada transponível/não transponível com aparelho padrão.
+
+    BIÓPSIAS - Não realizadas.
+
+    CONCLUSÃO - COLONOSCOPIA NORMAL ATÉ O CECO, COM ACESSO AO íleo terminal, QUE NÃO APRESENTA ALTERAÇÕES DE SUA SUPERFÍCIE MUCOSA.
+
+    NÃO VISUALIZAMOS PÓLIPOS NESTE EXAME.
+    CLASSIFICAÇÃO DE MONTREAL A L B
+    DOENÇA DE CROHN ESCORES SES-CD E CDEIS
+    ESCALA DE BOSTON P/ PREPARO DE CÓLON = ESQUERDO (3) + TRANSVERSO (3) + DIREITO (3)
+  Laudo Colonoscopia - DIVERT. DO SIGMOIDE E DESCENDENTE: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de colonoscopia:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, polipectomias, escores, preparo, extensão do exame ou conclusão.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Paciente sob monitorização eletrocardiográfica, oximetria de pulso, oxigenioterapia contínua e aferição seriada cada 1 minuto da pressão arterial não invasiva.
+
+    Inspeção - Presença de discreta congestão venosa externa.
+    Toque retal - Sem anormalidades.
+    Anuscopia - Presença de discreta congestão venosa interna.
+
+    Relatório - Paciente sob sedação anestésica, com preparo adequado para o exame. Introdução do aparelho endoscópico pelo orifício anal, progredindo com facilidade até o ceco. A ampola retal apresenta-se ampla, com sua distensibilidade e vascularização características, passagem fácil pela junção retossigmoideana. Os cólons sigmoide e descendente apresentam-se com numerosos óstios diverticulares de pequeno e médio calibre, com GRANDE condição espástica e discreta alteração de sua superfície mucosa. Os cólons transverso, ascendente e o ceco apresentam superfície mucosa, coloração, haustrações, mobilidade e vascularização dentro dos padrões de normalidade.
+
+    BIÓPSIAS - Não realizadas.
+
+    CONCLUSÃO - COLONOSCOPIA ATÉ O CECO.
+    MOLÉSTIA DIVERTICULAR DOS CÓLONS SIGMÓIDE E
+    DESCENDENTE COM GRANDE COMPONENTE ESPÁSTICO.
+    NÃO VISUALIZAMOS PÓLIPOS NESTE EXAME.
+
+    ESCALA DE BOSTON P/ PREPARO DO CÓLON = ESQUERDO (3) + TRANSVERSO (3) + DIREITO (3)
+    TOTAL 09 PONTOS
+  Laudo Colonoscopia - DIVERT SIGMOIDE E DESCENDENTE + ILEO: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de colonoscopia:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, polipectomias, escores, preparo, extensão do exame ou conclusão.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    AVALIAÇÃO COLO-PROCTOLÓGICA:
+    Paciente sob monitorização eletrocardiográfica, oximetria de pulso, oxigenioterapia contínua e aferição seriada cada 2 minutos da pressão arterial não invasiva.
+
+    Inspeção - Presença de discreta congestão venosa externa.
+    Toque retal - Sem anormalidades.
+    Anuscopia - Presença de discreta congestão venosa interna.
+
+    Relatório - Paciente sob sedação anestésica, com preparo adequado para o exame. Introdução do aparelho endoscópico pelo orifício anal, progredindo com facilidade até o ceco, possibilitando passagem até aproximadamente 10 cm do íleo-terminal, que não apresenta alterações de sua superfície mucosa. A ampola retal apresenta-se ampla, com sua distensibilidade e vascularização características, passagem fácil pela junção retossigmoideana. Os cólons sigmoide e descendente apresentam-se com vários óstios diverticulares de pequeno e médio calibre, com moderada condição espástica e discreta alteração de sua superfície mucosa. Os cólons descendente, transverso, ascendente e o ceco apresentam superfície mucosa, coloração, haustrações, mobilidade e vascularização dentro dos padrões de normalidade.
+
+    BIÓPSIAS - Não realizadas.
+
+    CONCLUSÃO - COLONOSCOPIA ATÉ O CECO, COM ACESSO AO íleo terminal,
+    QUE NÃO APRESENTA ALTERAÇÕES DE SUA SUPERFÍCIE MUCOSA.
+    MOLÉSTIA DIVERTICULAR DOS CÓLONS SIGMÓIDE E DESCENDENTE COM
+    COMPONENTE ESPÁSTICO.
+    NÃO VISUALIZAMOS PÓLIPOS NESTE EXAME.
+
+    ESCALA DE BOSTON P/ PREPARO DE CÓLON = ESQUERDO (3) + TRANSVERSO (3) + DIREITO (3)
+  Laudo Colonoscopia - COLO DIVERTICULOSE  DO CÓLON SIGMOIDE: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de colonoscopia:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, polipectomias, escores, preparo, extensão do exame ou conclusão.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Paciente sob monitorização eletrocardiográfica, oximetria de pulso, oxigenioterapia contínua e aferição seriada cada 2 minutos da pressão arterial não invasiva.
+
+    Inspeção - Sem anormalidades. Presença de discreta congestão venosa externa.
+    Toque retal - Sem anormalidades.
+    Anuscopia - Sem anormalidades. Presença de discreta congestão venosa interna.
+
+    Relatório - Paciente sob sedação anestésica, com preparo adequado para o exame. Introdução do aparelho endoscópico pelo orifício anal, progredindo com facilidade até o ceco. A ampola retal apresenta-se ampla, com sua distensibilidade e vascularização características, passagem fácil pela junção retossigmoideana. O cólon sigmoide apresenta-se com numerosos óstios diverticulares de médio calibre, com discreta condição espástica e sem alterações de sua superfície mucosa. Os cólons descendente, transverso, ascendente e o ceco apresentam superfície mucosa, coloração, haustrações, mobilidade e vascularização dentro dos padrões de normalidade.
+
+    BIÓPSIAS - Não realizadas.
+
+    CONCLUSÃO - DIVERTICULOSE DO CÓLON SIGMÓIDE.
+    - NÃO VISUALIZAMOS PÓLIPOS NESTE EXAME.
+
+    ESCALA DE BOSTON P/ PREPARO DE CÓLON = ESQUERDO (3) + TRANSVERSO (3) + DIREITO (3)
+    TOTAL DE 09 PONTOS
+  Laudo Colonoscopia - COLO PREPARO INADEQUADO: |
+    O seguinte texto é uma transcrição de voz para elaboração de um laudo de colonoscopia:
+
+    {texto}
+
+    O médico já selecionou previamente este modelo de laudo como base. Use exatamente o modelo abaixo como estrutura inicial e gere o laudo final completo.
+
+    Regras de geração do laudo:
+    - Preserve a estrutura e o estilo do modelo base.
+    - Mantenha no laudo final tudo o que pertence ao modelo e não foi alterado pela fala do médico.
+    - Acrescente, substitua ou remova apenas as informações que forem explicitamente ditadas.
+    - Não invente achados, classificações, medidas, localizações, biópsias, polipectomias, escores, preparo, extensão do exame ou conclusão.
+    - Quando a fala do médico corrigir algum trecho do modelo, a correção ditada deve prevalecer.
+    - Quando o médico mencionar número de foto ou imagem, associe a referência ao achado correspondente, de forma discreta e profissional, por exemplo: "(foto 7)" ou "(imagens 7 e 8)".
+    - Se o médico não mencionar número de foto, não crie referência de imagem.
+    - Corrija erros evidentes de transcrição quando houver alta confiança.
+    - Entregue apenas o laudo final, sem comentários, sem explicações e sem tópicos sobre o que foi alterado.
+
+    MODELO BASE:
+
+    Paciente sob monitorização eletrocardiográfica, oximetria de pulso,
+    oxigenioterapia contínua e aferição seriada a cada 2 minutos da
+    pressão arterial não invasiva.
+
+    Inspeção - Sem anormalidades.
+    Toque retal - Sem anormalidades.
+    Anuscopia - Sem anormalidades.
+
+    Relatório - Paciente sob sedação anestésica, introduzido o aparelho até o cólon sigmoide, onde foram identificados resíduos sólidos em grande quantidade, não aspiráveis, impedindo a progressão do aparelho. Interrompida a progressão do aparelho pelo risco de complicações.
+
+    BIÓPSIAS - Não realizadas.
+
+    CONCLUSÃO - COLONOSCOPIA INCOMPLETA POR PREPARO INADEQUADO.
+
+    ESCALA DE BOSTON P/PREPARO DE CÓLON = ESQUERDO (0)
+    + TRANSVERSO (0) + DIREITO (0)

@@ -456,78 +456,49 @@ function validarFormulario() {
 
 
 // ========== Funções de Profissão e Necessidade ==========
-function configurarSelecaoProfissaoNecessidade() {
+async function configurarSelecaoProfissaoNecessidade() {
   const rawProfissao = localStorage.getItem('profissao');
   const normalize = (s) => (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase();
-  const profissaoNorm = normalize(rawProfissao);
-  const PROFISSAO_MAP = {
-    'medico': 'Médico',
-    'psicologo': 'Psicólogo',
-    'juiz': 'Juíz',
-    'administrador': 'Administrador',
-    'advogado': 'Advogado'
-  };
-  const profissao = PROFISSAO_MAP[profissaoNorm] || rawProfissao;
-
   const necessidadeSelect = document.getElementById('selecaoNecessidade');
   const startConsultaBtn = document.getElementById('startConsultaBtn');
-  // let necessidade = "";
 
-  const opcoesNecessidade = {
+  if (!rawProfissao) {
+      necessidadeSelect.disabled = true;
+      return;
+  }
 
-      "Administrador": [
-          "Consulta Padrão",
-          "Consulta de Oftalmologia",
-          "Consulta de Neurologia",
-          "Consulta de Neuropediatria",
-          "Consulta de Cirurgia Plástica - Face",
-          "Atestado",
-          "Laudo",
-          "Receita",
-          "Exame",
-          "Consulta Psicólogo",
-          "Reunião", 
-          "Depoimento", 
-          "Audiência"
-      ],
-      "Médico": [
-          "Consulta Padrão",
-          "Consulta de Oftalmologia",
-          "Consulta de Neurologia",
-          "Consulta de Neuropediatria",
-          "Consulta de Cirurgia Plástica - Face",
-          "Atestado",
-          "Laudo",
-          "Receita",
-          "Exame",
-          "Reunião", 
-          "Consulta de Dermatologia",
-          "Exame de Colonoscopia",
-          "Exame de Endoscopia Digestiva Alta",
-
-      ],
-      "Psicólogo": ["Consulta", "Atestado"],
-      "Advogado": ["Depoimento", "Reunião"],
-      "Juíz": ["Audiência"]
-  };
-
-  // Preenche o select de profissão e desabilita
-  if (profissao) {
-      document.getElementById('profissaoDisplay').textContent = profissao;
-
-      // Popula necessidades conforme profissão
-      necessidadeSelect.innerHTML = '<option value="" disabled selected>Selecione a finalidade</option>';
-      if (opcoesNecessidade[profissao]) {
-          necessidadeSelect.disabled = false;
-          opcoesNecessidade[profissao].forEach(necessidadeOp => {
-              const option = document.createElement('option');
-              option.value = necessidadeOp;
-              option.textContent = necessidadeOp;
-              necessidadeSelect.appendChild(option);
-          });
-      } else {
-          necessidadeSelect.disabled = true;
+  let catalogo = {};
+  try {
+      const response = await fetch('/catalog/profissoes');
+      if (!response.ok) {
+          throw new Error(`Falha ao buscar catálogo (HTTP ${response.status})`);
       }
+      const data = await response.json();
+      catalogo = data.necessidades_por_profissao || {};
+  } catch (error) {
+      console.error('Erro ao carregar catálogo de profissões:', error);
+      necessidadeSelect.innerHTML = '<option value="" disabled selected>Erro ao carregar finalidades</option>';
+      necessidadeSelect.disabled = true;
+      return;
+  }
+
+  const catalogoKeys = Object.keys(catalogo);
+  const profissao = catalogoKeys.find((p) => normalize(p) === normalize(rawProfissao)) || rawProfissao;
+
+  document.getElementById('profissaoDisplay').textContent = profissao;
+  necessidadeSelect.innerHTML = '<option value="" disabled selected>Selecione a finalidade</option>';
+
+  const opcoes = catalogo[profissao] || [];
+  if (opcoes.length > 0) {
+      necessidadeSelect.disabled = false;
+      opcoes.forEach((necessidadeOp) => {
+          const option = document.createElement('option');
+          option.value = necessidadeOp;
+          option.textContent = necessidadeOp;
+          necessidadeSelect.appendChild(option);
+      });
+  } else {
+      necessidadeSelect.disabled = true;
   }
 
   // Listener para necessidade

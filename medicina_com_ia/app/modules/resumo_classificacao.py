@@ -3,18 +3,14 @@
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
-import yaml
 from app.modules.utils import add_log
+from app.modules.prompt_catalog import carregar_prompts
 
 load_dotenv()
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
-def carregar_prompts(caminho_arquivo='app/modules/prompts.yaml'):
-    with open(caminho_arquivo, 'r', encoding='utf-8') as file:
-        return yaml.safe_load(file)
-
 def resumir_classificar(texto: str, profissao: str, necessidade: str) -> str:
-    prompts = carregar_prompts()
+    prompts, _ = carregar_prompts()
     prompt_profissao = prompts.get(profissao, {})
     prompt_especialidade = prompt_profissao.get(necessidade)
 

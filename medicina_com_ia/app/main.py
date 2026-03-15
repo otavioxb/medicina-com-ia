@@ -10,7 +10,7 @@ from starlette.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.requests import Request
 
-from app.routers import auth_routes, websocket as ws_router, cadastro_routes, transcription_routes, download_relatorio_routes, dashboard_routes
+from app.routers import auth_routes, websocket as ws_router, cadastro_routes, transcription_routes, download_relatorio_routes, dashboard_routes, catalog_routes
 from app.db.init_db import create_tables
 
 load_dotenv()
@@ -54,6 +54,7 @@ app.include_router(cadastro_routes.router)
 app.include_router(transcription_routes.router)
 app.include_router(download_relatorio_routes.router)
 app.include_router(dashboard_routes.router)
+app.include_router(catalog_routes.router)
 
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 templates = Jinja2Templates(directory="app/static/html")
