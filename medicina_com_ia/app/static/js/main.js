@@ -488,7 +488,9 @@ async function configurarSelecaoProfissaoNecessidade() {
   document.getElementById('profissaoDisplay').textContent = profissao;
   necessidadeSelect.innerHTML = '<option value="" disabled selected>Selecione a finalidade</option>';
 
-  const opcoes = catalogo[profissao] || [];
+  const opcoes = (catalogo[profissao] || []).slice().sort((a, b) =>
+      a.localeCompare(b, 'pt-BR', { sensitivity: 'base' })
+  );
   if (opcoes.length > 0) {
       necessidadeSelect.disabled = false;
       opcoes.forEach((necessidadeOp) => {
